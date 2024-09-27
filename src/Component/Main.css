@@ -71,4 +71,21 @@ button {
     padding: 5px 10px;
 }
 
-  
+
+/* styles.css */
+.main-btn {
+    color: rgb(58, 242, 181);
+    background: transparent;
+    width: 190px;
+    height: 50px;
+    font-weight: 600;
+    border: 1px solid rgb(58, 242, 181);
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.main-btn:hover {
+    background: rgb(58, 242, 181); /* Change background on hover */
+    color: rgb(0, 0, 0); /* Change text color on hover */
+    font-weight: 600;
+}

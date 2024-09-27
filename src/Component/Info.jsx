@@ -2,7 +2,6 @@ import React from 'react'
 
 function Info() {
   return (
-    
     <section style={{margin:'0px auto',width:'90%'}}>
         <div style={{ 
   border: '1px solid rgb(101, 102, 104)', 

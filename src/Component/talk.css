@@ -1,0 +1,21 @@
+
+/* styles.css */
+.talk-btn {
+    background-color: rgb(58, 237, 178);
+    width: 180px;
+    height: 67px;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight:550; /* Smooth transition */
+}
+
+.talk-btn:hover {
+    background-color:transparent;
+    border :1px solid rgb(58, 237, 178);
+    color: rgb(58, 237, 178);
+  
+}

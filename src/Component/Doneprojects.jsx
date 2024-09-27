@@ -14,6 +14,8 @@ const testimonials = [
     first,
     we,
     only,
+    kmeti,
+    first
 ];
 
 function Doneprojects() {
@@ -41,7 +43,7 @@ function Doneprojects() {
     };
 
     return (
-        <div>
+        <div >
             <div style={{
                 marginTop: "30px",
                 borderTop: '1px solid transparent',
@@ -82,7 +84,7 @@ function Doneprojects() {
                                 style={{ 
                                     display: 'flex', 
                                     justifyContent: "space-between", 
-                                    gap: '20px', // Adjust gap for better spacing
+                                    gap: '40px', // Adjust gap for better spacing
                                     alignItems: 'center', 
                                     overflowX: 'auto', // Allow horizontal scrolling
                                     width: '100%' // Ensure the testimonials div takes full width
