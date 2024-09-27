@@ -1,17 +1,26 @@
 import React from 'react'
+import { useRef } from 'react';
 import './Main.css'
+
 import logo from "../image/logo.svg"
+
 import Info from './Info';
 import Talktous from './Talktous';
-function Mainpage() {
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Doneprojects from './Doneprojects';
 
+function Mainpage() {
+    
+      
     let hmm=window.innerWidth;
     console.log(hmm)
+
+
     return (
         <>
 
     
-<div className='Container'>
+<div className='Containerr'>
     <div style={{ width: '100%' }}>
         <div style={{ width: '90%', margin: '0px auto', paddingTop: "50px" }}>
             <header className='header'>
@@ -76,10 +85,12 @@ function Mainpage() {
         </nav>
         <br /><br />
       
+      
    <Talktous/>
-   <br /><br /><br />
+<br /><br />
  <Info/>
- <br /><br />
+ 
+ 
 <div style={{background:'rgb(9, 14, 23)'}}>
 <section style={{width:"90%",margin:'0px auto'}}>
 
@@ -88,16 +99,33 @@ function Mainpage() {
 <br />
 <p style={{color:'white',fontSize:"16px",width:"66%",wordSpacing:"2px",letterSpacing:"1px"}}>For the past decade we have been creating high performance, feature-packed mobile applications for iOS & Android. As an expert in mobile application development services, Folio3 can create the right app that will meet all your business and industry needs.</p>
 <br />
-<button style={{backgroundColor:'rgb(58, 237, 178)',width:"100px",height:'40px',borderRadius:"8px",outline:"none",border:"none",cursor:"pointer"}}>Talk to us</button>
+
 </div>
 </section>
-</div>
+
+<Doneprojects />
 
  
 
+<div style={{width:"90%",marginTop:"90px",display:'flex',margin:'0px auto',alignItems:"center",border:'1px solid white'}}>
+<div  >
+<h2 style={{color:'rgb(58, 237, 178)',fontSize:"40px"}}>Industries <span style={{color:'white'}}>We Serve</span></h2>
+<p style={{color:'white'}}>Our extensive experience in delivering mobile app development services, has given us the opportunity to work with brands  on key <br />industry issues and build efficient industry through smart apps.</p>
+</div>
+</div>
 
-     
 
+</div>
+
+
+
+
+
+
+
+
+
+{/* last... */}
     </div>
 
    

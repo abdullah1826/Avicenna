@@ -1,6 +1,7 @@
 
 import Mainpage from './Component/Mainpage'
-import "./app.css"
+import './app.css';
+
 function App() {
 
   return (

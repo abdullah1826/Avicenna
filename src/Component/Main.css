@@ -4,7 +4,7 @@
     padding: 0;
 }
 
-.Container{
+.Containerr{
     width: 100%;
     display: flex;
     justify-content: center;
@@ -35,3 +35,40 @@
 .hvr:hover{
     color: aquamarine;
 }
+
+
+
+
+.testimonials-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.testimonials {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+}
+
+.testimonials::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
+}
+
+.testimonial {
+    min-width: 200px;
+    padding: 20px;
+    margin-right: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    text-align: center;
+    border-radius: 5px;
+    flex-shrink: 0;
+}
+
+button {
+    font-size: 18px;
+    padding: 5px 10px;
+}
+
+  
