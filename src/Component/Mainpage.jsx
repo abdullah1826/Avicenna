@@ -2,7 +2,7 @@ import React from 'react'
 import { useRef } from 'react';
 import './Main.css'
 
-import logo from '../image/logo.svg';
+import logo1 from '../image/logo1.svg';
 
 
 
@@ -26,7 +26,7 @@ function Mainpage() {
     <div style={{ width: '100%' }}>
         <div style={{ width: '90%', margin: '0px auto', paddingTop: "50px" }}>
             <header className='header'>
-                <img src={logo} alt="Avicenna" />
+                <img src={logo1} alt="Avicenna" />
                 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: "20px" }}>
                     <h3 style={{ color: 'white' }}>+92 3114453396</h3>
                     <button style={{
