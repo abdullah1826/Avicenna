@@ -1,14 +1,33 @@
-.grid-containerr {
-    display: grid; /* Enable grid layout */
-    grid-template-columns: repeat(2, 1fr); /* Create two equal columns */
-    gap: 20px; /* Optional: space between items */
- width:40%;
- 
+@media (max-width: 970px) {
+   
+    
+    .phone-image-container{
+        width: 100%;
+
+    }
+   .phone-image-container img{
+
+    height: 700px;
+   }
+
 }
 
-
-
-.grid-itemm {
-    position: relative;
-
+body {
+    margin: 0;
+    padding: 0;
 }
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns, each taking equal space */
+    gap: 10px; /* Space between images */
+    max-width: 100%; /* Ensures it takes the full width of the parent */
+    padding: 10px; /* Optional padding around the grid */
+}
+
+.image-grid img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Prevent images from exceeding their container */
+}
+
