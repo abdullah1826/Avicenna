@@ -9,7 +9,7 @@ function App() {
   
 <div>
 
-  <Mainpage/>
+ <Mainpage/>
 </div>
 
   )

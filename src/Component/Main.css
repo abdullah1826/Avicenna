@@ -3,17 +3,17 @@
     margin: 0;
     padding: 0;
 }
-
-.Containerr{
+.Containerr {
     width: 100%;
     display: flex;
     justify-content: center;
-    /* align-items: center; */
-    background-image: url('../image/bg.png'); 
-    background-size: cover;
-    background-position: center; 
-    height: 100vh; 
-}
+    flex-direction: column;  /* Stack items vertically */
+    background-image: url('../image/bg.png');
+   /* background-position: center; */
+   background-repeat: no-repeat;
+ background-size: contain;
+    height: 100vh; /* Ensure it takes the full viewport height */
+  }
 /* .bg{
     background-image: url('../image/bg.png'); 
     background-size: cover;

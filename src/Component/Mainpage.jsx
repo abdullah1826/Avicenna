@@ -7,7 +7,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Doneprojects from './Doneprojects';
 import ArrayFun from './ArrayFun';
 import ChooseUs from './ChooseUs';
-import Technology from './Technology';
+import Tech_we_use from './Tech_we_use';
+import BLogs from './BLogs';
   
   
 
@@ -23,7 +24,7 @@ function Mainpage() {
         <>
 
     
-<div className='Containerr'>
+<div className='Containerr'style={{height:'100%', }}>
     <div style={{ width: '100%' }}>
         <div style={{ width: '90%', margin: '0px auto', paddingTop: "50px" }}>
             <header className='header'>
@@ -36,6 +37,9 @@ function Mainpage() {
                 </div>
             </header>
         </div>
+
+
+
 
         <nav style={{
            marginTop: "70px",
@@ -92,9 +96,9 @@ function Mainpage() {
       </div>
 
 
-<div style={{background:'rgb(9, 14, 23)'}}>
+
 <Info/>
-</div>
+
 
  
  
@@ -104,7 +108,7 @@ function Mainpage() {
 <div className='best-in-app'>
 <h2 style={{color:'white',fontSize:"50px",paddingTop:"55px",fontWeight:700}} >We Develop Great  <span style={{color:'rgb(58, 242, 181)'}}>Mobile apps </span> <br /> For Great <span style={{color:'rgb(58, 242, 181)'}}>Brands</span> </h2>
 <br />
-<p style={{color:'white',fontSize:"20px",width:"74%",wordSpacing:"1px",letterSpacing:'0'}}>For the past decade we have been creating high performance, feature-packed mobile applications for iOS & Android. As an expert in mobile application development services, Folio3 can create the right app that will meet all your business and industry needs.</p>
+<p style={{color:'white',fontSize:"20px",width:"74%",wordSpacing:"1px",letterSpacing:'0',fontWeight:100}}>For the past decade we have been creating high performance, feature-packed mobile applications for iOS & Android. As an expert in mobile application development services, Folio3 can create the right app that will meet all your business and industry needs.</p>
 <br />
 
 </div>
@@ -127,16 +131,12 @@ function Mainpage() {
 
 <ArrayFun/>
 <ChooseUs/>
-<Technology/>
+<Tech_we_use/>
+<BLogs/>
 
 
 
 </div>
-
-
-
-
-
 
 
 

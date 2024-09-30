@@ -1,0 +1,39 @@
+.cardd {
+    width: 60%; /* Ensure each card takes up to 45% of the container */
+    background: linear-gradient(to right, rgb(32, 35, 42), rgb(47, 49, 56));
+    border: 2px solid rgb(101, 102, 105);
+    overflow: hidden;
+    position: relative;
+    border-radius: 34px;
+    margin-bottom: 200px;
+    margin-top: 60px; /* Add space between rows */
+}
+
+.cardd-image {
+    border: none;
+    width: 100%;
+
+    top:0;
+}
+
+.cardd-content {
+    width: 95%;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.cardd-title {
+    margin: 0;
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    width:70%;
+}
+
+.cardd-description {
+    margin: 10px 0;
+    color: white;
+    font-weight: 100;
+}
+
+/* If you have a button class, you can keep or modify it here */

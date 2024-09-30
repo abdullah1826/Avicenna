@@ -1,0 +1,41 @@
+.cards-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow the cards to wrap to the next row on smaller screens */
+    justify-content: space-between;
+    gap: 10px; /* Reduced gap to minimize spacing between cards */
+    margin-top: 60px;
+  }
+  
+  .card {
+    position: relative; /* Required for positioning the pseudo-element */
+    flex: 0 0 300px; /* Fixed width for each card */
+    background-color: white;
+    border-radius: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden; /* Ensure content doesn't overflow */
+    margin-bottom: 20px; /* Add margin at the bottom to control spacing when cards wrap */
+  }
+  
+  .card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+  }
+  
+  .card button {
+    padding: 10px 25px;
+    background-color: transparent;
+    color: rgb(202, 202, 202);
+    border: 1px solid rgb(100, 101, 104);
+    border-radius: 23px;
+    cursor: pointer;
+    margin-bottom: 30px;
+  }
+  
+  /* Media Queries for Responsiveness */
+
+  

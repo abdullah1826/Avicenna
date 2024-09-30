@@ -62,19 +62,20 @@ function ChooseUs() {
     {/* iPhone Image */}
     <div className="iphone-image-container" style={{ 
         marginLeft: '20px', 
-        width: "50%", // Set a fixed width for the iPhone image container
-        maxWidth: '100%', // Ensure it doesn't exceed the parent container
-        height: 'auto', // Ensure height adjusts
-        boxSizing: 'border-box', // Include padding/border in width calculation
+        width: "50%",
+        maxWidth: '100%', 
+        height: 'auto', 
+        boxSizing: 'border-box', 
     }}> 
         <img 
             src={iphone} 
             alt="iPhone" 
             className="iphone-image"
             style={{ 
-                width: '100%', // Make the iPhone image responsive
-                height: 'auto', // Ensure height adjusts to maintain aspect ratio
-                 // Set a maximum height to prevent excessive shrinking
+                width: '100%',
+                height: 'auto',
+                paddingTop:"40px"
+              
             }} 
         />
     </div>  

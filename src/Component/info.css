@@ -1,0 +1,71 @@
+/* Global styles */
+.information {
+    border: 1px solid rgb(101, 102, 104);
+    height: 180px;
+    border-radius: 20px;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .information h1{
+    font-size: 65px;
+  }
+  .information p{
+    font-size: 15px;
+  }
+  
+  /* Responsive typography and layout */
+  @media (max-width: 1200px) {
+    .information h1 {
+      font-size: 65px;
+    }
+    .information p {
+      font-size: 15px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .information h1 {
+      font-size: 45px;
+    }
+    .information p {
+      font-size: 12px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .information h1 {
+      font-size: 40px;
+    }
+    .information p {
+      font-size: 11px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .information {
+      height: auto;
+      padding: 10px;
+    }
+    .information h1 {
+      font-size: 35px;
+    }
+    .information p {
+      font-size: 10px;
+    }
+    .h1 {
+      width: 100%;
+    }
+  }
+  
+  /* Flexbox wrapping for smaller screens */
+  @media (max-width: 400px) {
+    .information h1 {
+      font-size: 30px;
+    }
+    .information p {
+      font-size: 9px;
+    }
+  }
+  
