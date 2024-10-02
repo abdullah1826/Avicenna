@@ -1,14 +1,14 @@
 import React from 'react';
-import car from '../image/car.svg';
-import carry from '../image/carry.svg';
-import doc from '../image/doc.svg';
-import trolly from '../image/trolly.svg';
-import tract from '../image/tract.svg';
-import hat from '../image/hat.svg';
-import fact from '../image/fact.svg';
-import mdcn from '../image/mdcn.svg';
-import nfc from '../image/nfc.svg';
-
+import car from '../image/car.png';
+import carry from '../image/carry.png';
+import doc from '../image/doc.png';
+import trolly from '../image/trolly.png';
+import tract from '../image/tract.png';
+import hat from '../image/hat.png';
+import fact from '../image/fact.png';
+import mdcn from '../image/mdcn.png';
+import nfc from '../image/nfc.png';
+import './arrayfun.css';
 const gridStyle = {
   display: 'grid',
   margin: '0px auto',
@@ -38,8 +38,10 @@ const imgStyle = {
   alignSelf: 'flex-end',
   position: 'absolute',
   bottom: '-5px',
-  left: '0px', // Align image to the bottom
+  left: '0px',
+  objectFit:'contain'
 };
+
 
 const headingStyle = {
   color: 'white',
@@ -63,10 +65,10 @@ const arr = [
 function ArrayFun() {
   return (
     // ..........Cards........
-    <div>
-      <div style={gridStyle}>
+    <div id='services'>
+      <div className='gridst' style={gridStyle}>
         {arr.map((item, index) => (
-          <div key={index} style={cardStyle}>
+          <div className='crdstyle' key={index} style={cardStyle}>
             <h3 style={headingStyle}>{item.head}</h3>
             <div>
               <img style={imgStyle} src={item.imageUrl} alt={item.head} /> 
@@ -76,19 +78,19 @@ function ArrayFun() {
        
       </div>
     {/* ........ NFC.......... */}
-      <div style={{width:"90%",margin:"0px auto",marginTop:"40px",display:"flex",borderRadius:"25px",justifyContent:'center',alignItems:"center",
+      <div  style={{width:"90%",margin:"0px auto",marginTop:"40px",display:"flex",borderRadius:"25px",justifyContent:'center',alignItems:"center",
        background: 'linear-gradient(90.28deg, rgba(98, 98, 98, 0.25) 0%, rgba(168, 168, 168, 0.25) 100%)',
   border: '2px solid rgb(100, 101, 105)',
   }} className='nfc'>
-      <div style={{marginLeft:50,marginTop:"40px"}}>
+      <div className='nfc-l' style={{marginLeft:50,marginTop:"40px"}}>
       <h1 style={{color:'white',fontWeight:800}}>
   NFC
 </h1>
-<p style={{width:"70%",color:'white',lineHeight:1.5,margin:"0px",fontWeight:100}}>Our extensive experience in delivering mobile app development services, has given us the opportunity to work with brands on key industry issues and build efficient industry through smart apps.</p>
+<p className='my-p' style={{width:"70%",color:'white',lineHeight:1.5,margin:"0px",fontWeight:100}}>Our extensive experience in delivering mobile app development services, has given us the opportunity to work with brands on key industry issues and build efficient industry through smart apps.</p>
       
       </div>
       <div>
-        <img src={nfc} alt="nfc" />
+        <img style={{width:'350px'}} src={nfc} alt="nfc" />
       </div>
   </div>
     </div>

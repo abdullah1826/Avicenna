@@ -1,5 +1,3 @@
-
-/* styles.css */
 .talk-btn {
     background-color: rgb(58, 237, 178);
     width: 180px;
@@ -9,13 +7,59 @@
     border: none;
     font-size: 20px;
     cursor: pointer;
+    font-weight: 900;
     transition: background-color 0.3s;
-    font-weight:550; /* Smooth transition */
+    color: black;
+    font-weight: 550; /* Smooth transition */
 }
 
 .talk-btn:hover {
-    background-color:transparent;
-    border :1px solid rgb(58, 237, 178);
+    background-color: transparent;
+    border: 1px solid rgb(58, 237, 178);
     color: rgb(58, 237, 178);
-  
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .best-in-app h2 {
+        font-size: 30px !important; /* Adjust heading size for tablets */
+    }
+
+    .best-in-app p {
+        font-size: 20px !important ; /* Adjust paragraph size for tablets */
+    }
+
+    .talk-btn {
+        width: 130px !important; /* Adjust button width for tablets */
+        height: 50px !important; /* Adjust button height for tablets */
+        font-size: 15px !important; /* Adjust button font size for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .best-in-app{
+        padding-top: 20px !important;
+    }
+    .best-in-app h2 {
+        font-size: 20px !important; 
+       
+        margin-top:10px !important;
+    }
+
+    .best-in-app p {
+        font-size: 15px !important;
+        padding: 0px !important; /* Adjust paragraph size for mobile */
+        line-height: 16px;
+    }
+
+    .talk-btn {
+        width: 130px; /* Adjust button width for mobile */
+        height: 50px; /* Adjust button height for mobile */
+        font-size: 16px;
+        margin-top: 30px; /* Adjust button font size for mobile */
+    }
+
+    section {
+      margin: 15px !important; /* Add padding to section for mobile */
+    }
 }

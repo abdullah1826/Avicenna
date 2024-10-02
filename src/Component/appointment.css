@@ -1,0 +1,91 @@
+.b-g{
+    background-image: url('../image/secbg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+  .appointment-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .appointment-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 250px;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  }
+  
+  .appointment-header {
+    flex: 1; /* Allow the header to take up remaining space */
+  }
+  
+  .appointment-title {
+    color: black;
+    font-size: 3vw; /* Responsive font size */
+    font-weight: 900;
+  }
+  
+  .highlighted-text {
+    color: white;
+  }
+  
+  .start-button {
+    background: black;
+    color: white;
+  width: 300px;
+  height: 90px;
+  font-size:30px;
+  border-radius: 14px;
+  border: none;
+  }
+  
+  @media (max-width: 768px) {
+    .appointment-title {
+      font-size: 5vw; /* Adjust title font size for smaller screens */
+    }
+    .start-button {
+      background: black;
+      color: white;
+    width: 150px;
+    height: 70px;
+    font-size:16px;
+    border-radius: 14px;
+    border: none;
+    }
+    .b-g{
+      height: 200px !important;
+      align-items: center !important;
+      display: flex;
+    }
+    .appointment-title {
+      font-size:4vw; /* Further adjust title font size for very small screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .b-g{
+      height: 150px !important;
+      align-items: center !important;
+      display: flex;
+    }
+    .appointment-title {
+      font-size:5vw; /* Further adjust title font size for very small screens */
+    }
+    .start-button {
+        background: black;
+        color: white;
+      width: 100px;
+      height: 50px;
+      font-size:10px;
+      border-radius: 14px;
+      border: none;
+      }
+  
+   
+  }
+  

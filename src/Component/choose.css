@@ -15,3 +15,56 @@
     max-width: 100%; /* Prevent images from exceeding their container */
 }
 
+
+
+@media (max-width: 768px) {
+   
+.main h2{
+    font-size: 30px !important;
+
+}
+
+.main p {
+font-size: 14px !important;
+}
+.main-data{
+    margin-top: 10px !important;
+}
+}
+
+@media (max-width: 480px) {
+   
+
+.main h2{
+    font-size: 20px !important;
+
+}
+
+.main p {
+font-size: 14px !important;
+width: 90% !important;
+}
+.main-data{
+    margin-top: 0px !important;
+}
+.tw-img{
+    width: 130px !important;
+}
+
+
+.iphone-image-container{
+    width: 45% !important;
+   
+
+}
+.iphone-image{
+    height: 240px !important;
+    padding-top: 10px !important;
+    
+    
+
+}
+.image-grid{
+    width: 55% !important;
+}
+}

@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap; /* Allow the cards to wrap to the next row on smaller screens */
     justify-content: space-between;
-    gap: 10px; /* Reduced gap to minimize spacing between cards */
+    gap: 30px; /* Reduced gap to minimize spacing between cards */
     margin-top: 60px;
   }
   
@@ -39,3 +39,83 @@
   /* Media Queries for Responsiveness */
 
   
+
+  @media (max-width: 768px) {
+   
+   .tech-main h2{
+    font-size: 30px !important;
+
+   }
+   .tech-main p{
+    font-size: 15px !important;
+    width: 80% !important;
+   }
+
+   .card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+  }
+  .card h3{
+    font-size: 20px !important;
+  }
+  .card p{
+    font-size:12px !important;
+  }
+  .card button {
+    padding: 7px 20px;
+    background-color: transparent;
+    color: rgb(202, 202, 202);
+    border: 1px solid rgb(100, 101, 104);
+    border-radius: 23px;
+    cursor: pointer;
+    margin-bottom: 30px;
+  }
+
+    }
+  @media (max-width: 480px) {
+   
+    .cards-container{
+      margin-top: 30px !important;
+    }
+   .tech-main h2{
+    font-size: 20px !important;
+    padding-top: 40px !important;
+
+   }
+   .tech-main{
+    padding-top: 0px !important;
+   }
+   .tech-main p{
+    font-size: 15px !important;
+    width: 80% !important;
+  
+   }
+
+   .card{
+    margin: 0px auto !important;
+   
+    flex: 0 0 100% !important; 
+   }
+   .card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+  }
+  .card h3{
+    font-size: 20px !important;
+  }
+  .card p{
+    font-size:12px !important;
+  }
+  .card button {
+    padding: 7px 20px;
+    background-color: transparent;
+    color: rgb(202, 202, 202);
+    border: 1px solid rgb(100, 101, 104);
+    border-radius: 23px;
+    cursor: pointer;
+    margin-bottom: 30px;
+  }
+
+    }

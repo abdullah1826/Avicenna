@@ -1,9 +1,9 @@
 import React from 'react';
 import "./tech.css";
-import card1 from "../image/card1.svg";
-import card2 from "../image/card2.svg";
-import car3 from "../image/car3.svg";
-import card4 from "../image/card4.svg";
+import card1 from "../image/card1.png";
+import card2 from "../image/card2.png";
+import car3 from "../image/car3.png";
+import card4 from "../image/card4.png";
 
 function Tech_we_use() {
 
@@ -39,20 +39,20 @@ function Tech_we_use() {
   ];
   
   return (
-    <div style={{ marginTop: "100px", width: "90%", margin: "0px auto" }}>
+    <div className='tech-main' style={{ paddingTop: "160px", width: "90%", margin: "0px auto" }}>
       <div>
-        <h1 style={{ fontSize: "55px", fontWeight: 900, color: 'rgb(58, 237, 178)' }}>
+        <h2 style={{ fontSize: "55px", fontWeight: 900, color: 'rgb(58, 237, 178)' }}>
           Technologies <span style={{ color: 'white' }}>We Used to Build <br />Great</span> Mobile Applications
-        </h1>
-        <h5 style={{ color: 'white', fontSize: "20px", width: "70%", wordSpacing: "1px", letterSpacing: '0', fontWeight: 100 }}>
+        </h2>
+        <p style={{ color: 'white', fontSize: "20px", width: "70%" , letterSpacing: '0', fontWeight: 100 }}>
           For the past decade we have been creating high performance, feature-packed mobile applications for iOS & Android. As an expert in mobile application development services
-        </h5>
+        </p>
       </div>
 
       <div className="cards-container">
         {card.map((item, index) => (
           <div key={index} className="card" style={{ background: item.bg,border: `2px solid ${item.border}` }}>
-            <img style={{marginTop:"20px"}} src={item.imageUrl} alt={item.heading} />
+            <img style={{marginTop:"20px",width:'70px',height:'70px'}} src={item.imageUrl} alt={item.heading} />
             <h3 style={{color:"white"}}>{item.heading}</h3>
             <p style={{color:'white',fontSize:"12px",fontWeight:100,width:"90%"}}>{item.para}</p>
             <button>See More</button>

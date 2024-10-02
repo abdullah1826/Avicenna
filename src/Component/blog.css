@@ -1,19 +1,25 @@
+.cardd-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the cards horizontally */
+    align-items: center; /* Center the cards vertically if needed */
+    gap: 20px; /* Add space between the cards */
+}
+
 .cardd {
-    width: 60%; /* Ensure each card takes up to 45% of the container */
     background: linear-gradient(to right, rgb(32, 35, 42), rgb(47, 49, 56));
     border: 2px solid rgb(101, 102, 105);
     overflow: hidden;
     position: relative;
     border-radius: 34px;
-    margin-bottom: 200px;
-    margin-top: 60px; /* Add space between rows */
+    width: 30%; /* Set a default width for the cards */
+    margin-top: 60px;
 }
 
 .cardd-image {
-    border: none;
     width: 100%;
-
-    top:0;
+    height: auto;
+    top: 0;
 }
 
 .cardd-content {
@@ -27,7 +33,7 @@
     color: white;
     font-size: 30px;
     font-weight: 600;
-    width:70%;
+    width: 70%;
 }
 
 .cardd-description {
@@ -36,4 +42,19 @@
     font-weight: 100;
 }
 
-/* If you have a button class, you can keep or modify it here */
+
+
+
+@media (max-width: 768px) {
+.blog-main h2{
+font-size: 30px !important;
+}
+.blog-main p{
+font-size: 15px !important;
+}
+.blog-sec{
+    margin: 0px !important;
+}
+
+
+}

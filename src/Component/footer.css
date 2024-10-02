@@ -1,0 +1,138 @@
+/* General footer styles */
+footer {
+    margin-top: 90px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    width: 80%;
+    margin: 0px auto;
+}
+
+.main-img{
+    width: 250px;
+}
+.footer-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+h4 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin: 5px 0;
+}
+
+.main-div {
+    width: 80%;
+    margin: 0px auto;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+hr {
+    opacity: 1;
+}
+
+/* Responsive styles for 768px screen */
+@media (max-width: 768px) {
+    footer {
+      
+        width: 100%;
+    }
+
+    .footer-row {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    
+    .main-div {
+       width: 90% !important;
+    
+    }
+    .main-div img{
+        width: 140px;
+    }
+
+    .main-div p{
+        font-size: 12px !important;
+        padding-top: 10px !important;
+    }
+    .flo-icon h1{
+        font-size: 20px !important;
+
+    }
+
+    .flo-icon img{
+        width: 40px !important;
+    }
+
+    .copy{
+        width: 90% !important;
+    }
+
+   
+}
+@media (max-width: 480px) {
+    footer {
+      
+        width: 100%;
+    }
+
+    .footer-row {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    .footer-row h4{
+        font-size: 17px !important;
+    }
+    .footer-row li{
+        font-size: 11px !important;
+        line-height: 20px !important;
+    }
+    .main-div {
+       width: 90% !important;
+    
+    }
+    .main-div .main-img{
+        width: 110px !important;
+    }
+
+    .main-div p{
+        font-size: 10px !important;
+        padding-top: 10px !important;
+        width: 90% !important;
+    }
+    .main-div h1{
+        font-size: 17px !important;
+
+    }
+
+    .main-div .icon-img{
+        width: 30px !important;
+    }
+
+    .copy{
+        width: 90% !important;
+    }
+
+      .copy p{
+        font-size: 13px !important;
+    }
+ 
+   
+}

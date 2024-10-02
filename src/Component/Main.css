@@ -4,25 +4,25 @@
     padding: 0;
 }
 .Containerr {
-    width: 100%;
+  
     display: flex;
     justify-content: center;
     flex-direction: column;  /* Stack items vertically */
-    background-image: url('../image/bg.png');
+   
    /* background-position: center; */
    background-repeat: no-repeat;
  background-size: contain;
-    height: 100vh; /* Ensure it takes the full viewport height */
+    
   }
-/* .bg{
-    background-image: url('../image/bg.png'); 
-    background-size: cover;
-    background-position: center; 
-    height: 100vh; 
- 
-   
 
-} */
+  .Hero{
+    background-image: url('../image/bg.png');
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    z-index: 10;
+  }
 .header{
     display: flex;
     justify-content: space-between;
@@ -31,12 +31,6 @@
 
   
 }
-
-.hvr:hover{
-    color: aquamarine;
-}
-
-
 
 
 .testimonials-container {
@@ -90,5 +84,126 @@ button {
     font-weight: 600;
 }
 
+.header img{
+    width: 240px;
+}
 
 
+@media (max-width: 768px) {
+    .header h3{
+       display: none;
+
+    }
+    .header img{
+        width: 150px;
+    }
+    .header button{
+        width: 150px;
+        height: 50px;
+        font-size: 15px;
+    }
+nav{
+    width: 100%;
+
+}
+   
+  .hvr{
+    font-size: 16px;
+
+ }
+ nav ul{
+    width: 100%;
+ }
+
+ .crausal{
+    height: 150px !important;
+
+ }
+ 
+ .my-img{
+    width: 100px !important;
+ }
+ .next{
+    margin-left: 0px !important;
+ }
+
+.indust h2{
+    font-size: 30px !important;
+}
+.indust p{
+    font-size: 15px !important;
+}
+
+
+
+  }
+
+
+  
+  @media (max-width: 480px) {
+  
+
+    .Hero{
+height: 100% !important;
+    }
+    .header h3{
+        font-size: 12px;
+
+    }
+    .header img{
+        width: 120px;
+    }
+    .header button{
+        width: 120px;
+        height: 40px;
+        font-size: 10px;
+    }
+
+nav{
+    display: none;
+}
+
+.mey{
+    display: 'block';
+}
+   
+ .b-f{
+    flex-direction: column !important;
+    gap: 0px !important;;
+ }
+
+
+ .crausal{
+    height: 100px !important;
+
+ }
+ .next{
+    margin-left: 0px !important;
+    font-size: 20px !important;
+ }
+ .prev{
+    font-size: 20px !important;
+ }
+ .my-img{
+    width: 25% !important;
+ }
+ .header-wrap{
+    padding-top:20px !important;
+ }
+
+
+ .indust h2{
+    font-size: 20px !important;
+}
+.indust p{
+    font-size: 15px !important;
+}
+
+.indust{
+    margin-top: 30px !important
+}
+
+    }
+
+
+      

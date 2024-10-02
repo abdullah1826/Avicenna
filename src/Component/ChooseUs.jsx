@@ -1,12 +1,12 @@
 import React from 'react'
 import "./choose.css"
-import custom from "../image/custom.svg"
-import setting from "../image/setting.svg"
-import dev from "../image/dev.svg"
-import pricing from "../image/pricing.svg"
-import sols from "../image/sols.svg"
-import iphone from "../image/iphone.svg"
-import ts from "../image/ts.svg"
+import custom from "../image/custom.png"
+import setting from "../image/setting.png"
+import dev from "../image/dev.png"
+import pricing from "../image/pricing.png"
+import sols from "../image/sols.png"
+import iphone from "../image/iphone.png"
+import ts from "../image/ts.png"
 function ChooseUs() {
     
     const arr=[
@@ -23,16 +23,15 @@ function ChooseUs() {
     <div style={{ display: 'flex', width: '100%', }}>
     <div className='main' style={{ width: "90%", margin: '0px auto', color: "white", marginTop: "90px", display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
         
-        <div >
             <h2 style={{ fontSize: "55px", fontWeight: 900 }}>
                 Why <span style={{ color: 'rgb(58, 237, 178)' }}>Choose Us? </span>
             </h2>
-            <h5 style={{ color: 'white', fontSize: "20px", width: "100%", wordSpacing: "1px", letterSpacing: '0', fontWeight: 100 }}>
+            <p style={{ color: 'white', fontSize: "20px", width: "100%",  letterSpacing: '0', fontWeight: 100 }}>
                 We ensure high-performance delivery and deployment of our iOS applications to ensure the highest ROI. <br /> Our comprehensive iOS app development services offer:
-            </h5>
+            </p>
            
-        </div>
-        <div style={{ 
+       
+        <div className='main-data' style={{ 
     display: 'flex', 
     marginTop: "40px", 
     position: 'relative', 
@@ -44,10 +43,11 @@ function ChooseUs() {
         display: 'grid', 
         gridTemplateColumns: 'repeat(2, 1fr)', // Two images per row
         gap: '10px', // Space between images
-        width: '50%', // Adjust this as needed to fit your layout
+        width: '50%',
+        alignItems:'end' // Adjust this as needed to fit your layout
     }}>
         {arr.map((item, index) => (
-            <img 
+            <img  className='tw-img'
                 key={index} 
                 src={item.image} 
                 alt="images" 

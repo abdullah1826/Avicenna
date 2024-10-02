@@ -6,8 +6,7 @@ import we from "../image/we.svg";
 import only from "../image/only.svg";
 import { Row, Col, Container } from "react-bootstrap"; 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { GrNext } from "react-icons/gr";
-import { GrPrevious } from "react-icons/gr";
+import { GrNext, GrPrevious } from "react-icons/gr";
 
 const testimonials = [
     kmeti,
@@ -20,7 +19,7 @@ const testimonials = [
 
 function Doneprojects() {
     const scrollRef = useRef(null);
-    const [currentIndex, setCurrentIndex] = useState(1); // Start from 1 to show the first image after the cloned one
+    const [currentIndex, setCurrentIndex] = useState(1);
 
     const scrollLeft = () => {
         if (currentIndex === 1) {
@@ -41,7 +40,6 @@ function Doneprojects() {
             scrollRef.current.scrollBy({ left: 150, behavior: "smooth" });
         }
     };
-
     return (
         <div >
             <div style={{
@@ -67,7 +65,8 @@ function Doneprojects() {
 
                     <Row className="align-items-center" style={{ width: '100%' }}>
                         <Col xs={1}>
-                            <GrPrevious 
+                            <GrPrevious  
+                            className='prev'
                                 style={{ 
                                     outline: "none", 
                                     border: "none", 
@@ -93,7 +92,7 @@ function Doneprojects() {
                                 ref={scrollRef}
                             >
                                 {testimonials.map((testimonial, index) => (
-                                    <img 
+                                    <img className='my-img' 
                                         key={index} 
                                         style={{ width: "200px" }} 
                                         src={testimonial} 
@@ -103,7 +102,8 @@ function Doneprojects() {
                             </div>
                         </Col>
                         <Col xs={1}>
-                            <GrNext 
+                            <GrNext  
+                            className='next'
                                 style={{ 
                                     outline: "none", 
                                     border: "none", 

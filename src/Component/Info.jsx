@@ -5,12 +5,13 @@ function Info() {
   return (
     <section style={{ margin: '0px auto', width: '90%' ,paddingTop:"70px"}}>
       <div className="information">
-        <div style={{
+        <div className='myclass' style={{
           paddingTop: '20px',
+          height:'300px',
           color: 'white',
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'center',
+          justifyContent: 'space-between',
           flexWrap: 'wrap',  // Wrap for small screens
         }}>
           <div className="h1" style={{ width: '24%', textAlign: 'center' }}>

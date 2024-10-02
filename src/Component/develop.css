@@ -1,0 +1,26 @@
+@media (max-width: 768px) {
+    .best-in-app h2{
+        padding-top: 0px !important;
+        font-size: 30px !important;
+    }
+    .best-in-app p{
+        font-size: 15px !important;
+    }
+}
+@media (max-width: 480px) {
+    .best-in-app h2{
+        padding-top: 0px !important;
+        font-size: 20px !important;
+    }
+    .best-in-app p{
+        font-size: 15px !important;
+        width: 100% !important;
+        margin-top: 0px !important;
+    }
+    .marg{
+        padding-top: 0px !important;
+    }
+}
+
+
+
