@@ -47,7 +47,7 @@ function Mainpage() {
       <div>
       <Talktous/>
       </div>
-<br /><br />
+
 
 
 <Info/>

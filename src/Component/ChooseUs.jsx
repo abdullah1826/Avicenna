@@ -37,6 +37,7 @@ function ChooseUs() {
     position: 'relative', 
     flexWrap: 'nowrap', // Prevent wrapping of flex items
     alignItems: 'flex-start',
+    justifyContent:"space-between"
 }}>
     {/* Grid Container */}
     <div className="image-grid" style={{ 

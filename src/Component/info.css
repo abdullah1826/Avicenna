@@ -54,8 +54,11 @@
   align-items: stretch;
   margin-top: 10px;
 }
-
-}
 section{
-  padding-top: 0px !important;
+  padding-top: 40px !important;
+}
+
+.marg{
+  padding-top: 100px !important;
+}
 }

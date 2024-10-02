@@ -20,6 +20,10 @@
     .marg{
         padding-top: 0px !important;
     }
+    .marg section{
+        margin-top: 0px !important;
+        padding-top: 0px !important;
+    }
 }
 
 

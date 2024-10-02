@@ -100,20 +100,7 @@ function Blog() {
           <div style={cardContentStyle}>
             <h2 style={cardTitleStyle}>10 Best Ecommerce Hosting Services for 2024</h2>
             <p style={cardDescriptionStyle}>25 July 2024</p>
-            <div style={{
-              position: 'absolute',
-              right: '40px',
-              bottom: '30px',
-              background: 'transparent',
-              color: 'white',
-              borderRadius: '100%',
-              height: '60px',
-              width: '60px',
-              border: '2px solid grey',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}>
+            <div className='butn' >
               <MdArrowOutward style={{ fontSize: '40px' }} />
             </div>
           </div>
@@ -126,20 +113,7 @@ function Blog() {
             <div style={cardContentStyle}>
               <h2 style={{ ...cardTitleStyle, fontSize: "17px" }}>10 Best Ecommerce Hosting Services for 2024</h2>
               <p style={cardDescriptionStyle}>25 July 2024</p>
-              <div style={{
-                position: 'absolute',
-                right: '40px',
-                bottom: '30px',
-                background: 'transparent',
-                color: 'white',
-                borderRadius: '100%',
-                height: '45px',
-                width: '45px',
-                border: '2px solid grey',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}>
+              <div className='butn1'>
                 <MdArrowOutward style={{ fontSize: '25px' }} />
               </div>
             </div>
@@ -150,20 +124,7 @@ function Blog() {
             <div style={cardContentStyle}>
               <h2 style={{ ...cardTitleStyle, fontSize: "17px" }}>10 Best Ecommerce Hosting Services for 2024</h2>
               <p style={cardDescriptionStyle}>25 July 2024</p>
-              <div style={{
-                position: 'absolute',
-                right: '40px',
-                bottom: '30px',
-                background: 'transparent',
-                color: 'white',
-                borderRadius: '100%',
-                height: '45px',
-                width: '45px',
-                border: '2px solid grey',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}>
+              <div className='butn1'>
                 <MdArrowOutward style={{ fontSize: '25px' }} />
               </div>
             </div>

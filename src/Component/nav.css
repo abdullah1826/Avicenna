@@ -5,9 +5,29 @@
     font-weight: 100;
 }
 
-.hvr:hover {
-    color: aquamarine;
-}
+.dot {
+    display: inline-block;
+    width: 8px; /* Adjust size as needed */
+    height: 8px; /* Adjust size as needed */
+    border-radius: 50%;
+    background-color: transparent; /* Default color */
+    margin-right: 8px; /* Space between dot and text */
+    vertical-align: middle; /* Align dot vertically with text */
+  }
+  
+  .dot.active {
+    background-color: rgb(58, 242, 181) ; /* Color for active link */
+  }
+  
+  .active {
+    color: rgb(58, 242, 181);
+    text-decoration: none;
+  }
+  
+  ul li {
+    position: relative; /* For positioning the dot */
+  }
+  
 
 nav {
     margin-top: 70px;
@@ -22,6 +42,9 @@ nav {
     justify-content: center;
     align-items: center;
 }
+
+
+
 
 @media (max-width: 768px) {
     nav {
@@ -43,8 +66,12 @@ nav {
     }
 
     .drawer-toggle {
+        position: absolute !important;
+        font-size: 70px !important;
        color: aliceblue;
        margin-left: 15px;
+      right: 0;
+      top:-15px;
    
     }
 }

@@ -81,6 +81,7 @@
    .tech-main h2{
     font-size: 20px !important;
     padding-top: 40px !important;
+    
 
    }
    .tech-main{
@@ -88,7 +89,8 @@
    }
    .tech-main p{
     font-size: 15px !important;
-    width: 80% !important;
+    width: 100% !important;
+
   
    }
 

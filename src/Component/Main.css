@@ -151,12 +151,21 @@ height: 100% !important;
 
     }
     .header img{
-        width: 120px;
+        width: 145px;
+     
+     
     }
     .header button{
         width: 120px;
         height: 40px;
         font-size: 10px;
+        position: absolute;
+        right: 0;
+        top: 20px;
+        margin-right: 20px;
+        display: none;
+     
+        
     }
 
 nav{

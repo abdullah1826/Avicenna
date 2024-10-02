@@ -3,7 +3,7 @@ import "./develop.css"
 function Develop() {
   return (
     <div className='marg' style={{paddingTop:'240px'}}>
-        <section style={{width:"90%",margin:'0px auto',}}>
+        <section  style={{width:"90%",margin:'0px auto',}}>
 
 <div className='best-in-app'>
 <h2 style={{color:'white',fontSize:"50px",paddingTop:"55px",fontWeight:700}} >We Develop Great  <span style={{color:'rgb(58, 242, 181)'}}>Mobile apps </span> <br /> For Great <span style={{color:'rgb(58, 242, 181)'}}>Brands</span> </h2>
