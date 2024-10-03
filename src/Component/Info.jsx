@@ -3,7 +3,7 @@ import './info.css';
 
 function Info() {
   return (
-    <section style={{ margin: '0px auto', width: '90%' ,paddingTop:"70px"}}>
+    <section style={{ margin: '0px auto', width: '90%' ,paddingTop:"70px",backgroundColor:'rgb(16, 20, 24)'}}>
       <div className="information">
         <div className='myclass' style={{
           paddingTop: '20px',

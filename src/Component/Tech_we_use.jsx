@@ -39,7 +39,7 @@ function Tech_we_use() {
   ];
   
   return (
-    <div className='tech-main' style={{ paddingTop: "160px", width: "90%", margin: "0px auto" }}>
+    <div className='tech-main' style={{ paddingTop: "40px", width: "90%", margin: "0px auto" }}>
       <div>
         <h2 style={{ fontSize: "55px", fontWeight: 900, color: 'rgb(58, 237, 178)' }}>
           Technologies <span style={{ color: 'white' }}>We Used to Build <br />Great</span> Mobile Applications
