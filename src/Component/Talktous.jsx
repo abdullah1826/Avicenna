@@ -2,7 +2,7 @@ import React from 'react'
 import "./talk.css"
 function Talktous() {
   return (
-    <section style={{margin:'0px auto',width:'90%',marginTop:"70px",height:'100%'}}>
+    <section style={{margin:'0px auto',width:'90%',marginTop:"140px",height:'100%'}}>
         <div className='best-in-app'>
 <h2 style={{color:'white',fontSize:"55px",fontWeight:"900"}} >Best-in-Class <span style={{color:'rgb(58, 242, 181)'}}>App <br /> Development</span> Services</h2>
 

@@ -43,6 +43,14 @@ nav {
     align-items: center;
 }
 
+.fixed-nav {
+  position: fixed;
+  top: -300px; /* Keep it at the top */
+  width: 100%;
+  z-index: 1000;
+ 
+}
+
 
 
 
@@ -66,12 +74,21 @@ nav {
     }
 
     .drawer-toggle {
-        position: absolute !important;
-        font-size: 70px !important;
+      
+      
        color: aliceblue;
        margin-left: 15px;
-      right: 0;
-      top:-15px;
+    
+      top:-7px !important;
+      font-size: 70px !important;
+      
+      position: fixed !important;
+      right: 0px;
+      padding-top: 23px;
    
     }
+  
+
+
+
 }

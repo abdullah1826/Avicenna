@@ -41,11 +41,15 @@ font-size: 14px !important;
 }
 
 .main p {
-font-size: 14px !important;
-width: 90% !important;
-}
+    font-size: 14px !important;
+    width: 100% !important;
+    text-align: left; /* Use 'left', 'center', 'right', or 'justify' based on your needs */
+   /* Center the paragraph block horizontally if necessary */
+  }
+  
 .main-data{
     margin-top: 0px !important;
+    width: 100% !important;
 }
 .tw-img{
     width: 130px !important;
@@ -53,18 +57,25 @@ width: 90% !important;
 
 
 .iphone-image-container{
-    width: 45% !important;
+    width: 40% !important;
    
 
 }
 .iphone-image{
-    height: 240px !important;
-    padding-top: 10px !important;
-    
+    height: 270px !important;
+    padding-top: 20px !important;
+   
+
     
 
 }
 .image-grid{
-    width: 55% !important;
+    width: 60% !important;
 }
+
+.mobile-hide {
+    display: none;
+  }
 }
+
+

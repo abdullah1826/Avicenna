@@ -107,6 +107,9 @@ font-size: 15px !important;
     .blog-sec{
         padding-top: 0px !important;
     }
+    .blog-main p{
+      width: 100% !important;
+        }
 
 
 }

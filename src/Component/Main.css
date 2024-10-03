@@ -151,7 +151,8 @@ height: 100% !important;
 
     }
     .header img{
-        width: 145px;
+        width: 190px;
+        padding: 0px 15px;
      
      
     }
@@ -195,6 +196,8 @@ nav{
  }
  .my-img{
     width: 25% !important;
+  
+;
  }
  .header-wrap{
     padding-top:20px !important;
@@ -210,6 +213,14 @@ nav{
 
 .indust{
     margin-top: 30px !important
+}
+.header{
+    position: fixed;
+    background-color: #101418;
+    width: 100% !important;
+    height: 70px;
+    top: 0;
+    right: 0;
 }
 
     }

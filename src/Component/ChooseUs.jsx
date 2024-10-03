@@ -27,7 +27,7 @@ function ChooseUs() {
                 Why <span style={{ color: 'rgb(58, 237, 178)' }}>Choose Us? </span>
             </h2>
             <p style={{ color: 'white', fontSize: "20px", width: "100%",  letterSpacing: '0', fontWeight: 100 }}>
-                We ensure high-performance delivery and deployment of our iOS applications to ensure the highest ROI. <br /> Our comprehensive iOS app development services offer:
+                We ensure high-performance delivery and deployment of our iOS applications to ensure the highest ROI. <br class="mobile-hide" /> Our comprehensive iOS app development services offer:
             </p>
            
        
