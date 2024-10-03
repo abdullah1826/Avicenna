@@ -71,7 +71,7 @@ function Nav() {
             offset={-50}
             onSetActive={() => handleSetActive(text)} // Track active link
           >
-            <ListItem disablePadding onClick={toggleDrawer(false)}> {/* Close drawer on click */}
+            <ListItem disablePadding > 
               <ListItemButton style={{ color: activeLink === text ? 'rgb(58, 242, 181)' : 'inherit' }}>
                 <span className={`dot ${activeLink === text ? 'active' : ''}`} />
                 <ListItemText primary={text} />
