@@ -8,7 +8,7 @@
     font-size: 20px;
     cursor: pointer;
     font-weight: 900;
-    transition: background-color 0.3s;
+     transition: background-color 0.4s, color 0.4s;
     color: black;
     font-weight: 550; /* Smooth transition */
 }

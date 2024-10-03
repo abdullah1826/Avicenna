@@ -1,28 +1,63 @@
 .hvr {
-    margin: 0 15px;
-    cursor: pointer;
-    font-size: 24px;
-    font-weight: 100;
+  margin: 0 15px;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 100;
+  position: relative; /* Positioning context for the dot */
+  padding: 4px 0; /* Maintain size and position */
+  line-height: 1.5; /* Consistent line height */
+  text-decoration: none; /* Prevent text decoration changes */
+  transition: color 2s ease; /* Transition for text color */
 }
 
 .dot {
-    display: inline-block;
-    width: 8px; /* Adjust size as needed */
-    height: 8px; /* Adjust size as needed */
-    border-radius: 50%;
-    background-color: transparent; /* Default color */
-    margin-right: 8px; /* Space between dot and text */
-    vertical-align: middle; /* Align dot vertically with text */
-  }
+  display: inline-block;
+  position: relative;
+  top:-4px;
+    width: 8px; 
+  height: 8px; 
+  border-radius: 50%;
+  background-color: transparent; 
+  margin-right: 8px; 
+  vertical-align: middle; 
+  transition: background-color 1s ease; 
+  visibility: hidden;
+}
+
+.hvr:hover .dot {
+  visibility: visible;
+  background-color: rgb(58, 242, 181); 
+}
+
+
+.list-i:hover{
+  color: rgb(58, 242, 181); 
+}
+.hvr:hover {
+  color: rgb(58, 242, 181); 
+}
+
+.dot.active {
+  background-color: rgb(58, 242, 181); 
+  transition: background-color 1s ease; 
+}
+
+.active {
+  color: rgb(58, 242, 181);
+  text-decoration: none;
+}
+
+
+.active .dot {
+  display: inline-block; 
+}
+
   
-  .dot.active {
-    background-color: rgb(58, 242, 181) ; /* Color for active link */
-  }
+
+
   
-  .active {
-    color: rgb(58, 242, 181);
-    text-decoration: none;
-  }
+
+
   
   ul li {
     position: relative; /* For positioning the dot */
@@ -92,3 +127,14 @@ nav {
 
 
 }
+
+.css-1edfpdg-MuiTypography-root {
+  margin: 0  !important;
+  font-family:  "Helvetica" !important;
+  font-weight: 500 !important;
+  font-size: 19px !important;
+  line-height: 0.8 !important;
+  letter-spacing: 0 !important;
+
+}
+

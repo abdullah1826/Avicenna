@@ -16,7 +16,7 @@ function Nav() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 480);
   const [activeLink, setActiveLink] = useState('');
   const [isFixed, setIsFixed] = useState(false);
-  const navHeight =100; // Adjust this value based on your actual navigation height
+  const navHeight = 100; // Adjust this value based on your actual navigation height
 
   const handleScroll = () => {
     if (window.scrollY > 180) { // Change to the point where you want the nav to stick
@@ -61,25 +61,40 @@ function Nav() {
         <img src={logo1} alt="Logo" style={{ width: '100%', maxWidth: '150px', height: 'auto' }} />
       </Box>
       <List>
-        {['Solutions', 'Services', 'Portfolio', 'Blogs', 'Careers', 'Contact Us'].map((text) => (
-          <ScrollLink
-            key={text}
-            to={text.toLowerCase().replace(' ', '')}
-            spy={true}
-            smooth={true}
-            duration={500}
-            offset={-50}
-            onSetActive={() => handleSetActive(text)} // Track active link
-          >
-            <ListItem disablePadding > 
-              <ListItemButton style={{ color: activeLink === text ? 'rgb(58, 242, 181)' : 'inherit' }}>
-                <span className={`dot ${activeLink === text ? 'active' : ''}`} />
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          </ScrollLink>
-        ))}
-      </List>
+  {['Solutions', 'Services', 'Portfolio', 'Blogs', 'Careers', 'Contact Us'].map((text) => (
+    <ListItem className='list-i' key={text} disablePadding>
+      <ScrollLink
+        to={text.toLowerCase().replace(' ', '')}
+        spy={true}
+        smooth={true}
+        duration={500}
+        offset={-50}
+        onSetActive={() => handleSetActive(text)} // Track active link
+        className={`hvr ${activeLink === text ? 'active' : ''}`} // Add class for hover and active effect
+      >
+        <ListItemButton
+          sx={{
+            color: activeLink === text ? 'rgb(58, 242, 181)' : 'white',
+            '&:hover': {
+              color: 'rgba(58, 242, 181, 1)',
+            },
+            '&.Mui-selected': {
+              color: 'green',
+              backgroundColor: 'transparent',
+            },
+            padding: '5px 10px', // Adjust padding for size
+            fontSize: "200px", // Adjust font size for better visibility
+          }}
+        >
+          <span className={`dot ${activeLink === text ? 'active' : ''}`} />
+          <ListItemText sx={{fontSize:'4rem'}} primary={text} />
+        </ListItemButton>
+      </ScrollLink>
+    </ListItem>
+  ))}
+</List>
+
+
       <Divider />
       <Box sx={{ padding: '16px', display: 'flex', justifyContent: 'center' }}>
         <button className='main-btn'> 
@@ -129,12 +144,12 @@ function Nav() {
                   'linear-gradient(90deg, rgba(98, 98, 98, 0.25) 0%, rgba(168, 168, 168, 0.25) 100%),' +
                   'linear-gradient(90deg, #14171C 0%, rgba(20, 23, 28, 0) 29.84%),' +
                   'linear-gradient(90deg, rgba(16, 18, 24, 0) 61.08%, #0E1016 100%)',
-                  borderTop: '1px solid transparent',
-            borderBottom: '1px solid transparent',
-            borderImageSource: `
-              linear-gradient(90deg, rgba(100, 101, 103, 0.1) 0%, rgba(100, 101, 103, 1) 50%, rgba(100, 101, 103, 0.1) 100%)
-            `,
-            borderImageSlice: 1,
+                borderTop: '1px solid transparent',
+                borderBottom: '1px solid transparent',
+                borderImageSource: `
+                  linear-gradient(90deg, rgba(100, 101, 103, 0.1) 0%, rgba(100, 101, 103, 1) 50%, rgba(100, 101, 103, 0.1) 100%)
+                `,
+                borderImageSlice: 1,
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
@@ -172,9 +187,8 @@ function Nav() {
         </div>
       )}
       <Drawer open={open} onClose={toggleDrawer(false)}>
-  {DrawerList} {/* Include the DrawerList here */}
-</Drawer>
-
+        {DrawerList} {/* Include the DrawerList here */}
+      </Drawer>
     </div>
   );
 }
