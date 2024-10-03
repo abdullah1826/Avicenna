@@ -71,7 +71,7 @@ function ArrayFun() {
           <div className='crdstyle' key={index} style={cardStyle}>
             <h3 style={headingStyle}>{item.head}</h3>
             <div>
-              <img style={imgStyle} src={item.imageUrl} alt={item.head} /> 
+              <img loading='lazy'  style={imgStyle} src={item.imageUrl} alt={item.head} /> 
             </div>
           </div>
         ))}

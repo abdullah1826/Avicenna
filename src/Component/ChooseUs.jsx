@@ -48,7 +48,7 @@ function ChooseUs() {
         alignItems:'end' // Adjust this as needed to fit your layout
     }}>
         {arr.map((item, index) => (
-            <img  className='tw-img'
+            <img loading='lazy'   className='tw-img'
                 key={index} 
                 src={item.image} 
                 alt="images" 
@@ -70,6 +70,7 @@ function ChooseUs() {
     }}> 
         <img 
             src={iphone} 
+            loading='lazy' 
             alt="iPhone" 
             className="iphone-image"
             style={{ 

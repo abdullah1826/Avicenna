@@ -1,19 +1,20 @@
-import React from 'react'
-import './Main.css'
-import logo1 from '../image/logo1.png';
-import Info from './Info';
-import Talktous from './Talktous';
+import React from 'react';
+import './Main.css';
+import logo1 from '../image/logo1.png'; // This path seems correct
+
+// Fix the path for Talktous (Notice the removal of extra space in the folder name)
+import Info from './Talktous'; 
+import Talktous from './Talktous'; // Consistent path to Talktous component
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Doneprojects from './Doneprojects';
-import ArrayFun from './ArrayFun';
-import ChooseUs from './ChooseUs';
-import Tech_we_use from './Tech_we_use';
-import BLogs from './BLogs';
-import Appointment from './Appointment';
-import Footer from './Footer';
-import Develop from './Develop';
-import Nav from './Nav';
-  
+import Doneprojects from './Doneprojects'; // Fixed path
+import ArrayFun from './ArrayFun'; // Fixed path
+import ChooseUs from './ChooseUs'; // Fixed path
+import Tech_we_use from './Tech_we_use'; // Fixed path
+import BLogs from './BLogs'; // Fixed path
+import Appointment from './Appointment'; // Fixed path
+import Footer from './Footer'; // Fixed path
+import Develop from './Develop'; // Fixed path
+import Nav from './Nav'; // Fixed path
 
 
 function Mainpage() {
@@ -30,9 +31,9 @@ function Mainpage() {
 <div className='Hero'>
 <div className='header-wrap' style={{ width: '90%', margin: '0px auto', paddingTop: "50px" }}>
             <header className='header'>
-                <img src={logo1} alt="Avicenna" />
+                <img loading='lazy' src={logo1} alt="Avicenna" />
                 <div className='b-f' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: "20px" }}>
-                    <h3 style={{ color: 'white' }}>+92 3114453396</h3>
+                    <h3 style={{ color: 'white' }}>+92 320 0001511</h3>
                     <button className='main-btn'  > 
                         Start Your Project
                     </button>

@@ -96,7 +96,7 @@ function Blog() {
 
       <section className='blog-sec' style={containerStyle}>
         <div style={cardStyle1}> {/* First card takes more space */}
-          <img style={cardImageStyle} src={blog1} alt="Blog 1" />
+          <img loading='lazy'  style={cardImageStyle} src={blog1} alt="Blog 1" />
           <div style={cardContentStyle}>
             <h2 style={cardTitleStyle}>10 Best Ecommerce Hosting Services for 2024</h2>
             <p style={cardDescriptionStyle}>25 July 2024</p>
@@ -109,7 +109,7 @@ function Blog() {
         {/* Wrapper for the second and third cards */}
         <div style={{ display: 'flex', flexWrap: 'wrap', flex: '1 1 35%',flexDirection:"column" }}> {/* Make sure these cards share space */}
           <div style={cardStyle}> {/* Right cards will share equal height */}
-            <img style={{...cardImageStyle,height:'180px',objectFit:'cover',borderBottomRightRadius:'20px',borderBottomLeftRadius:'20px'}} src={blog2} alt="Blog 2" />
+            <img loading='lazy'  style={{...cardImageStyle,height:'180px',objectFit:'cover',borderBottomRightRadius:'20px',borderBottomLeftRadius:'20px'}} src={blog2} alt="Blog 2" />
             <div style={cardContentStyle}>
               <h2 style={{ ...cardTitleStyle, fontSize: "17px" }}>10 Best Ecommerce Hosting Services for 2024</h2>
               <p style={cardDescriptionStyle}>25 July 2024</p>
@@ -120,7 +120,7 @@ function Blog() {
           </div>
 
           <div style={cardStyle}> {/* Right cards will share equal height */}
-            <img style={{...cardImageStyle,height:'180px',objectFit:'cover',borderBottomRightRadius:'20px',borderBottomLeftRadius:'20px'}} src={blog3} alt="Blog 3" />
+            <img loading='lazy'  style={{...cardImageStyle,height:'180px',objectFit:'cover',borderBottomRightRadius:'20px',borderBottomLeftRadius:'20px'}} src={blog3} alt="Blog 3" />
             <div style={cardContentStyle}>
               <h2 style={{ ...cardTitleStyle, fontSize: "17px" }}>10 Best Ecommerce Hosting Services for 2024</h2>
               <p style={cardDescriptionStyle}>25 July 2024</p>

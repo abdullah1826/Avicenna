@@ -1,5 +1,5 @@
 
-import Mainpage from './Component/Mainpage'
+import Mainpage from './Component/Mainpage';
 import './App.css'; // Ensure this matches the actual file name
 
 
