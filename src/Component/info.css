@@ -57,6 +57,9 @@
 section{
   padding-top: 40px !important;
 }
+.my-section{
+  padding-top: 0px !important;
+}
 
 .marg{
   padding-top: 100px !important;

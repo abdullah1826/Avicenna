@@ -86,7 +86,7 @@ function Nav() {
             fontSize: "200px", // Adjust font size for better visibility
           }}
         >
-          <span className={`dot ${activeLink === text ? 'active' : ''}`} />
+          <span style={{top:'0px'}} className={`dot ${activeLink === text ? 'active' : ''}`} />
           <ListItemText sx={{fontSize:'4rem'}} primary={text} />
         </ListItemButton>
       </ScrollLink>

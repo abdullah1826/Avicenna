@@ -7,8 +7,8 @@
   }
   
   .card {
-    position: relative; /* Required for positioning the pseudo-element */
-    flex: 0 0 300px; /* Fixed width for each card */
+    position: relative;
+    flex: 0 1 300px; /* This allows cards to shrink if needed */
     background-color: white;
     border-radius: 40px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -16,8 +16,8 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    overflow: hidden; /* Ensure content doesn't overflow */
-    margin-bottom: 20px; /* Add margin at the bottom to control spacing when cards wrap */
+    overflow: hidden;
+    margin-bottom: 10px; /* Adjust this to reduce gap at the bottom */
   }
   
   .card img {
