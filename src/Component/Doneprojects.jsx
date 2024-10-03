@@ -1,9 +1,9 @@
 import React, { useRef, useState } from 'react';
 import './Main.css';
 import kmeti from "../image/kmeti.png";
-import first from "../image/first.svg";
-import we from "../image/we.svg";
-import only from "../image/only.svg";
+import first from "../image/first.png";
+import we from "../image/we.png";
+import only from "../image/only.png";
 import { Row, Col, Container } from "react-bootstrap"; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { GrNext, GrPrevious } from "react-icons/gr";
