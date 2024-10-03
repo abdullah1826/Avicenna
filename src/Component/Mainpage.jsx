@@ -3,18 +3,18 @@ import './Main.css';
 import logo1 from '../image/logo1.png'; // This path seems correct
 
 // Fix the path for Talktous (Notice the removal of extra space in the folder name)
-import Info from './Talktous'; 
-import Talktous from './Talktous'; // Consistent path to Talktous component
+import Info from '../Component/Info'; 
+import Talktous from '../Component/Talktous'; // Consistent path to Talktous component
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Doneprojects from './Doneprojects'; // Fixed path
-import ArrayFun from './ArrayFun'; // Fixed path
-import ChooseUs from './ChooseUs'; // Fixed path
-import Tech_we_use from './Tech_we_use'; // Fixed path
-import BLogs from './BLogs'; // Fixed path
-import Appointment from './Appointment'; // Fixed path
-import Footer from './Footer'; // Fixed path
-import Develop from './Develop'; // Fixed path
-import Nav from './Nav'; // Fixed path
+import Doneprojects from '../Component/Doneprojects'; // Fixed path
+import ArrayFun from '../Component/ArrayFun'; // Fixed path
+import ChooseUs from '../Component/ChooseUs'; // Fixed path
+import Tech_we_use from '../Component/Tech_we_use'; // Fixed path
+import BLogs from '../Component/BLogs'; // Fixed path
+import Appointment from '../Component/Appointment'; // Fixed path
+import Footer from '../Component/Footer'; // Fixed path
+import Develop from '../Component/Develop'; // Fixed path
+import Nav from '../Component/Nav'; // Fixed path
 
 
 function Mainpage() {
