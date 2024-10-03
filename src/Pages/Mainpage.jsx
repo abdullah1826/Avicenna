@@ -1,8 +1,6 @@
 import React from 'react';
-import './Main.css';
 import logo1 from '../image/logo1.png'; // This path seems correct
-
-// Fix the path for Talktous (Notice the removal of extra space in the folder name)
+import "./Main.css";  
 import Info from '../Component/Info'; 
 import Talktous from '../Component/Talktous'; // Consistent path to Talktous component
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -16,13 +14,7 @@ import Footer from '../Component/Footer'; // Fixed path
 import Develop from '../Component/Develop'; // Fixed path
 import Nav from '../Component/Nav'; // Fixed path
 
-
 function Mainpage() {
-    
-
-
-        
-
     return (
         <>
 

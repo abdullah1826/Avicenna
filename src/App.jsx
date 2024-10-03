@@ -1,6 +1,7 @@
 
-import Mainpage from './Component/Mainpage';
+
 import './App.css'; // Ensure this matches the actual file name
+import Mainpage from './Pages/Mainpage';
 
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
   
 <div>
 
- <Mainpage/>
+<Mainpage/>
 </div>
 
   )

@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import './Main.css';
+import '../Pages/Main.css'
 import kmeti from "../image/kmeti.png";
 import first from "../image/first.png";
 import we from "../image/we.png";
