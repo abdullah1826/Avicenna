@@ -16,11 +16,10 @@ function Nav() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 480);
   const [activeLink, setActiveLink] = useState('');
   const [isFixed, setIsFixed] = useState(false);
-
-  const navHeight = 100; // Set the height of your nav for easy reference
+  const navHeight =100; // Adjust this value based on your actual navigation height
 
   const handleScroll = () => {
-    if (window.scrollY > 180) { // Change 100 to the point where you want the nav to stick
+    if (window.scrollY > 180) { // Change to the point where you want the nav to stick
       setIsFixed(true);
     } else {
       setIsFixed(false);
@@ -41,6 +40,54 @@ function Nav() {
   const handleSetActive = (link) => {
     setActiveLink(link);
   };
+
+  const DrawerList = (
+    <Box
+      sx={{
+        width: '200px',
+        background: '#111419',
+        height: '100%',
+        color: 'white',
+        borderRight: '1px solid transparent',
+        borderLeft: '1px solid transparent',
+        borderImageSource: `
+          linear-gradient(90deg, rgba(100, 101, 103, 0.1) 0%, rgba(100, 101, 103, 1) 50%, rgba(100, 101, 103, 0.1) 100%)
+        `,
+        borderImageSlice: 1,
+      }}
+      role="presentation"
+    >
+      <Box sx={{ padding: '16px', display: 'flex', justifyContent: 'center' }}>
+        <img src={logo1} alt="Logo" style={{ width: '100%', maxWidth: '150px', height: 'auto' }} />
+      </Box>
+      <List>
+        {['Solutions', 'Services', 'Portfolio', 'Blogs', 'Careers', 'Contact Us'].map((text) => (
+          <ScrollLink
+            key={text}
+            to={text.toLowerCase().replace(' ', '')}
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={-50}
+            onSetActive={() => handleSetActive(text)} // Track active link
+          >
+            <ListItem disablePadding onClick={toggleDrawer(false)}> {/* Close drawer on click */}
+              <ListItemButton style={{ color: activeLink === text ? 'rgb(58, 242, 181)' : 'inherit' }}>
+                <span className={`dot ${activeLink === text ? 'active' : ''}`} />
+                <ListItemText primary={text} />
+              </ListItemButton>
+            </ListItem>
+          </ScrollLink>
+        ))}
+      </List>
+      <Divider />
+      <Box sx={{ padding: '16px', display: 'flex', justifyContent: 'center' }}>
+        <button className='main-btn'> 
+          Start Your Project
+        </button>
+      </Box>
+    </Box>
+  );
 
   useEffect(() => {
     const handleResize = () => {
@@ -124,10 +171,10 @@ function Nav() {
           </nav>
         </div>
       )}
-
       <Drawer open={open} onClose={toggleDrawer(false)}>
-        {/* Drawer content */}
-      </Drawer>
+  {DrawerList} {/* Include the DrawerList here */}
+</Drawer>
+
     </div>
   );
 }
