@@ -14,6 +14,11 @@ import Footer from '../Component/Footer'; // Fixed path
 import Develop from '../Component/Develop'; // Fixed path
 import Nav from '../Component/Nav'; // Fixed path
 
+
+
+
+
+
 function Mainpage() {
     return (
         <>

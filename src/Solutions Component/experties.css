@@ -1,0 +1,243 @@
+.Experties {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.for-flex {
+    display: flex;
+    gap: 12px;
+    margin-top: 250px;
+    flex-direction: row; /* Keep row direction for larger screens */
+}
+
+.first {
+    width: 100%;
+    min-width: 40%;
+    height: 200px;
+}
+
+.web-img {
+    width: 80%;
+}
+.web-imgg {
+   width: 300px;
+}
+
+.back-design {
+    position: relative;
+    width: 80%;
+    min-height: 200px;
+    margin-left: 70px;
+    border-radius: 35px;
+    background: linear-gradient(180deg, rgba(59, 237, 178, 0.25) -0.52%, rgba(0, 0, 0, 0.4) 117.47%);
+}
+
+.for-ab {
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+}
+
+.for-ab3 {
+    position: absolute;
+    right: -60px;
+    top: -100px;
+}
+
+.for-ab2 {
+    position: absolute;
+    left: 100px;
+    top: -65px;
+}
+
+.second {
+    width: 100%;
+    max-width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto; /* Corrected 'ato' to 'auto' */
+    padding: 20px;
+}
+
+.vertical-line {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: aquamarine;
+    top: -140px;
+}
+
+.step {
+    position: relative;
+    margin: 100px 0; /* Adjust vertical spacing between steps */
+}
+
+.circle {
+    width: 50px; /* Circle diameter */
+    height: 50px; /* Circle diameter */
+    border-radius: 50%; /* Make it circular */
+    background: linear-gradient(180deg, #3BEDB2 0%, #93FF9D 100%); /* Circle color */
+    color: white; /* Text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px; /* Font size for step number */
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    z-index: 1; /* Position above the line */
+    position: absolute;
+    left: -25px;
+    top: -100px;
+}
+
+.circle2 {
+    width: 50px; /* Circle diameter */
+    height: 50px; /* Circle diameter */
+    border-radius: 50%; /* Make it circular */
+    background: linear-gradient(180deg, #3BEDB2 0%, #93FF9D 100%); /* Circle color */
+    color: white; /* Text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px; /* Font size for step number */
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    z-index: 1; /* Position above the line */
+    position: absolute;
+    left: -25px;
+    top: -30px;
+}
+
+.circle3 {
+    width: 50px; /* Circle diameter */
+    height: 50px; /* Circle diameter */
+    border-radius: 50%; /* Make it circular */
+    background: linear-gradient(180deg, #3BEDB2 0%, #93FF9D 100%); /* Circle color */
+    color: white; /* Text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px; /* Font size for step number */
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    z-index: 1; /* Position above the line */
+    position: absolute;
+    left: -25px;
+    bottom: -170px;
+}
+
+.start-circle {
+    /* Styles for the circles at the start and end */
+    width: 30px; /* Circle diameter */
+    height: 30px; /* Circle diameter */
+    border-radius: 50%; /* Make it circular */
+    background: #3BEDB2; /* Circle color */
+    z-index: 1;
+    position: absolute;
+    left: -15px;
+    top: -114px;
+    /* Position above the line */
+}
+
+.end-circle {
+    /* Styles for the circles at the start and end */
+    width: 30px; /* Circle diameter */
+    height: 30px; /* Circle diameter */
+    border-radius: 50%; /* Make it circular */
+    background: #3BEDB2; /* Circle color */
+    z-index: 1;
+    position: absolute;
+    left: -15px;
+    bottom: -134px;
+    /* Position above the line */
+}
+
+.vertical-line::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px; /* Width of the vertical line */
+    height: calc(100% + 20px); /* Full height */
+    background-color: #3BEDB2; /* Line color */
+    transform: translateX(-50%); /* Center the line */
+    z-index: 0; /* Position behind circles */
+}
+
+.end-circle {
+    /* Move the end circle to the bottom */
+    margin-top: auto; /* Push it to the end of the vertical line */
+}
+
+.third {
+    width: 100%;
+    max-width: 40%;
+    height: 200px;
+}
+
+.last{
+    margin: 130px 30px;
+}
+@media (max-width: 480px) {
+    .for-flex {
+        flex-direction: column; /* Change to column direction */
+        margin-top: 20px; /* Adjust top margin */
+    }
+
+    .first,
+    .third {
+        width: 100%; /* Make both sections full width */
+        min-width: 100%; /* Ensure no minimum width */
+    }
+
+    .vertical-line {
+        display: none; /* Hide vertical line */
+    }
+
+    .back-design {
+        position: relative;
+        width: 100%; /* Full width for smaller screens */
+        min-height: 200px;
+        margin-left: 0; /* Remove left margin */
+        border-radius: 35px;
+        background: linear-gradient(180deg, rgba(59, 237, 178, 0.25) -0.52%, rgba(0, 0, 0, 0.4) 117.47%);
+    }
+
+    .fix {
+        padding-top: 371px; /* Keep padding as is */
+        margin: 0px !important;
+    }
+    .web-img{
+   width: 50% !important;
+        display: flex !important;
+   
+    margin: 0 auto !important;
+    }
+    .web-imgg{
+   
+        width: 50% !important;
+        display: flex !important;
+   
+    margin: 0 auto !important;
+    }
+
+    .for-ab3{
+       position: static !important;
+       right: 0;
+       margin-top: 25rem;
+    }
+    .for-ab{
+        position: static !important;
+    }
+    .for-ab2{
+        position: static !important;
+        margin-top: 24rem;
+    }
+    .last{
+   
+        margin: 0px !important;
+        margin-top:5rem!important;
+    }
+}

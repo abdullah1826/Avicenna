@@ -10,6 +10,7 @@ import MenuSharpIcon from '@mui/icons-material/MenuSharp';
 import logo1 from "../image/logo1.png"; // Import your logo
 import { Link as ScrollLink } from 'react-scroll';
 import './nav.css';
+import {  useNavigate } from 'react-router-dom';
 
 function Nav() {
   const [open, setOpen] = useState(false);
@@ -39,6 +40,19 @@ function Nav() {
 
   const handleSetActive = (link) => {
     setActiveLink(link);
+  };
+  const navigate = useNavigate();
+
+  const handleNavigation = (text) => {
+    // Check if the clicked item is "Solutions" to navigate to the solutions page
+    if (text === 'solutions') {
+      navigate(`/solutions`);
+    } else if(text==='services') {
+navigate(`/`)
+    }
+    else{
+      handleSetActive(text); // Just set active link for other items
+    }
   };
 
   const DrawerList = (
@@ -73,6 +87,7 @@ function Nav() {
         className={`hvr ${activeLink === text ? 'active' : ''}`} // Add class for hover and active effect
       >
         <ListItemButton
+        onClick={() => handleNavigation(text.toLowerCase().replace(' ', ''))}
           sx={{
             color: activeLink === text ? 'rgb(58, 242, 181)' : 'white',
             '&:hover': {
@@ -166,18 +181,12 @@ function Nav() {
               >
                 {['Solutions', 'Services', 'Portfolio', 'Blogs', 'Careers', 'Contact Us'].map(
                   (text) => (
-                    <li key={text} className='hvr'>
-                      <ScrollLink
-                        to={text.toLowerCase().replace(' ', '')}
-                        spy={true}
-                        smooth={true}
-                        duration={400}
-                        offset={-50}
-                        onSetActive={() => handleSetActive(text)}
-                      >
+                    <li key={text} className='hvr' 
+                     onClick={() => handleNavigation(text.toLowerCase().replace(' ', ''))}>
+                      
                         <span className={`dot ${activeLink === text ? 'active' : ''}`} />
                         {text}
-                      </ScrollLink>
+                      
                     </li>
                   )
                 )}

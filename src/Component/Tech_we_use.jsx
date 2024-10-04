@@ -60,6 +60,7 @@ function Tech_we_use() {
         ))}
       </div>
     </div>
+  
   );
 }
 
