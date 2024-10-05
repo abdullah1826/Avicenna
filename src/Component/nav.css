@@ -86,6 +86,13 @@ nav {
  
 }
 
+nav ul li.active {
+  color: rgba(58, 242, 181, 1);
+}
+
+nav ul li .dot.active {
+  background-color: rgba(58, 242, 181, 1);
+}
 
 
 

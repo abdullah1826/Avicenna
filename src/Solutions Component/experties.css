@@ -180,6 +180,16 @@
 .last{
     margin: 130px 30px;
 }
+
+@media (max-width: 768px) {
+    .web-imgg{
+        width: 200px;
+    }
+
+
+
+}
+   
 @media (max-width: 480px) {
     .for-flex {
         flex-direction: column; /* Change to column direction */

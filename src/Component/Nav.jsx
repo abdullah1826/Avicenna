@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
@@ -8,19 +9,19 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import MenuSharpIcon from '@mui/icons-material/MenuSharp';
 import logo1 from "../image/logo1.png"; // Import your logo
-import { Link as ScrollLink } from 'react-scroll';
 import './nav.css';
-import {  useNavigate } from 'react-router-dom';
 
 function Nav() {
   const [open, setOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 480);
-  const [activeLink, setActiveLink] = useState('');
   const [isFixed, setIsFixed] = useState(false);
-  const navHeight = 100; // Adjust this value based on your actual navigation height
+  const navHeight = 100;
+
+  const location = useLocation(); // Get the current location
+  const navigate = useNavigate();
 
   const handleScroll = () => {
-    if (window.scrollY > 180) { // Change to the point where you want the nav to stick
+    if (window.scrollY > 180) {
       setIsFixed(true);
     } else {
       setIsFixed(false);
@@ -38,21 +39,8 @@ function Nav() {
     setOpen(newOpen);
   };
 
-  const handleSetActive = (link) => {
-    setActiveLink(link);
-  };
-  const navigate = useNavigate();
-
-  const handleNavigation = (text) => {
-    // Check if the clicked item is "Solutions" to navigate to the solutions page
-    if (text === 'solutions') {
-      navigate(`/solutions`);
-    } else if(text==='services') {
-navigate(`/`)
-    }
-    else{
-      handleSetActive(text); // Just set active link for other items
-    }
+  const handleNavigation = (path) => {
+    navigate(`/${path}`);
   };
 
   const DrawerList = (
@@ -75,46 +63,42 @@ navigate(`/`)
         <img src={logo1} alt="Logo" style={{ width: '100%', maxWidth: '150px', height: 'auto' }} />
       </Box>
       <List>
-  {['Solutions', 'Services', 'Portfolio', 'Blogs', 'Careers', 'Contact Us'].map((text) => (
-    <ListItem className='list-i' key={text} disablePadding>
-      <ScrollLink
-        to={text.toLowerCase().replace(' ', '')}
-        spy={true}
-        smooth={true}
-        duration={500}
-        offset={-50}
-        onSetActive={() => handleSetActive(text)} // Track active link
-        className={`hvr ${activeLink === text ? 'active' : ''}`} // Add class for hover and active effect
-      >
-        <ListItemButton
-        onClick={() => handleNavigation(text.toLowerCase().replace(' ', ''))}
-          sx={{
-            color: activeLink === text ? 'rgb(58, 242, 181)' : 'white',
-            '&:hover': {
-              color: 'rgba(58, 242, 181, 1)',
-            },
-            '&.Mui-selected': {
-              color: 'green',
-              backgroundColor: 'transparent',
-            },
-            padding: '5px 10px', // Adjust padding for size
-            fontSize: "200px", // Adjust font size for better visibility
-          }}
-        >
-          <span style={{top:'0px'}} className={`dot ${activeLink === text ? 'active' : ''}`} />
-          <ListItemText sx={{fontSize:'4rem'}} primary={text} />
-        </ListItemButton>
-      </ScrollLink>
-    </ListItem>
-  ))}
-</List>
-
-
+        {['Solutions', 'Services', 'Portfolio', 'Blogs', 'Careers', 'Contact Us'].map((text) => (
+          <ListItem className='list-i' key={text} disablePadding>
+            <ListItemButton
+              onClick={() => {
+                handleNavigation(text.toLowerCase().replace(' ', ''));
+                setOpen(false); // Close the drawer after navigation
+              }}
+              sx={{
+                color: location.pathname.includes(text.toLowerCase().replace(' ', ''))
+                  ? 'rgb(58, 242, 181)'
+                  : 'white',
+                '&:hover': {
+                  color: 'rgba(58, 242, 181, 1)',
+                },
+                '&.Mui-selected': {
+                  color: 'green',
+                  backgroundColor: 'transparent',
+                },
+                padding: '5px 10px',
+                fontSize: '200px',
+              }}
+            >
+              <span
+                style={{ top: '0px' }}
+                className={`dot ${
+                  location.pathname.includes(text.toLowerCase().replace(' ', '')) ? 'active' : ''
+                }`}
+              />
+              <ListItemText sx={{ fontSize: '4rem' }} primary={text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
       <Divider />
       <Box sx={{ padding: '16px', display: 'flex', justifyContent: 'center' }}>
-        <button className='main-btn'> 
-          Start Your Project
-        </button>
+        <button className='main-btn'>Start Your Project</button>
       </Box>
     </Box>
   );
@@ -139,12 +123,12 @@ navigate(`/`)
       )}
 
       {!isMobile && (
-        <div style={{ height: `${navHeight}px`, marginTop: "70px" }}> {/* Reserve space for the nav */}
+        <div style={{ height: `${navHeight}px`, marginTop: '70px' }}>
           <nav
             className={isFixed ? 'fixed-nav' : ''}
             style={{
               width: '100%',
-              top: isFixed ? `-71px` : '0px', // Adjust positioning when fixed
+              top: isFixed ? '-71px' : '0px',
               position: isFixed ? 'fixed' : 'relative',
               zIndex: 1000,
             }}
@@ -181,12 +165,23 @@ navigate(`/`)
               >
                 {['Solutions', 'Services', 'Portfolio', 'Blogs', 'Careers', 'Contact Us'].map(
                   (text) => (
-                    <li key={text} className='hvr' 
-                     onClick={() => handleNavigation(text.toLowerCase().replace(' ', ''))}>
-                      
-                        <span className={`dot ${activeLink === text ? 'active' : ''}`} />
-                        {text}
-                      
+                    <li
+                      key={text}
+                      className={`hvr ${
+                        location.pathname.includes(text.toLowerCase().replace(' ', ''))
+                          ? 'active'
+                          : ''
+                      }`}
+                      onClick={() => handleNavigation(text.toLowerCase().replace(' ', ''))}
+                    >
+                      <span
+                        className={`dot ${
+                          location.pathname.includes(text.toLowerCase().replace(' ', ''))
+                            ? 'active'
+                            : ''
+                        }`}
+                      />
+                      {text}
                     </li>
                   )
                 )}
@@ -195,8 +190,9 @@ navigate(`/`)
           </nav>
         </div>
       )}
+
       <Drawer open={open} onClose={toggleDrawer(false)}>
-        {DrawerList} {/* Include the DrawerList here */}
+        {DrawerList}
       </Drawer>
     </div>
   );

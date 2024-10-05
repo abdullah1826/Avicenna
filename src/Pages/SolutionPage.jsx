@@ -6,9 +6,13 @@ import Info from '../Component/Info';
 import Develop from '../Component/Develop';
 import "./Solution.css";
 import Doneprojects from '../Component/Doneprojects';
+import BLogs from '../Component/BLogs';
+import Footer from '../Component/Footer';
+import Appointment from '../Component/Appointment';
 import Services_provide from '../Solutions Component/Services_provide';
 import For_client from '../Solutions Component/For_client';
 import Experties from '../Solutions Component/Experties';
+
 function SolutionPage() {
   return (
 
@@ -40,6 +44,10 @@ function SolutionPage() {
         <Services_provide/>
         <For_client/>
         <Experties/>
+        <BLogs/>
+        <Appointment/>
+        <Footer/>
+       
 
 
 
