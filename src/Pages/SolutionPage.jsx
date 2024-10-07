@@ -12,16 +12,18 @@ import Appointment from '../Component/Appointment';
 import Services_provide from '../Solutions Component/Services_provide';
 import For_client from '../Solutions Component/For_client';
 import Experties from '../Solutions Component/Experties';
+import Testimonial from '../Solutions Component/Testimonial';
 
 function SolutionPage() {
+    
   return (
 
 
   
 
 
- <div className='Containerr'style={{height:'100%',background:" #090e17" }}>
-<div className='Hero'>
+ <div id='solutions' className='Containerr'style={{height:'100%',background:" #090e17" }}>
+<div className='Hero' >
 <div className='header-wrap' style={{ width: '90%', margin: '0px auto', paddingTop: "50px" }}>
             <header className='header'>
                 <img loading='lazy' src={logo1} alt="Avicenna" />
@@ -34,6 +36,8 @@ function SolutionPage() {
             </header>
         </div>
         <Nav/>
+
+        
         <Connect/>
 
        
@@ -44,6 +48,7 @@ function SolutionPage() {
         <Services_provide/>
         <For_client/>
         <Experties/>
+        <Testimonial/>
         <BLogs/>
         <Appointment/>
         <Footer/>

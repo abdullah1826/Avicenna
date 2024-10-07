@@ -6,8 +6,9 @@ import dev from "../image/dev.png"
 import pricing from "../image/pricing.png"
 import sols from "../image/sols.png"
 import iphone from "../image/iphone.png"
+import newmac from "../image/newmac.png"
 import ts from "../image/ts.png"
-function ChooseUs() {
+function ChooseUs({page}) {
     
     const arr=[
 {image: sols},
@@ -69,7 +70,7 @@ function ChooseUs() {
         boxSizing: 'border-box', 
     }}> 
         <img 
-            src={iphone} 
+           src={page == "app" ? iphone :newmac} 
             loading='lazy' 
             alt="iPhone" 
             className="iphone-image"

@@ -20,6 +20,7 @@ function Nav() {
   const location = useLocation(); // Get the current location
   const navigate = useNavigate();
 
+ 
   const handleScroll = () => {
     if (window.scrollY > 180) {
       setIsFixed(true);
@@ -41,7 +42,10 @@ function Nav() {
 
   const handleNavigation = (path) => {
     navigate(`/${path}`);
+    setOpen(false); // Close the drawer after navigation
+    // Scrolls to the top of the page
   };
+  
 
   const DrawerList = (
     <Box
@@ -66,10 +70,7 @@ function Nav() {
         {['Solutions', 'Services', 'Portfolio', 'Blogs', 'Careers', 'Contact Us'].map((text) => (
           <ListItem className='list-i' key={text} disablePadding>
             <ListItemButton
-              onClick={() => {
-                handleNavigation(text.toLowerCase().replace(' ', ''));
-                setOpen(false); // Close the drawer after navigation
-              }}
+              onClick={() => handleNavigation(text.toLowerCase().replace(' ', ''))}
               sx={{
                 color: location.pathname.includes(text.toLowerCase().replace(' ', ''))
                   ? 'rgb(58, 242, 181)'

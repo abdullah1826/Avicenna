@@ -32,7 +32,7 @@ function Footer() {
     borderTopRightRadius: '30px',
     borderTopLeftRadius: '30px',
         }}>
-            <footer id="solutions">
+            <footer >
                 {footerarr.map((item, index) => (
                     <div key={index} className="footer-row" style={{ marginBottom: "20px" }}>
                         <h4 style={{ fontSize: "25px", fontWeight: 500, marginTop: "20px" }}>{item.title}</h4>

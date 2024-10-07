@@ -6,17 +6,23 @@ import user from "../image/user.png"
 import backend from "../image/backend.png"
 import mob from "../image/mob.png"
 import { LuMoveRight } from "react-icons/lu";
+import { useNavigate } from 'react-router-dom';
+
 function Services_provide() {
+    const navigate = useNavigate(); // useNavigate hook for navigation
+
     const service = [
         {
             image: mob,
             heading: 'Mobile Application',
-            para: "We develop native mobile applications for iOS. That’ll be faster, more reliable..."
+            para: "We develop native mobile applications for iOS. That’ll be faster, more reliable...",
+            move: '/services'
         },
         {
             image: web,
             heading: 'Website Development',
-            para: "We will develop a roadmap of how we’ll develop the website from scratch by..."
+            para: "We will develop a roadmap of how we’ll develop the website from scratch by...",
+            move: '/webservices'
         },
         {
             image: backend,
@@ -45,21 +51,22 @@ function Services_provide() {
                     For the past decade, we have been creating high-performance, feature-packed <br className='br' /> mobile applications for iOS & Android.
                 </p>
             </div>
-            <section className='container section-data' style={{ display: 'flex', justifyContent: 'center',width:'100%' }}>
-  {service.map((item, index) => (
-    <div key={index} className='cards'>
-      <div className='card-data'>
-        <img className='card-img' src={item.image} alt={item.heading} />
-        <h2 className='card-head'>{item.heading}</h2>
-        <p className='card-para'>{item.para}</p>
-        <button className='card-button'> <LuMoveRight />   Read more</button>
-      </div>
-    </div>
-  ))}
-</section>
-
-
-          
+            <section className='container section-data' style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+                {service.map((item, index) => (
+                    <div key={index} className='cards'>
+                        <div className='card-data'>
+                            <img className='card-img' src={item.image} alt={item.heading} />
+                            <h2 className='card-head'>{item.heading}</h2>
+                            <p className='card-para'>{item.para}</p>
+                            <button 
+                                onClick={() => navigate(item.move)} // Navigate to the specified route
+                                className='card-button'>
+                                <LuMoveRight /> Read more
+                            </button>
+                        </div>
+                    </div>
+                ))}
+            </section>
         </div>
     );
 }

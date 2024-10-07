@@ -77,7 +77,7 @@ function Blog() {
   };
 
   return (
-    <div  id='blogs' style={{ margin: '0 auto', width: "90%", marginTop: "70px" }}>
+    <div   style={{ margin: '0 auto', width: "90%", marginTop: "70px" }}>
       <div className='blog-main'>
         <h2 style={{ color: "white", fontSize:'55px',fontWeight:900}}>
           Latest From <span style={{ color: 'rgb(58, 237, 178)' }}> Our Blogs</span>

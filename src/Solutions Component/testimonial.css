@@ -1,0 +1,43 @@
+.main-testo{
+
+    width: 100%;
+    background-color: transparent;
+    box-shadow: inset 0px 0px 30px rgba(255, 255, 255, 0.3);
+   
+    min-height: 400px;
+
+}
+.testimonial{
+    width: 100%;
+    background:red;
+    margin-bottom: 100px;
+    
+    
+}
+
+.its {
+margin-top: 50px;
+border: 2px solid grey;
+background-color:rgb(31, 34, 42);
+border-radius: 35px;
+display: flex;
+gap: 20px !important;
+width: 96% !important;
+
+  }
+
+
+  @media (max-width: 480px) {
+
+ .paragraph{
+    width: 100% !important;
+ }
+
+  }
+   
+ 
+
+
+  
+  
+

@@ -1,3 +1,10 @@
+.ExpertiesContainer{
+    color: white;
+    width: 90%;
+    margin: 0px auto;
+    margin-top: 100px;
+}
+
 .Experties {
     width: 100%;
     margin: 0 auto;
@@ -17,10 +24,14 @@
 }
 
 .web-img {
-    width: 80%;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    margin: 0px auto;
 }
 .web-imgg {
    width: 300px;
+   
 }
 
 .back-design {
@@ -29,7 +40,17 @@
     min-height: 200px;
     margin-left: 70px;
     border-radius: 35px;
-    background: linear-gradient(180deg, rgba(59, 237, 178, 0.25) -0.52%, rgba(0, 0, 0, 0.4) 117.47%);
+    background: linear-gradient(90deg, rgba(59, 237, 178, 0.25) 0%, rgba(0, 0, 0, 0) 100%);
+
+}
+.back-design1 {
+    position: relative;
+    width: 80%;
+    min-height: 200px;
+    margin-left: 70px;
+    border-radius: 35px;
+    background: linear-gradient(180deg, rgba(59, 237, 178, 0.25) -0.52%, rgba(0, 0, 0, 0.4) 117.47%); 
+
 }
 
 .for-ab {
@@ -183,12 +204,32 @@
 
 @media (max-width: 768px) {
     .web-imgg{
-        width: 200px;
+        width: 100% !important;
+    }
+    .back-design{
+        min-height: 147px !important;
+        width: 100% !important;
+        margin-left: 0px !important;
+    }
+    .back-design1{
+        min-height: 147px !important;
+        width: 100% !important;
+        margin-left: 0px !important;
+    }
+
+    .web-img{
+        display: flex;
+        justify-content: center;
+        margin: 0px auto;
+    }
+    .for-ab3 .web-img{
+        margin-left: 0px !important;
+    }
     }
 
 
 
-}
+
    
 @media (max-width: 480px) {
     .for-flex {
@@ -250,4 +291,11 @@
         margin: 0px !important;
         margin-top:5rem!important;
     }
+    .for-ab3 .web-img{
+        width: 55% !important;
+        display: flex !important;
+        justify-content: center !important;
+        margin: 0px auto !important;
+    }
+
 }

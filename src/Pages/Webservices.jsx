@@ -1,8 +1,7 @@
 import React from 'react';
-import logo1 from '../image/logo1.png'; // This path seems correct
+
 import "./Main.css";  
 import Info from '../Component/Info'; 
-import Talktous from '../Component/Talktous'; // Consistent path to Talktous component
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Doneprojects from '../Component/Doneprojects'; // Fixed path
 import ArrayFun from '../Component/ArrayFun'; // Fixed path
@@ -12,44 +11,23 @@ import BLogs from '../Component/BLogs'; // Fixed path
 import Appointment from '../Component/Appointment'; // Fixed path
 import Footer from '../Component/Footer'; // Fixed path
 import Develop from '../Component/Develop'; // Fixed path
-import Nav from '../Component/Nav'; // Fixed path
-
-
-
-
-
-
-function Mainpage() {
+import bg2 from "../image/bg2.png"
+import Hero from '../Component/Hero';
+const HeroData = {
+    width: "70%",
+        title: '<h2 style="color: white; font-size: 55px; font-weight: 900; width: 80%;">Best-in Class  <span style="color: rgb(58, 242, 181);">Web development </span> Services</h2>',
+        description: '<p style="color: white; font-size: 24px; font-weight: 100;">Avicenna Enterprises Solutions is Your <span style="color: rgb(58, 242, 181);">one-step solution for <br /></span> all your development needs</p>',
+        imageUrl: bg2
+    }
+   
+function Webservices() {
+    
     return (
         <>
 
     
 <div className='Containerr'style={{height:'100%',background:" #090e17" }}>
-<div className='Hero'>
-<div className='header-wrap' style={{ width: '90%', margin: '0px auto', paddingTop: "50px" }}>
-            <header className='header'>
-                <img loading='lazy' src={logo1} alt="Avicenna" />
-                <div className='b-f' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: "20px" }}>
-                    <h3 style={{ color: 'white' }}>+92 320 0001511</h3>
-                    <button className='main-btn'  > 
-                        Start Your Project
-                    </button>
-                </div>
-            </header>
-        </div>
-
-<Nav/>
-
-
-      
-      <div>
-      <Talktous/>
-      </div>
-
-
-
-
-</div>
+<Hero data = {HeroData} />
 
 <Info/>
 
@@ -59,7 +37,7 @@ function Mainpage() {
  
  
 <div style={{background:'rgb(9, 14, 23)'}}>
-<Develop/>
+<Develop data={"web"}/>
 
 <Doneprojects />
 
@@ -76,9 +54,9 @@ function Mainpage() {
 </div>
 
 
-<ArrayFun/>
-<ChooseUs/>
-<Tech_we_use/>
+<ArrayFun />
+<ChooseUs page={"web"}/>
+<Tech_we_use data={"web"}/>
 <BLogs/>
 <Appointment/>
 <Footer/>
@@ -101,4 +79,4 @@ function Mainpage() {
     )
 }
 
-export default Mainpage
+export default Webservices;

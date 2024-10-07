@@ -5,7 +5,7 @@ import product from '../image/product.png'
 import globe from '../image/globe.png'
 function Experties() {
   return (
-    <div style={{marginTop:0}} className='ServicesContainer'>
+    <div style={{marginTop:0,marginBottom:0}} className='ExpertiesContainer'>
     <div>
         <h2 style={{color:'white'}} className='heading'> Our <span style={{color:'rgb(58, 242, 181)'}}>Expertise </span> </h2>
         <p style={{width:'90%'}} className='paragraph'>We’re specialized in mobile apps, website development & social media marketing. We can help you bring your product to life - whether it's a Minimum Viable Product, UX/UI Services, or a permit to scale your company.</p>
@@ -15,10 +15,10 @@ function Experties() {
 
 <div className='for-flex'>
 <div className='first'>
-<div className='back-design'>
+<div className='back-design1'>
 
 <div className='for-ab'>
-    <img  className='web-img' src={webimg} alt="ii" />
+    <img style={{width:'80%',height:'auto',objectFit:'cover'}}  className='web-img' src={webimg} alt="ii" />
 </div>
 </div>
 <div style={{marginTop:"100px"}}>
@@ -30,7 +30,7 @@ function Experties() {
 <div style={{marginTop:"150px"}} className='back-design'>
 
 <div s className='for-ab3'>
-    <img style={{marginLeft:'30px'}}  className='web-img' src={globe} alt="ii" />
+    <img  style={{marginLeft:'30px',width:'80%',height:'auto',objectFit:'cover'}}  className='web-img' src={globe} alt="ii" />
 </div>
 </div>
 </div>
@@ -65,7 +65,7 @@ function Experties() {
 <div style={{marginTop:'130px'}} className='back-design'>
 
 <div className='for-ab2'>
-    <img  className='web-imgg' src={product} alt="ii" />
+    <img style={{width:'80%',height:'auto',objectFit:'cover'}}   className='web-imgg' src={product} alt="ii" />
 </div>
 </div>
 

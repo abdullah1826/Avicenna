@@ -3,6 +3,7 @@ import './client.css';
 import same from '../image/same.png';
 import same2 from '../image/same2.png';
 
+
 function For_client() {
   const client_card = [
     {
@@ -30,6 +31,8 @@ function For_client() {
       btn: 'See More',
     },
   ];
+
+
 
   return (
     <div style={{ marginTop: '0px' }} className="ServicesContainer">
