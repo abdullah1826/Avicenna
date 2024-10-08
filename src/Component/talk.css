@@ -13,10 +13,31 @@
     font-weight: 550; /* Smooth transition */
 }
 
+.talk-btn2{
+    background-color:rgb(146, 199, 85);
+    width: 180px;
+    height: 67px;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 900;
+     transition: background-color 0.4s, color 0.4s;
+    color: black;
+    font-weight: 550; /* Smooth transition */
+}
+
+
 .talk-btn:hover {
     background-color: transparent;
     border: 1px solid rgb(58, 237, 178);
     color: rgb(58, 237, 178);
+}
+.talk-btn2:hover {
+    background-color: transparent;
+    border: 1px solid rgb(146, 199, 85);
+    color:rgb(146, 199, 85);
 }
 
 /* Responsive styles */

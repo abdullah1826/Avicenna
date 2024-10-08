@@ -9,6 +9,17 @@
   text-decoration: none; /* Prevent text decoration changes */
   transition: color 2s ease; /* Transition for text color */
 }
+.hvr2 {
+  margin: 0 15px;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 100;
+  position: relative; /* Positioning context for the dot */
+  padding: 4px 0; /* Maintain size and position */
+  line-height: 1.5; /* Consistent line height */
+  text-decoration: none; /* Prevent text decoration changes */
+  transition: color 2s ease; /* Transition for text color */
+}
 
 .dot {
   display: inline-block;
@@ -28,6 +39,10 @@
   visibility: visible;
   background-color: rgb(58, 242, 181); 
 }
+.hvr2:hover .dot {
+  visibility: visible;
+  background-color:rgb(146, 199, 85); 
+}
 
 
 .list-i:hover{
@@ -35,6 +50,9 @@
 }
 .hvr:hover {
   color: rgb(58, 242, 181); 
+}
+.hvr2:hover {
+  color:rgb(146, 199, 85) ; 
 }
 
 .dot.active {
@@ -47,8 +65,20 @@
   text-decoration: none;
 }
 
+.dot.active2{
+  background-color:rgb(146, 199, 85); 
+  transition: background-color 1s ease; 
+}
+.active2 {
+  color:rgb(146, 199, 85);
+  text-decoration: none;
+}
+
 
 .active .dot {
+  display: inline-block; 
+}
+.active2 .dot {
   display: inline-block; 
 }
 

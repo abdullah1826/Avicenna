@@ -4,7 +4,7 @@
     background-color: transparent;
     box-shadow: inset 0px 0px 30px rgba(255, 255, 255, 0.3);
    
-    min-height: 400px;
+    min-height: 450px;
 
 }
 .testimonial{
@@ -32,9 +32,14 @@ width: 96% !important;
  .paragraph{
     width: 100% !important;
  }
+ .my-date{
+    font-size: 10px !important;
+ }
 
+ .stardata{
+    display: block !important;
+ }
   }
-   
  
 
 

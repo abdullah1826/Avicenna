@@ -10,6 +10,7 @@ import bgImage from '../image/bg3.png';
 import Testimonial from '../Solutions Component/Testimonial';
 import Automotive from '../Component/Automotive';
 import { useLocation } from 'react-router-dom';
+import Successstory from '../Component/Successstory';
 
 function Industryservices() {
 
@@ -53,7 +54,7 @@ function Industryservices() {
 
 <Automotive data = {itemData} />
 
-
+<Successstory/>
 
 
 

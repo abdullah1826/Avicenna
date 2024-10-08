@@ -3,7 +3,7 @@ import './automotive.css'
 function Automotive({data}) {
     console.log(data)
   return (
-    <div style={{marginTop:"60px",marginBottom:"50px",display:"flex",color:'white',width:'100%'}} >
+    <div className="autos" style={{marginTop:"60px",marginBottom:"50px",display:"flex",color:'white',width:'100%'}} >
 
 <div className='more-res' style={{display:'flex',margin:"20px"}}>
     <div className='new-data' style={{width:"60%",marginLeft:"4%",marginTop:"80px"}}>

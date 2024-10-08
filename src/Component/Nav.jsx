@@ -11,7 +11,7 @@ import MenuSharpIcon from '@mui/icons-material/MenuSharp';
 import logo1 from "../image/logo1.png"; // Import your logo
 import './nav.css';
 
-function Nav() {
+function Nav({navbar}) {
   const [open, setOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 480);
   const [isFixed, setIsFixed] = useState(false);
@@ -168,11 +168,12 @@ function Nav() {
                   (text) => (
                     <li
                       key={text}
-                      className={`hvr ${
-                        location.pathname.includes(text.toLowerCase().replace(' ', ''))
-                          ? 'active'
-                          : ''
-                      }`}
+                      className={`hvr ${navbar === "android" ? "hvr2" : ""} ${
+  location.pathname.includes(text.toLowerCase().replace(" ", "")) 
+    ? (navbar === "android" ? "active2" : "active") 
+    : ""
+}`}
+
                       onClick={() => handleNavigation(text.toLowerCase().replace(' ', ''))}
                     >
                       <span

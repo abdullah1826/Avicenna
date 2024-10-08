@@ -8,7 +8,7 @@ import node from "../image/node.png";
 import card2 from "../image/card2.png";
 import car3 from "../image/car3.png";
 import card4 from "../image/card4.png";
-
+import { Navigate, useNavigate } from 'react-router-dom';
 function Tech_we_use( {data}) {
 
   const card = [
@@ -17,7 +17,8 @@ function Tech_we_use( {data}) {
       heading: data=="app"? 'ios Application':'CSS', 
       para: "For the past decade we have been creating high performance, feature-packed mobile applications for iOS & Android. As an expert in mobile application development services", 
  border: data=="app"?'rgb(42, 82, 150,0.7)':'rgb(29, 65, 159)',
-      bg: data=="app"? "linear-gradient(90.28deg, rgba(75, 131, 220, 0.25) 0%, rgba(221, 237, 255, 0.25) 100%)": "linear-gradient(90.28deg, rgba(38, 77, 228, 0.25) 0%, rgba(41, 101, 241, 0.25) 100%)"
+      bg: data=="app"? "linear-gradient(90.28deg, rgba(75, 131, 220, 0.25) 0%, rgba(221, 237, 255, 0.25) 100%)": "linear-gradient(90.28deg, rgba(38, 77, 228, 0.25) 0%, rgba(41, 101, 241, 0.25) 100%)",
+  
       
     },
     { 
@@ -25,8 +26,8 @@ function Tech_we_use( {data}) {
       heading: data=="app"? 'Android Applications':'PHP', 
       para: "For the past decade we have been creating high performance, feature-packed mobile applications for iOS & Android. As an expert in mobile application development services", 
       border: data== "app"? "rgb(93, 127, 61)":"rgb(59, 65, 128)",
-      bg: data=="app"? "linear-gradient(90.28deg, rgba(147, 199, 86, 0.25) 0%, rgba(135, 186, 82, 0.25) 100%)" :" linear-gradient(90.28deg, rgba(119, 123, 179, 0.25) 0%, rgba(110, 116, 199, 0.25) 100%)"
-      
+      bg: data=="app"? "linear-gradient(90.28deg, rgba(147, 199, 86, 0.25) 0%, rgba(135, 186, 82, 0.25) 100%)" :" linear-gradient(90.28deg, rgba(119, 123, 179, 0.25) 0%, rgba(110, 116, 199, 0.25) 100%)",
+      move:'/androidservices'
     },
     { 
       imageUrl:  data=="app"? car3 :react, 
@@ -45,6 +46,7 @@ function Tech_we_use( {data}) {
     },
   ];
   
+  const navigate=useNavigate();
   return (
     <div className='tech-main' style={{ paddingTop: "40px", width: "90%", margin: "0px auto" }}>
       <div>
@@ -62,7 +64,13 @@ function Tech_we_use( {data}) {
             <img loading='lazy'  style={{marginTop:"20px",width:'70px',height:'70px'}} src={item.imageUrl} alt={item.heading} />
             <h3 style={{color:"white"}}>{item.heading}</h3>
             <p style={{color:'white',fontSize:"12px",fontWeight:100,width:"90%"}}>{item.para}</p>
-            <button>See More</button>
+            <button            onClick={() => {
+          // Check if item.move is defined and navigate if it is
+          if (item.move) {
+            
+            navigate(item.move);
+          }
+        }}  >See More  </button>
           </div>
         ))}
       </div>

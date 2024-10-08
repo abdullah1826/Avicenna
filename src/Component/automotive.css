@@ -13,7 +13,7 @@
 }
 
   }
-  @media (max-width: 500px) {
+  @media (max-width: 480px) {
    
 .more-res{
     flex-direction: column !important;
@@ -37,7 +37,14 @@
 }
 
 .newimg {
-    transform: scaleX(1); /* Revert to normal on small screens */
+    transform: scaleX(1);
+
+}
+
+.autos{
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+
 }
   }
 

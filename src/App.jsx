@@ -6,6 +6,9 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import Webservices from './Pages/Webservices';
 import Appservices from './Pages/Appservices';
 import Industryservices from './Pages/Industryservices';
+import Android from './Pages/Android';
+import Portfolio from './Pages/Portfolio';
+import Career from './Pages/Career';
 
 function AnimatedRoutes() {
   const location = useLocation(); // Access current location
@@ -25,6 +28,9 @@ function AnimatedRoutes() {
           <Route path="/solutions" element={<SolutionPage />} />
           <Route path="/webservices" element={<Webservices />} />
           <Route path="/industryservices" element={<Industryservices />} />
+          <Route path="/androidservices" element={<Android />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/careers" element={<Career />} />
           {/* Add other routes here as needed */}
         </Routes>
       </CSSTransition>
