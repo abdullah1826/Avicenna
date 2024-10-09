@@ -1,9 +1,9 @@
 .cardd-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Center the cards horizontally */
-    align-items: center; /* Center the cards vertically if needed */
-    gap: 20px; /* Add space between the cards */
+    justify-content: space-between; /* Use space-between to better manage the layout */
+    align-items: flex-start; /* Align cards to the top */
+    gap: 20px; /* Maintain space between the cards */
 }
 
 .cardd {
@@ -12,14 +12,13 @@
     overflow: hidden;
     position: relative;
     border-radius: 34px;
-    width: 30%; /* Set a default width for the cards */
+    width: 30%; /* Default width for cards */
     margin-top: 60px;
 }
 
 .cardd-image {
     width: 100%;
     height: auto;
-    top: 0;
 }
 
 .cardd-content {
@@ -33,7 +32,6 @@
     color: white;
     font-size: 30px;
     font-weight: 600;
-    width: 70%;
 }
 
 .cardd-description {
@@ -42,74 +40,60 @@
     font-weight: 100;
 }
 
-.butn{
+.butn,
+.butn1 {
     position: absolute;
-    right: 40px;
-    bottom: 30px;
+    right: 20px; /* Adjusted for better positioning */
+    bottom: 20px; /* Adjusted for better positioning */
     background: transparent;
     color: white;
-    border-radius: 100%;
+    border-radius: 50%; /* Rounded button */
+    border: 2px solid grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; 
+}
+
+.imp{
+    font-size: 10px !important;
+}
+
+.butn {
     height: 60px;
     width: 60px;
-    border: 2px solid grey;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; 
 }
-.butn1{
-    position: absolute;
-    right: 40px;
-    bottom: 30px;
-    background: transparent;
-    color: white;
-    border-radius: 100%;
+
+.butn1 {
     height: 45px;
     width: 45px;
-    border: 2px solid grey;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; 
 }
-.butn1:hover{
+
+.butn1:hover,
+.butn:hover {
     background-color: rgb(58, 242, 181);
     color: black;
     border: none;
     transform: rotate(45deg);
 }
-
-.butn:hover{
-
-    background-color: rgb(58, 242, 181);
-    color: black;
-    border: none;
-    transform: rotate(45deg);
-}
-
-
 
 @media (max-width: 768px) {
-.blog-main h2{
-font-size: 30px !important;
-}
-.blog-main p{
-font-size: 15px !important;
-}
-.blog-sec{
-    margin: 0px !important;
-}
-
-
+    .blog-main h2 {
+        font-size: 30px !important;
+    }
+    .blog-main p {
+        font-size: 15px !important;
+    }
+    .blog-sec {
+        margin: 0px !important;
+    }
 }
 
 @media (max-width: 480px) {
-    .blog-sec{
+    .blog-sec {
         padding-top: 0px !important;
     }
-    .blog-main p{
-      width: 100% !important;
-        }
-
-
+    .blog-main p {
+        width: 100% !important;
+    }
 }

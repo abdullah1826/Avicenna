@@ -9,6 +9,8 @@ import Industryservices from './Pages/Industryservices';
 import Android from './Pages/Android';
 import Portfolio from './Pages/Portfolio';
 import Career from './Pages/Career';
+import BlogPage from './Pages/BlogPage';
+import Readblog from './Pages/Readblog';
 
 function AnimatedRoutes() {
   const location = useLocation(); // Access current location
@@ -31,6 +33,8 @@ function AnimatedRoutes() {
           <Route path="/androidservices" element={<Android />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/careers" element={<Career />} />
+          <Route path="/blogs" element={<BlogPage />} />
+          <Route path="/readblogs" element={<Readblog />} />
           {/* Add other routes here as needed */}
         </Routes>
       </CSSTransition>

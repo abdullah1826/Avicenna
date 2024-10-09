@@ -46,7 +46,6 @@ function Nav({navbar}) {
     // Scrolls to the top of the page
   };
   
-
   const DrawerList = (
     <Box
       sx={{
@@ -72,7 +71,8 @@ function Nav({navbar}) {
             <ListItemButton
               onClick={() => handleNavigation(text.toLowerCase().replace(' ', ''))}
               sx={{
-                color: location.pathname.includes(text.toLowerCase().replace(' ', ''))
+                color: (location.pathname === '/androidservices' && navbar === 'android') || 
+                        location.pathname.includes(text.toLowerCase().replace(' ', ''))
                   ? 'rgb(58, 242, 181)'
                   : 'white',
                 '&:hover': {
@@ -87,8 +87,8 @@ function Nav({navbar}) {
               }}
             >
               <span
-                style={{ top: '0px' }}
                 className={`dot ${
+                  (location.pathname === '/androidservices' && navbar === 'android') || 
                   location.pathname.includes(text.toLowerCase().replace(' ', '')) ? 'active' : ''
                 }`}
               />
@@ -103,6 +103,7 @@ function Nav({navbar}) {
       </Box>
     </Box>
   );
+  
 
   useEffect(() => {
     const handleResize = () => {
@@ -155,39 +156,44 @@ function Nav({navbar}) {
                 alignItems: 'center',
               }}
             >
-              <ul
-                style={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  listStyle: 'none',
-                  padding: '0',
-                  margin: '0',
-                }}
-              >
-                {['Solutions', 'Services', 'Portfolio', 'Blogs', 'Careers', 'Contact Us'].map(
-                  (text) => (
-                    <li
-                      key={text}
-                      className={`hvr ${navbar === "android" ? "hvr2" : ""} ${
-  location.pathname.includes(text.toLowerCase().replace(" ", "")) 
-    ? (navbar === "android" ? "active2" : "active") 
-    : ""
-}`}
+    
+    
+    <ul
+  style={{
+    display: 'flex',
+    justifyContent: 'center',
+    listStyle: 'none',
+    padding: '0',
+    margin: '0',
+  }}
+>
+  {['Solutions', 'Services', 'Portfolio', 'Blogs', 'Careers', 'Contact Us'].map((text) => {
+    const isServices = text === 'Services';
+    const isAndroidServicesPage = location.pathname === '/androidservices' && navbar === 'android';
+    const isActive = location.pathname.includes(text.toLowerCase().replace(' ', ''));
 
-                      onClick={() => handleNavigation(text.toLowerCase().replace(' ', ''))}
-                    >
-                      <span
-                        className={`dot ${
-                          location.pathname.includes(text.toLowerCase().replace(' ', ''))
-                            ? 'active'
-                            : ''
-                        }`}
-                      />
-                      {text}
-                    </li>
-                  )
-                )}
-              </ul>
+    return (
+      <li
+        key={text}
+        className={`
+          ${isAndroidServicesPage ? 'hvr2' : 'hvr'}
+          ${isServices && isAndroidServicesPage ? 'active2' : ''}
+          ${isActive && !isAndroidServicesPage ? 'active' : ''}
+        `}
+        onClick={() => handleNavigation(text.toLowerCase().replace(' ', ''))}
+      >
+        <span
+          className={`dot ${
+            isServices && isAndroidServicesPage ? 'active2' : isActive ? 'active' : ''
+          }`}
+        />
+        {text}
+      </li>
+    );
+  })}
+</ul>
+
+
             </div>
           </nav>
         </div>

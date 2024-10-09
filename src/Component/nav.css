@@ -1,25 +1,16 @@
-.hvr {
+.hvr, .hvr2 {
   margin: 0 15px;
   cursor: pointer;
   font-size: 24px;
   font-weight: 100;
-  position: relative; /* Positioning context for the dot */
-  padding: 4px 0; /* Maintain size and position */
-  line-height: 1.5; /* Consistent line height */
-  text-decoration: none; /* Prevent text decoration changes */
-  transition: color 2s ease; /* Transition for text color */
+  position: relative;
+  padding: 4px 0;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: color 2s ease;
+  color: white; /* Default color */
 }
-.hvr2 {
-  margin: 0 15px;
-  cursor: pointer;
-  font-size: 24px;
-  font-weight: 100;
-  position: relative; /* Positioning context for the dot */
-  padding: 4px 0; /* Maintain size and position */
-  line-height: 1.5; /* Consistent line height */
-  text-decoration: none; /* Prevent text decoration changes */
-  transition: color 2s ease; /* Transition for text color */
-}
+
 
 .dot {
   display: inline-block;
@@ -45,9 +36,11 @@
 }
 
 
+
 .list-i:hover{
   color: rgb(58, 242, 181); 
 }
+
 .hvr:hover {
   color: rgb(58, 242, 181); 
 }
@@ -63,6 +56,7 @@
 .active {
   color: rgb(58, 242, 181);
   text-decoration: none;
+  color: aliceblue;
 }
 
 .dot.active2{
@@ -174,4 +168,6 @@ nav ul li .dot.active {
   letter-spacing: 0 !important;
 
 }
+
+
 

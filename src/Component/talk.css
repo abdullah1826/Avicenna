@@ -42,10 +42,14 @@
 
 /* Responsive styles */
 @media (max-width: 768px) {
+    
     .best-in-app h2 {
-        font-size: 30px !important; /* Adjust heading size for tablets */
+        font-size: 30px !important;
+        width: 100% !important;
+    
+      
     }
-
+  
     .best-in-app p {
         font-size: 20px !important ; /* Adjust paragraph size for tablets */
     }
@@ -54,6 +58,9 @@
         width: 130px !important; /* Adjust button width for tablets */
         height: 50px !important; /* Adjust button height for tablets */
         font-size: 15px !important; /* Adjust button font size for tablets */
+    }
+    .hidden-br {
+        display: none !important;
     }
 }
 
