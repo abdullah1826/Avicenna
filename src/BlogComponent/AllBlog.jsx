@@ -18,7 +18,37 @@ function AllBlog() {
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
+   
   }, []);
+
+
+  const scrollToTop = () => {
+    const targetScrollY = 0; // Target scroll position
+    const currentScrollY = window.scrollY; // Current scroll position
+    const distance = currentScrollY - targetScrollY; // Distance to scroll
+    const duration = 500; // Duration of the scroll (in ms)
+    const startTime = performance.now(); // Get the current time
+
+    const scrollStep = (timestamp) => {
+        const elapsed = timestamp - startTime; // Calculate how much time has passed
+        const progress = Math.min(elapsed / duration, 1); // Calculate progress (0 to 1)
+
+        // Easing function (easeOutCubic)
+        const easeOutCubic = (t) => {
+            return 1 - Math.pow(1 - t, 3);
+        };
+
+        const scrollY = currentScrollY - distance * easeOutCubic(progress); // Calculate the new scroll position
+        window.scrollTo(0, scrollY); // Scroll to the new position
+
+        if (progress < 1) {
+            requestAnimationFrame(scrollStep); // Continue the animation if not finished
+        }
+    };
+
+    requestAnimationFrame(scrollStep); // Start the scrolling animation
+};
+
 
   // Calculate styles based on window width
   const containerStyle = {
@@ -121,7 +151,7 @@ function AllBlog() {
                   <p style={cardDescriptionStyle}>{item.date}</p>
                   <div className='butn'>
                     <MdArrowOutward style={{ fontSize: '40px' }}
-                      onClick={() => navigate(item.move, { state: item })} // Navigate to the respective route with item as state
+                      onClick={() => { scrollToTop(); navigate(item.move, { state: item })} }// Navigate to the respective route with item as state
                     />
                   </div>
                 </div>
@@ -138,7 +168,7 @@ function AllBlog() {
                     <p style={cardDescriptionStyle}>{item.date}</p>
                     <div className='butn1'>
                       <MdArrowOutward style={{ fontSize: '25px' }}
-                        onClick={() => navigate(item.move, { state: item })} // Navigate to the respective route with item as state
+                        onClick={()  =>  {scrollToTop(); navigate(item.move, { state: item })}} // Navigate to the respective route with item as state
                       />
                     </div>
                   </div>
@@ -152,7 +182,7 @@ function AllBlog() {
                       <p style={cardDescriptionStyle}>{blogPosts[index + 1].date}</p>
                       <div className='butn1'>
                         <MdArrowOutward style={{ fontSize: '25px' }}
-                          onClick={() => navigate(blogPosts[index + 1].move, { state: blogPosts[index + 1] })} // Navigate to the respective route with the next blog item as state
+                          onClick={() => { scrollToTop(); navigate(blogPosts[index + 1].move, { state: blogPosts[index + 1] })}} // Navigate to the respective route with the next blog item as state
                         />
                       </div>
                     </div>

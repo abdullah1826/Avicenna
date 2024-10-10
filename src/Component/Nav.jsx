@@ -43,8 +43,38 @@ function Nav({navbar}) {
   const handleNavigation = (path) => {
     navigate(`/${path}`);
     setOpen(false); // Close the drawer after navigation
-    // Scrolls to the top of the page
+  
+    // Custom smooth scroll function
+    const scrollToTop = () => {
+      const targetScrollY = 0; // Target scroll position
+      const currentScrollY = window.scrollY; // Current scroll position
+      const distance = currentScrollY - targetScrollY; // Distance to scroll
+      const duration = 500; // Duration of the scroll (in ms)
+      const startTime = performance.now(); // Get the current time
+  
+      const scrollStep = (timestamp) => {
+        const elapsed = timestamp - startTime; // Calculate how much time has passed
+        const progress = Math.min(elapsed / duration, 1); // Calculate progress (0 to 1)
+  
+        // Easing function (easeOutCubic)
+        const easeOutCubic = (t) => {
+          return 1 - Math.pow(1 - t, 3);
+        };
+  
+        const scrollY = currentScrollY - distance * easeOutCubic(progress); // Calculate the new scroll position
+        window.scrollTo(0, scrollY); // Scroll to the new position
+  
+        if (progress < 1) {
+          requestAnimationFrame(scrollStep); // Continue the animation if not finished
+        }
+      };
+  
+      requestAnimationFrame(scrollStep); // Start the scrolling animation
+    };
+  
+    scrollToTop(); // Call the scroll function
   };
+  
   
   const DrawerList = (
     <Box

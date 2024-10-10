@@ -246,6 +246,9 @@ nav{
     top: 0;
     right: 0;
 }
+.hide-on-mobile {
+    display: none;
+  }
 
     }
 

@@ -16,7 +16,7 @@ function Readblog() {
     const HeroData = {
         width: "70%",
         title: title,
-        description: '<p style="color: white; font-size: 24px; font-weight: 100;">Avicenna Enterprises Solutions is Your <span style="color: rgb(58, 242, 181);">one-step solution  <br /></span> for all your development needs</p>',
+        description: '<p style="color: white; font-size: 24px; font-weight: 100;">Avicenna Enterprises Solutions is Your <span style="color: rgb(58, 242, 181);">one-step solution  <br classname="hide-on-mobile" /></span> for all your development needs</p>',
         imageUrl: bg8
     }
     return (

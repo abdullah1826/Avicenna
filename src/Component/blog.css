@@ -62,11 +62,13 @@
 .butn {
     height: 60px;
     width: 60px;
+    cursor: pointer;
 }
 
 .butn1 {
     height: 45px;
     width: 45px;
+    cursor: pointer;
 }
 
 .butn1:hover,

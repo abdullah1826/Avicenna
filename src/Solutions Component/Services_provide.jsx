@@ -1,15 +1,42 @@
 import React from 'react';
 import "./services_provide.css";
-import suport from "../image/suport.png"
-import web from "../image/web.png"
-import user from "../image/user.png"
-import backend from "../image/backend.png"
-import mob from "../image/mob.png"
+import suport from "../image/suport.png";
+import web from "../image/web.png";
+import user from "../image/user.png";
+import backend from "../image/backend.png";
+import mob from "../image/mob.png";
 import { LuMoveRight } from "react-icons/lu";
 import { useNavigate } from 'react-router-dom';
 
 function Services_provide() {
     const navigate = useNavigate(); // useNavigate hook for navigation
+
+    const scrollToTop = () => {
+        const targetScrollY = 0; // Target scroll position
+        const currentScrollY = window.scrollY; // Current scroll position
+        const distance = currentScrollY - targetScrollY; // Distance to scroll
+        const duration = 500; // Duration of the scroll (in ms)
+        const startTime = performance.now(); // Get the current time
+
+        const scrollStep = (timestamp) => {
+            const elapsed = timestamp - startTime; // Calculate how much time has passed
+            const progress = Math.min(elapsed / duration, 1); // Calculate progress (0 to 1)
+
+            // Easing function (easeOutCubic)
+            const easeOutCubic = (t) => {
+                return 1 - Math.pow(1 - t, 3);
+            };
+
+            const scrollY = currentScrollY - distance * easeOutCubic(progress); // Calculate the new scroll position
+            window.scrollTo(0, scrollY); // Scroll to the new position
+
+            if (progress < 1) {
+                requestAnimationFrame(scrollStep); // Continue the animation if not finished
+            }
+        };
+
+        requestAnimationFrame(scrollStep); // Start the scrolling animation
+    };
 
     const service = [
         {
@@ -42,7 +69,7 @@ function Services_provide() {
     ];
 
     return (
-        <div className='ServicesContainer '> 
+        <div className='ServicesContainer'> 
             <div>
                 <h2 className='heading'>
                     Services <span className='my-span'>We Provide</span>
@@ -59,7 +86,10 @@ function Services_provide() {
                             <h2 className='card-head'>{item.heading}</h2>
                             <p className='card-para'>{item.para}</p>
                             <button 
-                                onClick={() => navigate(item.move)} // Navigate to the specified route
+                                onClick={() => {
+                                    scrollToTop(); // Scroll to the top before navigating
+                                    navigate(item.move); // Navigate to the specified route
+                                }}
                                 className='card-button'>
                                 <LuMoveRight /> Read more
                             </button>

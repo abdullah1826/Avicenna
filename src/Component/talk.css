@@ -108,8 +108,3 @@
       margin: 15px !important; /* Add padding to section for mobile */
     }
 }
-@media (max-width: 480px) {
-    .hide-on-mobile {
-      display: none;
-    }
-  }

@@ -19,7 +19,7 @@ import Jobapply from '../PortfolioComponent/Jobapply';
 const HeroData = {
     width: "60%",
         title: '<h2 style="color: white; font-size: 55px; font-weight: 900; width: 80%;">  Be The Part Of   <span style="color: rgb(58, 242, 181);"> Our Brillient Team </span> </h2>',
-        description: '<p style="color: white; font-size: 24px; font-weight: 100;">Avicenna Enterprises Solutions is Your <span style="color: rgb(58, 242, 181);">one-step solution  <br classname="hidden-br" /></span> for all your development needs</p>',
+        description: '<p style="color: white; font-size: 24px; font-weight: 100;">Avicenna Enterprises Solutions is Your <span style="color: rgb(58, 242, 181);">one-step solution  <br classname="hide-on-mobile" /></span> for all your development needs</p>',
         imageUrl: bg6
     }
   
