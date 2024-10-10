@@ -7,10 +7,10 @@ import { MdCall } from "react-icons/md";
 function Location() {
   return (
     <div className='ServicesContainer'>
-      <h3 className='heading' style={{color:'rgb(58, 242, 181)',fontSize:"30px",fontWeight:"700"}}>
+      <h3 className='heading' style={{color:'rgb(58, 242, 181)',fontSize:"35px",fontWeight:"700"}}>
         Get In <span style={{color:"white"}}>Touch</span>
       </h3>
-      <p style={{width:"70%",fontWeight:100}}>
+      <p className='paragraph' style={{width:"70%",fontWeight:100}}>
         For the past decade, we have been creating high-performance, feature-packed mobile applications for iOS & Android. As an expert in mobile application development services, Folio3 can create the right app that will meet all your business and industry needs.
       </p>
 
@@ -20,9 +20,9 @@ function Location() {
             <div style={{ display:'flex',justifyContent:"center",alignItems:'center',width:'80px',borderRadius:"10px",border:'1px solid grey',height:'70px',background:`linear-gradient(90.28deg, rgba(98, 98, 98, 0.25) 0%, rgba(168, 168, 168, 0.25) 100%)` }}>
               <MdLocationOn style={{color:"rgb(58, 242, 181)",fontSize:"30px"}}/>
             </div>
-            <div style={{width:"61%"}}>
+            <div style={{width:"90%"}}>
               <h5 style={{fontWeight:900,fontSize:'25px'}}>Location</h5>
-              <p style={{fontSize:"19px",fontWeight:100,width:'90%'}}>79 P Block Rd, Block P Phase 2 Johar Town, Lahore</p>
+              <p style={{fontSize:"19px",fontWeight:100,width:'100%'}}>79 P Block Rd, Block P Phase 2 Johar Town, Lahore</p>
             </div>
           </div>
 
