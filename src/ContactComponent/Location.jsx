@@ -20,7 +20,7 @@ function Location() {
             <div style={{ display:'flex',justifyContent:"center",alignItems:'center',width:'80px',borderRadius:"10px",border:'1px solid grey',height:'70px',background:`linear-gradient(90.28deg, rgba(98, 98, 98, 0.25) 0%, rgba(168, 168, 168, 0.25) 100%)` }}>
               <MdLocationOn style={{color:"rgb(58, 242, 181)",fontSize:"30px"}}/>
             </div>
-            <div style={{width:"90%"}}>
+            <div style={{width:"76%"}}>
               <h5 style={{fontWeight:900,fontSize:'25px'}}>Location</h5>
               <p style={{fontSize:"19px",fontWeight:100,width:'100%'}}>79 P Block Rd, Block P Phase 2 Johar Town, Lahore</p>
             </div>

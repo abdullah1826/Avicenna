@@ -21,7 +21,9 @@
   
   @media (max-width: 768px) {
     
-
+.for-h{
+  height: 60px !important;
+}
 .information{
   height: 200px !important;
 }

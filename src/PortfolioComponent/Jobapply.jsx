@@ -5,13 +5,7 @@ import "./jobapply.css";
 function Jobapply() {
   // Array of job data
   const jobData = [
-    {
-      title: "UI/UX Designer",
-      buttons: ["2+ Experience", "Figma Expert", "Auto Layout"],
-      description:
-        "We ensure high-performance delivery and deployment of our iOS applications to ensure the highest ROI. Our comprehensive iOS app development services offer:",
-      image: img1,
-    },
+ 
     {
       title: "Frontend Developer",
       buttons: ["3+ Experience", "React Expert", "Responsive Design"],
@@ -24,6 +18,20 @@ function Jobapply() {
       buttons: ["4+ Experience", "Node.js Expert", "API Integration"],
       description:
         "We offer robust backend development services to ensure smooth integration and secure data management for your applications.",
+      image: img1,
+    },
+    {
+      title: "Backend Developer",
+      buttons: ["4+ Experience", "Node.js Expert", "API Integration"],
+      description:
+        "We offer robust backend development services to ensure smooth integration and secure data management for your applications.",
+      image: img1,
+    },
+    {
+      title: "Frontend Developer",
+      buttons: ["3+ Experience", "React Expert", "Responsive Design"],
+      description:
+        "Our frontend development services focus on delivering seamless and engaging user experiences across various devices and platforms.",
       image: img1,
     },
     // Add more job listings as needed
@@ -48,8 +56,6 @@ function Jobapply() {
             </div>
             <button
               style={{
-                marginRight: "20px",
-                width: 230,
                 height: '55px',
                 fontSize: '13px',
               }}
