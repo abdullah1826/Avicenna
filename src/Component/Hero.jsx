@@ -26,7 +26,7 @@ export default function Hero({ data, dataa, newdata, page }) {
             <div className='header-wrap' style={{ width: '90%', margin: '0px auto', paddingTop: "50px" }}>
                 <header className='header'>
                     <img  src={logo1} alt="Avicenna" />
-                    <div className='b-f' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: "20px" }}>
+                    <div className='b-f' style={{ display: 'flex', justifyContent: 'center', alignItems: 'end', gap: "10px" }}>
                         <h3 style={{ color: 'white' }}>+92 320 0001511</h3>
                         <button className={newdata === "android" ? "main-btn2" : "main-btn"}>
                             Start Your Project

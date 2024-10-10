@@ -204,6 +204,7 @@ nav{
  .b-f{
     flex-direction: column !important;
     gap: 0px !important;;
+    align-items: end !important;
  }
 
 

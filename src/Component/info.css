@@ -13,6 +13,7 @@
   .information h1{
     font-size: 75px !important;
     font-weight: 900;
+    height: 100px !important;
   }
   .information p{
     font-size: 15px;

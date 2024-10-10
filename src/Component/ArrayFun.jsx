@@ -31,6 +31,7 @@ const cardStyle = {
   position: 'relative',
   overflow: 'hidden',
   textAlign: 'left',
+  width:'-webkit-fill-available'
 };
 
 const imgStyle = {
@@ -46,9 +47,9 @@ const imgStyle = {
 
 const headingStyle = {
   color: 'white',
-  position: 'absolute',
-  top: '30px',
-  left: '20px',
+ 
+textAlign:"center",
+paddingTop:"20px",
   fontSize: '28px',
 };
 
