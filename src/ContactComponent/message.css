@@ -1,0 +1,106 @@
+.main-back {
+    width: 100%;
+    background-image: url(../image/main-bck.png);
+    min-height: 400px;
+    background-size: cover;
+    /* Ensure the background is centered */
+    display: flex;
+    /* Enable flexbox */
+    justify-content: center;
+    /* Center content horizontally */
+    align-items: center;
+    /* Center content vertically */
+
+
+}
+
+.main-back-content {
+    text-align: center;
+    /* Center text inside this div */
+    padding: 20px;
+    /* Optional: Add some padding for aesthetics */
+    border-radius: 10px;
+    /* Optional: round the corners */
+}
+
+.form-part {
+    width: 90%;
+    margin: 0px auto;
+    margin-top: 30px;
+}
+
+.myclass {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+
+}
+
+.for-form-width {
+
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    border: 2px solid grey;
+    background: rgb(19, 22, 26, 0.6);
+    border-radius: 14px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width:768px) {
+
+
+
+    .b-g {
+        margin-top: 0px !important;
+    }
+
+    .main-back-content h3 {
+        font-size: 22px !important;
+    }
+
+    .main-back-content p {
+        font-size: 16px !important;
+    }
+
+
+    .myclass {
+
+        flex-direction: column !important;
+        gap: 20px;
+
+    }
+
+    .myclass input {
+
+        width: 100% !important;
+
+
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    .talk-btn {
+        font-size: 12px !important;
+    }
+
+    .form-part {
+        width: 100%!important;
+
+    }
+
+    .for-form-width {
+        width: 95% ;
+    }
+    .b-g{
+        margin-top: 30px !important;
+    }
+    .main-back-content p {
+        font-size: 16px !important;
+        width:100%!important;
+    }
+
+
+}

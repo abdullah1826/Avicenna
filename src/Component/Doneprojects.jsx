@@ -92,7 +92,7 @@ function Doneprojects() {
                                 ref={scrollRef}
                             >
                                 {testimonials.map((testimonial, index) => (
-                                    <img loading='lazy'  className='my-img' 
+                                    <img  className='my-img' 
                                         key={index} 
                                         style={{ width: "200px" }} 
                                         src={testimonial} 

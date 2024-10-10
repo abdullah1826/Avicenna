@@ -64,45 +64,46 @@ function Nav({navbar}) {
     >
       <Box sx={{ padding: '16px', display: 'flex', justifyContent: 'center' }}>
         <img src={logo1} alt="Logo" style={{ width: '100%', maxWidth: '150px', height: 'auto' }} />
-      </Box>
-      <List>
-        {['Solutions', 'Services', 'Portfolio', 'Blogs', 'Careers', 'Contact Us'].map((text) => (
-          <ListItem className='list-i' key={text} disablePadding>
-            <ListItemButton
-              onClick={() => handleNavigation(text.toLowerCase().replace(' ', ''))}
-              sx={{
-                color: (location.pathname === '/androidservices' && navbar === 'android') || 
-                        location.pathname.includes(text.toLowerCase().replace(' ', ''))
-                  ? 'rgb(58, 242, 181)'
-                  : 'white',
-                '&:hover': {
-                  color: 'rgba(58, 242, 181, 1)',
-                },
-                '&.Mui-selected': {
-                  color: 'green',
-                  backgroundColor: 'transparent',
-                },
-                padding: '5px 10px',
-                fontSize: '200px',
-              }}
-            >
-              <span
-                className={`dot ${
-                  (location.pathname === '/androidservices' && navbar === 'android') || 
-                  location.pathname.includes(text.toLowerCase().replace(' ', '')) ? 'active' : ''
-                }`}
-              />
-              <ListItemText sx={{ fontSize: '4rem' }} primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <Box sx={{ padding: '16px', display: 'flex', justifyContent: 'center' }}>
-        <button className='main-btn'>Start Your Project</button>
-      </Box>
+        </Box>
+<List>
+  {['Solutions', 'Services', 'Portfolio', 'Blogs', 'Careers', 'Contact Us'].map((text) => {
+    const isServices = text === 'Services';
+    const isAndroidServicesPage = location.pathname === '/androidservices' && navbar === 'android';
+    const isActive = location.pathname.includes(text.toLowerCase().replace(' ', ''));
+
+    return (
+      <ListItem className='list-i' key={text} disablePadding>
+        <ListItemButton
+          onClick={() => handleNavigation(text.toLowerCase().replace(' ', ''))}
+          className={isAndroidServicesPage ? 'hvr2' : 'hvr'}
+          sx={{
+            color: isServices && isAndroidServicesPage ? 'rgb(91, 126, 29)' :
+                   isActive ? 'rgb(58, 242, 181)' : 'white',
+            padding: '5px 10px',
+          }}
+        >
+          <span
+            className={`dot ${
+              isServices && isAndroidServicesPage ? 'active2' :
+              isActive ? 'active' : ''
+            }`}
+          />
+          <ListItemText sx={{ fontSize: '1rem' }} primary={text} />
+        </ListItemButton>
+      </ListItem>
+    );
+  })}
+</List>
+<Divider />
+<Box sx={{ padding: '16px', display: 'flex', justifyContent: 'center' }}>
+  <button style={{fontSize:"12px"}} className={location.pathname === "/androidservices" ? "main-btn2 hvr2 active2" : "main-btn hvr active"}>
+    Start Your Project
+  </button>
+</Box>
+
     </Box>
   );
+  
   
 
   useEffect(() => {

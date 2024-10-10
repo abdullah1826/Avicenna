@@ -59,6 +59,11 @@
         height: 50px !important; /* Adjust button height for tablets */
         font-size: 15px !important; /* Adjust button font size for tablets */
     }
+    .talk-btn2 {
+        width: 130px !important; /* Adjust button width for tablets */
+        height: 50px !important; /* Adjust button height for tablets */
+        font-size: 15px !important; /* Adjust button font size for tablets */
+    }
     .hidden-br {
         display: none !important;
     }
@@ -86,8 +91,25 @@
         font-size: 16px;
         margin-top: 30px; /* Adjust button font size for mobile */
     }
+    .talk-btn {
+        width: 120px !important; /* Adjust button width for mobile */
+        height: 40px !important; /* Adjust button height for mobile */
+        font-size: 16px;
+        margin-top: 30px; /* Adjust button font size for mobile */
+    }
+    .talk-btn2 {
+        width: 120px !important; /* Adjust button width for mobile */
+        height: 40px !important; /* Adjust button height for mobile */
+        font-size: 16px;
+        margin-top: 30px; /* Adjust button font size for mobile */
+    }
 
     section {
       margin: 15px !important; /* Add padding to section for mobile */
     }
 }
+@media (max-width: 480px) {
+    .hide-on-mobile {
+      display: none;
+    }
+  }

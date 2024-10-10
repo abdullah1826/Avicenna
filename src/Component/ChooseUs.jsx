@@ -49,7 +49,7 @@ function ChooseUs({page}) {
         alignItems:'end' // Adjust this as needed to fit your layout
     }}>
         {arr.map((item, index) => (
-            <img loading='lazy'   className='tw-img'
+            <img   className='tw-img'
                 key={index} 
                 src={item.image} 
                 alt="images" 
@@ -71,7 +71,7 @@ function ChooseUs({page}) {
     }}> 
         <img 
            src={page == "app" ? iphone :newmac} 
-            loading='lazy' 
+            
             alt="iPhone" 
             className="iphone-image"
             style={{ 

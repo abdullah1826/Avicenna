@@ -1,0 +1,38 @@
+.abouthead{
+
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.aboutp{
+
+    font-size: 18px;
+    font-weight: 100;
+    width: 100% !important;
+ 
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .abouthead{
+        font-size: 30px;
+    }
+    .aboutp{
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .abouthead{
+        font-size: 16px;
+    }
+    .aboutp{
+        font-size: 14px;
+    }
+    .ServicesContainer{
+        margin: 20px auto !important;
+    }
+  
+}

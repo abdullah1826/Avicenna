@@ -11,6 +11,8 @@ import Portfolio from './Pages/Portfolio';
 import Career from './Pages/Career';
 import BlogPage from './Pages/BlogPage';
 import Readblog from './Pages/Readblog';
+import Contact from './Pages/Contact';
+
 
 function AnimatedRoutes() {
   const location = useLocation(); // Access current location
@@ -35,6 +37,7 @@ function AnimatedRoutes() {
           <Route path="/careers" element={<Career />} />
           <Route path="/blogs" element={<BlogPage />} />
           <Route path="/readblogs" element={<Readblog />} />
+          <Route path="/contactus" element={<Contact />} />
           {/* Add other routes here as needed */}
         </Routes>
       </CSSTransition>

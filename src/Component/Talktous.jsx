@@ -20,7 +20,7 @@ function Talktous({ data, newdata, page = null }) {
             <div className='best-in-app'>
                 {/* Render title and description safely */}
                 {page == "blogRead" ? (
-                <div style={{ width: data.width, fontSize: "55px", width: "60%", color: 'white',fontWeight:900 }} dangerouslySetInnerHTML={{ __html: modifyTitle(data.title) }} />
+                <div className='heading' style={{ width: data.width, fontSize: "55px", width: "60%", color: 'white',fontWeight:900 }} dangerouslySetInnerHTML={{ __html: modifyTitle(data.title) }} />
                 ) : 
                 (  <div style={{ width: data.width }} dangerouslySetInnerHTML={{ __html: data.title }} /> )}
                 

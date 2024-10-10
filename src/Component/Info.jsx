@@ -5,7 +5,7 @@ function Info() {
   return (
     <section className='my-section' style={{ margin: '0px auto', width: '90%' ,paddingTop:"70px"}}>
       <div className="information">
-        <div className='myclass' style={{
+        <div className='myclasss' style={{
           paddingTop: '20px',
           height:'300px',
           color: 'white',

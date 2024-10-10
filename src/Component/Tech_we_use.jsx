@@ -61,7 +61,7 @@ function Tech_we_use( {data}) {
       <div className="cards-container">
         {card.map((item, index) => (
           <div key={index} className="card" style={{ background: item.bg,border: `2px solid ${item.border}` }}>
-            <img loading='lazy'  style={{marginTop:"20px",width:'70px',height:'70px'}} src={item.imageUrl} alt={item.heading} />
+            <img  style={{marginTop:"20px",width:'70px',height:'70px'}} src={item.imageUrl} alt={item.heading} />
             <h3 style={{color:"white"}}>{item.heading}</h3>
             <p style={{color:'white',fontSize:"12px",fontWeight:100,width:"90%"}}>{item.para}</p>
             <button            onClick={() => {
