@@ -10,6 +10,12 @@ display: flex;
 align-items: center;
 
 }
+
+.three-btn{
+    display: flex;
+    gap: 10px;
+}
+
 .image1{
     width: 20%;
 }
@@ -74,7 +80,7 @@ margin: 5px;
 }
 
 .three-btn button{
-    width: 100px;
+    width: auto;
     font-size: 10px;
     height: 32px;
 }
@@ -128,5 +134,18 @@ margin: 5px;
     margin: 0px !important;
     margin-bottom: 10px !important;
   }
+  .three-btn button{
+    width: auto;
+    font-size: 10px;
+    height: 32px;
+}
+
   }
-      
+  @media (max-width: 400px) {
+    .three-btn button{
+        width: auto;
+        font-size: 7px;
+        height: 32px;
+    }
+
+  }      

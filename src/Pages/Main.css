@@ -25,6 +25,7 @@
     min-height: 100vh;
     z-index: 10;
     padding-bottom: 20px;
+    
   }
 
 
@@ -111,6 +112,9 @@ button {
 
 
 @media (max-width: 768px) {
+    .Heros{
+        height: auto !important;
+      }
     .header h3{
        display: none;
 
@@ -165,7 +169,9 @@ nav{
 
   
   @media (max-width: 480px) {
-  
+  .Heros{
+    height: auto !important;
+  }
 
     .Hero{
 min-height: 100% !important;
@@ -247,8 +253,8 @@ nav{
     top: 0;
     right: 0;
 }
-.hide-on-mobile {
-    display: none;
+ p span br{
+    display: none !important;
   }
 
     }

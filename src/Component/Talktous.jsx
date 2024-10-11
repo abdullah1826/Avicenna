@@ -1,9 +1,9 @@
 import React from 'react';
 import "./talk.css";
-
+import { useNavigate } from 'react-router-dom';
 function Talktous({ data, newdata, page = null }) {
     console.log(page); // Debugging to check the structure of data
-
+const navigate=useNavigate();
     const modifyTitle = (title) => {
         if (!title) return ''; // Safeguard against undefined title
 
@@ -31,8 +31,10 @@ function Talktous({ data, newdata, page = null }) {
                 <div dangerouslySetInnerHTML={{ __html: data?.description || '' }} />
                
                 {/* Conditional button style based on newdata */}
-                <button style={{ marginTop: "20px" }} className={newdata === "android" ? 'talk-btn2' : 'talk-btn'}>
+                <button style={{ marginTop: "20px" }} className={newdata === "android" ? 'talk-btn2' : 'talk-btn'}
+                onClick={()=>{navigate('/contactus')}}>
                     Talk to us
+
                 </button>
             </div>
         </section>

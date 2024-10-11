@@ -20,7 +20,7 @@ const HeroData = {
 function Android() {
   return (
     
-        <div className='Containerr'style={{height:'100%',background:" #090e17" }}>
+        <div className='Containerr' style={{height:'100%',background:" #090e17" }}>
 <Hero data = {HeroData} newdata={"android"}  />
 
 <Develop dev={"android"}/>

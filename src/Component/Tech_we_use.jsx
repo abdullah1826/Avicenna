@@ -18,7 +18,7 @@ function Tech_we_use( {data}) {
       para: "For the past decade we have been creating high performance, feature-packed mobile applications for iOS & Android. As an expert in mobile application development services", 
  border: data=="app"?'rgb(42, 82, 150,0.7)':'rgb(29, 65, 159)',
       bg: data=="app"? "linear-gradient(90.28deg, rgba(75, 131, 220, 0.25) 0%, rgba(221, 237, 255, 0.25) 100%)": "linear-gradient(90.28deg, rgba(38, 77, 228, 0.25) 0%, rgba(41, 101, 241, 0.25) 100%)",
-  
+      move:'/androidservices'
       
     },
     { 
@@ -34,15 +34,16 @@ function Tech_we_use( {data}) {
       heading:  data=="app"? 'Flutter Applications':"React JS", 
       para: "For the past decade we have been creating high performance, feature-packed mobile applications for iOS & Android. As an expert in mobile application development services", 
      border:"rgb(24, 79, 134)",
-      bg: "linear-gradient(90.28deg, rgba(115, 211, 237, 0.25) 0%, rgba(35, 126, 207, 0.25) 100%)"
+      bg: "linear-gradient(90.28deg, rgba(115, 211, 237, 0.25) 0%, rgba(35, 126, 207, 0.25) 100%)",
+      move:'/androidservices'
     },
     { 
       imageUrl:  data=="app"? card4 : node, 
       heading:  data=="app"?'Native Applications':'Node JS', 
       para: "For the past decade we have been creating high performance, feature-packed mobile applications for iOS & Android. As an expert in mobile application development services", 
      border: data=="app"? "rgb(75, 136, 156)": "rgb(91, 126, 29)",
-      bg:  data=="app"?  "linear-gradient(90.28deg, rgba(142, 219, 237, 0.25) 0%, rgba(0, 216, 255, 0.25) 100%)":" linear-gradient(90.28deg, rgba(139, 197, 0, 0.25) 0%, rgba(135, 186, 82, 0.25) 100%)"
-      
+      bg:  data=="app"?  "linear-gradient(90.28deg, rgba(142, 219, 237, 0.25) 0%, rgba(0, 216, 255, 0.25) 100%)":" linear-gradient(90.28deg, rgba(139, 197, 0, 0.25) 0%, rgba(135, 186, 82, 0.25) 100%)",
+      move:'/androidservices'
     },
   ];
   

@@ -5,7 +5,7 @@ import Nav from '../Component/Nav';
 import "../Pages/Main.css";
 
 
-export default function Hero({ data, dataa, newdata, page }) {
+export default function Hero({ data, dataa, newdata, page ,iosd}) {
     console.log('Page:', page);
     console.log('Data:', data);
     console.log('DataA:', dataa);
@@ -16,6 +16,7 @@ export default function Hero({ data, dataa, newdata, page }) {
             className='Heros'
             style={{
                 width: '100%',
+                height:"100vh",
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',
                 zIndex: 10,
@@ -28,7 +29,7 @@ export default function Hero({ data, dataa, newdata, page }) {
                     <img  src={logo1} alt="Avicenna" />
                     <div className='b-f' style={{ display: 'flex', justifyContent: 'center', alignItems: 'end', gap: "10px" }}>
                         <h3 style={{ color: 'white' }}>+92 320 0001511</h3>
-                        <button className={newdata === "android" ? "main-btn2" : "main-btn"}>
+                        <button  className={newdata === "android" ? "main-btn2" : "main-btn"}>
                             Start Your Project
                         </button>
                     </div>

@@ -4,7 +4,7 @@ import './info.css';
 const data = [
   {
     number: "300+",
-    description: "Designer, Developer <br /> and Miracle Workers",
+    description: "Designer, and Miracle Workers",
   },
   {
     number: "500+",
@@ -16,7 +16,7 @@ const data = [
   },
   {
     number: "15+",
-    description: "Years of Development <br />Experience",
+    description: "Years of Development Experience",
   },
 ];
 
@@ -36,7 +36,7 @@ function Info() {
           {data.map((item, index) => (
             <div className='for-h' key={index} style={{ width: '24%', textAlign: 'center', height: '140px',display:'flex',flexDirection:'column' }}>
               <h1 dangerouslySetInnerHTML={{ __html: item.number }}></h1>
-              <p dangerouslySetInnerHTML={{ __html: item.description }}></p>
+              <p style={{width:"100%",margin:"0px auto"}} dangerouslySetInnerHTML={{ __html: item.description }}></p>
             </div>
           ))}
         </div>

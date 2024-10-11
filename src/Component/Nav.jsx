@@ -126,7 +126,7 @@ function Nav({navbar}) {
 </List>
 <Divider />
 <Box sx={{ padding: '16px', display: 'flex', justifyContent: 'center' }}>
-  <button style={{fontSize:"12px"}} className={location.pathname === "/androidservices" ? "main-btn2 hvr2 active2" : "main-btn hvr active"}>
+  <button style={{fontSize:"12px",marginLeft:'0px'}} className={location.pathname === "/androidservices" ? "main-btn2 hvr2 active2" : "main-btn hvr active"}>
     Start Your Project
   </button>
 </Box>

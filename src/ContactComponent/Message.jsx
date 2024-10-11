@@ -37,7 +37,7 @@ function Message() {
 
                 <div style={{  width: '100%', margin: '0 auto', height: 'auto', marginTop:"-100px"}}>
                     <div className='for-form-width' >
-                        <div className='form-part'>
+                        <div id='contactus' className='form-part'>
                             <form onSubmit={handleSubmit}>
                                 <div  className="myclass" >
                                     <input
