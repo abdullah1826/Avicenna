@@ -1,5 +1,5 @@
 import React from 'react';
-import './testimonial.css';
+import "../Solutions Component/testimonial.css";
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -85,7 +85,7 @@ function Testimonial({data}) {
         <div className='ServicesContainer' style={{ margin: '20px auto', width: '100%' }}>
             <div style={{ width: '90%', margin: '0px auto' }}>
                 <h2 style={{ color: 'white' }} className='heading'>
-                    Client <span style={{ color: data?.color }}>Testimonials</span>
+                    Client <span style={{ color:data?.color }}>Testimonials</span>
                 </h2>
                 <p style={{ width: '50%' }} className='paragraph'>
                     For the past decade we have been creating high performance, feature-packed mobile applications for iOS & Android.
@@ -97,7 +97,7 @@ function Testimonial({data}) {
                     {testimonials.map((testimonial, index) => (
                         <div className='its' style={slideStyle} key={index}>
                             <div className='inside-content' style={insideContentStyle}>
-                                <img loading='lazy' src={testimonial.img} alt="Client" style={{ borderRadius: '50%', width: '100px', height: '100px', marginBottom: '15px' }} />
+                                <img src={testimonial.img} alt="Client" style={{ borderRadius: '50%', width: '100px', height: '100px', marginBottom: '15px' }} />
                                 <h2 style={{ marginBottom: '10px' }}>{testimonial.heading}</h2>
                                 <p style={{ marginBottom: '20px' }}>
                                     "{testimonial.para}"

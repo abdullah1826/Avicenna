@@ -18,11 +18,14 @@ const HeroData = {
  
    
 function BlogPage() {
-
+    
     return (
-        <>  
+        <>
+
+    
 <div className='Containerr'style={{height:'100%',background:" #090e17" }}>
 <Hero  data = {HeroData} />
+
 <Develop/>
 <Doneprojects/>
 <AllBlog  />

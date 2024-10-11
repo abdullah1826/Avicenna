@@ -15,6 +15,8 @@ const HeroData = {
    imageUrl:bg4
 }
 
+
+
 function Android() {
   return (
     
@@ -40,4 +42,4 @@ function Android() {
   )
 }
 
-export default Android
+export default Android 
