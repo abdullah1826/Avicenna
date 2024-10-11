@@ -39,10 +39,10 @@ function SolutionPage() {
             <For_client />
             <Experties />
 
-            <Suspense fallback={<div></div>}>
+          
                 <BLogs />
                 <Testimonial />
-            </Suspense>
+    
 
             <Appointment />
             <Footer />

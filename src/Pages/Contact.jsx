@@ -28,10 +28,10 @@ function Contact() {
             <Doneprojects />
 
             {/* Suspense is used for lazy-loaded components */}
-            <Suspense fallback={<div></div>}>
+       
                 <Location />
                 <Message />
-            </Suspense>
+       
 
             <Appointment />
             <Footer />

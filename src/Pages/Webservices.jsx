@@ -45,15 +45,15 @@ function Webservices() {
                 <ChooseUs page="web" />
                 <Tech_we_use data="web" />
                 
-                <Suspense fallback={<div></div>}>
+               
                     <BLogs />
-                </Suspense>
+               
 
                 <Appointment />
                 
-                <Suspense fallback={<div></div>}>
+            
                     <Footer />
-                </Suspense>
+               
             </div>
         </div>
     );

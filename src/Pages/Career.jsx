@@ -9,7 +9,7 @@ import bg6 from '../image/bg6.png';
 import Hero from '../Component/Hero';
 
 // Lazy load Jobapply component
-const Jobapply = React.lazy(() => import('../PortfolioComponent/Jobapply'));
+
 
 // HeroData remains unchanged
 const HeroData = {
@@ -26,9 +26,9 @@ function Career() {
 
             <Develop chng={"career"} />
 
-            <Suspense fallback={<div></div>}>
+         
                 <Jobapply />
-            </Suspense>
+           
 
             <Appointment />
             <Footer />
