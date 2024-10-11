@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import React from 'react';
 import Nav from '../Component/Nav'; 
 import logo1 from '../image/logo1.png'; 
 import Connect from '../Solutions Component/Connect';
@@ -6,14 +6,13 @@ import Info from '../Component/Info';
 import Develop from '../Component/Develop';
 import "./Solution.css";
 import Doneprojects from '../Component/Doneprojects';
+import BLogs from '../Component/BLogs';
 import Footer from '../Component/Footer';
 import Appointment from '../Component/Appointment';
 import Services_provide from '../Solutions Component/Services_provide';
 import For_client from '../Solutions Component/For_client';
 import Experties from '../Solutions Component/Experties';
-
-const BLogs = lazy(() => import('../Component/BLogs'));
-const Testimonial = lazy(() => import('../Solutions Component/Testimonial'));
+import Testimonial from '../Solutions Component/Testimonial';
 
 function SolutionPage() {
     return (
@@ -24,7 +23,9 @@ function SolutionPage() {
                         <img src={logo1} alt="Avicenna" />
                         <div className='b-f' style={{ display: 'flex', justifyContent: 'center', alignItems: 'end', gap: "20px" }}>
                             <h3 style={{ color: 'white' }}>+92 320 0001511</h3>
-                            <button className='main-btn'>Start Your Project</button>
+                            <button className='main-btn'>
+                                Start Your Project
+                            </button>
                         </div>
                     </header>
                 </div>
@@ -38,12 +39,8 @@ function SolutionPage() {
             <Services_provide />
             <For_client />
             <Experties />
-
-          
-                <BLogs />
-                <Testimonial />
-    
-
+            <Testimonial />
+            <BLogs />
             <Appointment />
             <Footer />
         </div>
