@@ -82,7 +82,7 @@ function Services_provide() {
                 {service.map((item, index) => (
                     <div key={index} className='cards'>
                         <div className='card-data'>
-                            <img className='card-img' src={item.image} alt={item.heading} />
+                            <img loading='lazy' className='card-img' src={item.image} alt={item.heading} />
                             <h2 className='card-head'>{item.heading}</h2>
                             <p className='card-para'>{item.para}</p>
                             <button 

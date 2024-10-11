@@ -30,6 +30,7 @@ function About() {
             maxHeight: "500px",
             objectFit: "cover"
         }} 
+        loading='lazy'
         src={imgSrc} 
         alt="" 
     />
@@ -70,6 +71,7 @@ function About() {
             maxHeight: "500px",
             objectFit: "cover"
         }} 
+        loading='lazy'
         src={imgSrc} 
         alt="" 
     />
@@ -104,8 +106,8 @@ function About() {
     <h2 className='abouthead'   style={{color:'rgb(58, 242, 181)'}}> Content Lability</h2>
     <p  className='aboutp'>Lorem ipsum dolor sit amet Lorem ipsum Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque, tempore! dolor sit, amet consectetur adipisicing elit. Repellat eligendi quis accusamus necessitatibus incidunt ex modi minima porro veritatis magni! A, blanditiis consequatur? Voluptate perferendis quae pariatur illum, nihil enim! consectetur. Mauris nam lectus lectus quam vitae quis pretium ut risus. Faucibus aliquet dolor vitae porttitor nibh. Luctus vulputate ornare lectus nulla scelerisque ligula congue velit tellus. </p>
   <div style={{display:'flex' ,justifyContent:'space-between',alignItems:'center',paddingTop:"40px"}}>
-    <img style={{width:'48%'}} src={imgSrc} alt="" />
-    <img style={{width:'48%'}} src={imgSrc} alt="" />
+    <img loading='lazy' style={{width:'48%'}} src={imgSrc} alt="" />
+    <img loading='lazy' style={{width:'48%'}} src={imgSrc} alt="" />
   </div>
  </div>
 

@@ -85,7 +85,7 @@ function Successstory({ data, minedata }) { // Destructure data here
                             </p>
                         </div>
 
-                        <img className='myi' style={{ width: '30%', position: "relative", right: "0px" }} src={item.image} alt="new" />
+                        <img loading='lazy' className='myi' style={{ width: '30%', position: "relative", right: "0px" }} src={item.image} alt="new" />
                     </div>
                 ))}
             </Slider>

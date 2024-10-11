@@ -48,10 +48,10 @@ function For_client() {
         {client_card.map((item, index) => (
           <div key={index} className="my-card">
           <div className='inner-data'>
-            <img className='my-img' src={item.image} alt={item.heding} />
+            <img loading='lazy' className='my-img' src={item.image} alt={item.heding} />
 
             <div style={{display:'flex',alignItems:'end',gap:'10px'}} className='headnimg'>
-            <img style={{width:'10px'}} src={same2} alt="" />
+            <img loading='lazy' style={{width:'10px'}} src={same2} alt="" />
               <h2 className='my-head'>{item.heding}</h2>
             </div>
 

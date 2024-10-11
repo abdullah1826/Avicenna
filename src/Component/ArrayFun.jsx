@@ -88,6 +88,7 @@ function ArrayFun() {
                 style={imgStyle}
                 src={item.imageUrl}
                 alt={item.head}
+                
               />
             </div>
           </div>

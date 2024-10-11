@@ -11,7 +11,7 @@ function Automotive({data}) {
         <p style={{width:'90%'}} className='paragraph'>We ensure high-performance delivery and deployment of our iOS applications to ensure the highest ROI. Our comprehensive iOS app development services offer:</p>
     </div>
     <div style={{width:'38%'}}>
-    <img className='newimg' src={data.imageUrl} alt=""/>
+    <img loading='lazy' className='newimg' src={data.imageUrl} alt=""/>
     </div>
 </div>
  

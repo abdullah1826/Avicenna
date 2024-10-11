@@ -23,6 +23,7 @@ function Experties() {
             <div className='back-design1'>
               <div className='for-ab'>
                 <img
+                loading='lazy'
                   style={{ width: '80%', height: 'auto', objectFit: 'cover' }}
                   className='web-img'
                   src={webimg}
@@ -40,6 +41,7 @@ function Experties() {
             <div style={{ marginTop: "150px" }} className='back-design'>
               <div className='for-ab3'>
                 <img
+                loading='lazy'
                   style={{ marginLeft: '30px', width: '80%', height: 'auto', objectFit: 'cover' }}
                   className='web-img'
                   src={globe}
@@ -82,6 +84,7 @@ function Experties() {
             <div style={{ marginTop: '130px' }} className='back-design'>
               <div className='for-ab2'>
                 <img
+                loading='lazy'
                   style={{ width: '80%', height: 'auto', objectFit: 'cover' }}
                   className='web-imgg'
                   src={product}

@@ -97,7 +97,7 @@ function Testimonial({data}) {
                     {testimonials.map((testimonial, index) => (
                         <div className='its' style={slideStyle} key={index}>
                             <div className='inside-content' style={insideContentStyle}>
-                                <img src={testimonial.img} alt="Client" style={{ borderRadius: '50%', width: '100px', height: '100px', marginBottom: '15px' }} />
+                                <img loading='lazy' src={testimonial.img} alt="Client" style={{ borderRadius: '50%', width: '100px', height: '100px', marginBottom: '15px' }} />
                                 <h2 style={{ marginBottom: '10px' }}>{testimonial.heading}</h2>
                                 <p style={{ marginBottom: '20px' }}>
                                     "{testimonial.para}"

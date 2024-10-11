@@ -57,10 +57,10 @@ function Footer() {
                 <div className='flo-icn'>
                     <h1 style={{fontSize:'24px',textAlign:'center'}}>Follow Us On:</h1>
                     <div style={{display:'flex',justifyContent:'center',gap:'10px'}}>
-                    <img   className='icon-img' style={{width:'45px'}} src={lg1} alt="lg" />
-                    <img   className='icon-img' style={{width:'45px'}} src={lg2} alt="lg" />
-                    <img   className='icon-img' style={{width:'45px'}} src={lg3} alt="lg" />
-                    <img   className='icon-img' style={{width:'45px'}} src={lg4} alt="lg" />
+                    <img loading='lazy'   className='icon-img' style={{width:'45px'}} src={lg1} alt="lg" />
+                    <img loading='lazy'   className='icon-img' style={{width:'45px'}} src={lg2} alt="lg" />
+                    <img loading='lazy'  className='icon-img' style={{width:'45px'}} src={lg3} alt="lg" />
+                    <img loading='lazy'  className='icon-img' style={{width:'45px'}} src={lg4} alt="lg" />
 
                     </div>
                 </div>

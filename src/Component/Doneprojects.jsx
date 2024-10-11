@@ -94,6 +94,7 @@ function Doneprojects() {
                                 {testimonials.map((testimonial, index) => (
                                     <img  className='my-img' 
                                         key={index} 
+                                        loading='lazy'
                                         style={{ width: "200px" }} 
                                         src={testimonial} 
                                         alt={`testimonial-${index}`} 
