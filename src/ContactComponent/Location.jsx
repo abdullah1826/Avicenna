@@ -3,7 +3,7 @@ import "../ContactComponent/loc.css"
 import { MdLocationOn } from "react-icons/md";
 import { IoMdMail } from "react-icons/io";
 import { MdCall } from "react-icons/md";
-import "../Pages/main.css"
+
 
 function Location() {
   return (
