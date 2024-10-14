@@ -21,7 +21,7 @@ function Readblog() {
     }
     return (
         <>
-            <div className='Containerr' style={{height:'100%', background:"#090e17"}}>
+            <div className='Containerr' style={{height:'100%', background:"#090e17",position:'sticky'}}>
                 <Hero  page={"read"} data={HeroData} />
            
            <About/>

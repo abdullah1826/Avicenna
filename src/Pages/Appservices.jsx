@@ -30,7 +30,7 @@ function Mainpage() {
         <>
 
     
-<div className='Containerr'style={{height:'100%',background:" #090e17" }}>
+<div className='Containerr'style={{height:'100%',background:" #090e17",position:'sticky' }}>
 <Hero data = {HeroData} />
 
 
