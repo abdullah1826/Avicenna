@@ -87,7 +87,7 @@ function Testimonial({data}) {
                 <h2 style={{ color: 'white' }} className='heading'>
                     Client <span style={{ color:data?.color }}>Testimonials</span>
                 </h2>
-                <p style={{ width: '50%' }} className='paragraph'>
+                <p style={{ width: '50%',color:'white',fontWeight:100 }} className='paragraph'>
                     For the past decade we have been creating high performance, feature-packed mobile applications for iOS & Android.
                 </p>
             </div>
@@ -98,9 +98,9 @@ function Testimonial({data}) {
                         <div className='its' style={slideStyle} key={index}>
                             <div className='inside-content' style={insideContentStyle}>
                                 <img src={testimonial.img} alt="Client" style={{ borderRadius: '50%', width: '100px', height: '100px', marginBottom: '15px' }} />
-                                <h2 style={{ marginBottom: '10px' }}>{testimonial.heading}</h2>
-                                <p style={{ marginBottom: '20px' }}>
-                                    "{testimonial.para}"
+                                <h2 style={{ marginBottom: '10px',color:"white" }}>{testimonial.heading}</h2>
+                                <p style={{ marginBottom: '20px',color:'whitesmoke',fontWeight:100 }}>
+                                    {testimonial.para}
                                 </p>
                                 <div className="stardata" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                                     <Box sx={{ width: 200, display: 'flex', alignItems: 'center' }}>

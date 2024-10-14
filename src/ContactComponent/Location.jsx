@@ -1,16 +1,17 @@
 import React from 'react';
-import "./loc.css";
+import "../ContactComponent/loc.css"
 import { MdLocationOn } from "react-icons/md";
 import { IoMdMail } from "react-icons/io";
 import { MdCall } from "react-icons/md";
+import "../Pages/main.css"
 
 function Location() {
   return (
-    <div className='ServicesContainer'>
+    <div className='ServicesContainer' style={{width:'90%',margin:'0px auto',paddingTop:"100px",paddingBottom:"100px"}}>
       <h3 className='heading' style={{color:'rgb(58, 242, 181)',fontSize:"35px",fontWeight:"700"}}>
         Get In <span style={{color:"white"}}>Touch</span>
       </h3>
-      <p className='paragraph' style={{width:"70%",fontWeight:100}}>
+      <p className='paragraph' style={{width:"70%",fontWeight:100,color:"white"}}>
         For the past decade, we have been creating high-performance, feature-packed mobile applications for iOS & Android. As an expert in mobile application development services, Folio3 can create the right app that will meet all your business and industry needs.
       </p>
 
@@ -21,8 +22,8 @@ function Location() {
               <MdLocationOn style={{color:"rgb(58, 242, 181)",fontSize:"30px"}}/>
             </div>
             <div style={{width:"76%"}}>
-              <h5 style={{fontWeight:900,fontSize:'25px'}}>Location</h5>
-              <p style={{fontSize:"19px",fontWeight:100,width:'100%'}}>79 P Block Rd, Block P Phase 2 Johar Town, Lahore</p>
+              <h5 style={{fontWeight:900,fontSize:'25px',color:"white"}}>Location</h5>
+              <p style={{fontSize:"19px",fontWeight:100,width:'100%',color:"white"}}>79 P Block Rd, Block P Phase 2 Johar Town, Lahore</p>
             </div>
           </div>
 
@@ -31,8 +32,8 @@ function Location() {
               <IoMdMail style={{color:"rgb(58, 242, 181)",fontSize:"30px"}}/>
             </div>
             <div className='for-h5'  style={{width:"50%"}}>
-              <h5  style={{fontWeight:900,fontSize:'25px'}}>Email us</h5>
-              <p style={{fontSize:"19px",fontWeight:100,width:'100%'}}>info@avicennaenterprise.com</p>
+              <h5  style={{fontWeight:900,fontSize:'25px',color:"white"}}>Email us</h5>
+              <p style={{fontSize:"19px",fontWeight:100,width:'100%',color:"white"}}>info@avicennaenterprise.com</p>
             </div>
           </div>
 
@@ -41,8 +42,8 @@ function Location() {
               <MdCall style={{color:"rgb(58, 242, 181)",fontSize:"30px"}}/>
             </div>
             <div  style={{width:"61%"}}>
-              <h5  style={{fontWeight:900,fontSize:'25px'}}>Call us</h5>
-              <p className='thip' style={{fontSize:"19px",fontWeight:100,width:'100%'}}>+92 320 000 1511</p>
+              <h5  style={{fontWeight:900,fontSize:'25px',color:"white"}}>Call us</h5>
+              <p className='thip' style={{fontSize:"19px",color:"white",fontWeight:100,width:'100%'}}>+92 320 000 1511</p>
             </div>
           </div>
         </div>

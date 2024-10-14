@@ -8,7 +8,7 @@ function Appointment() {
         <div className="appointment-content">
           <div className="appointment-header">
             <h1 className="appointment-title">
-              Schedule an appointment with our <br />
+              Schedule an appointment with our <br  classname="hide-on-mobile"/>
               <span className="highlighted-text"> Mobile App Development</span> Expert
             </h1>
           </div>
