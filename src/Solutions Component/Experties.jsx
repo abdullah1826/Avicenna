@@ -23,13 +23,13 @@ function Experties() {
 </div>
 <div style={{marginTop:"100px"}}>
     <h3  style={{color:'#3AEDB2'}} >Product UX, Design & Development</h3>
-    <p>
+    <p style={{fontWeight:100}}>
     Avicenna Enterprise Solutions leads the way in Product UX, Design & Development. Immerse yourself in a world where creativity meets functionality. From ideation to delivery, we transform visions into captivating products. Elevate your brand with our expertise in creating seamless and user-centric digital solutions.
     </p>
 </div>
 <div style={{marginTop:"150px"}} className='back-design'>
 
-<div s className='for-ab3'>
+<div  className='for-ab3'>
     <img  style={{marginLeft:'30px',width:'80%',height:'auto',objectFit:'cover'}}  className='web-img' src={globe} alt="ii" />
 </div>
 </div>
@@ -58,7 +58,7 @@ function Experties() {
 <div color='third'>
 <div className='fix' style={{margin:'30px'}}>
     <h3 style={{color:'#3AEDB2'}} >Mobile App & Website Development</h3>
-    <p>
+    <p style={{fontWeight:100}}>
     Avicenna Enterprise Solutions is your go-to partner for cutting-edge Mobile App & Website Development. From concept to execution, we craft exceptional digital experiences that captivate and resonate. Join us in shaping the future of mobile and web with innovative solutions tailored to your success.
     </p>
 </div>
@@ -71,7 +71,7 @@ function Experties() {
 
 <div className='last' >
     <h3 style={{color:'#3AEDB2'}} >MVP Builder & Dedicated Team</h3>
-    <p>
+    <p style={{fontWeight:100}}>
     Avicenna Enterprise Solutions, your trusted MVP Builder & Dedicated Team partner. Witness your ideas come to life with our efficient Minimum Viable Product (MVP) solutions. Leverage our dedicated team to accelerate development, ensuring your project reaches its full potential. Build, iterate, and succeed with Avicenna
     </p>
 </div>

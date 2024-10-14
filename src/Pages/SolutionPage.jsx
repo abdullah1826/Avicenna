@@ -16,6 +16,10 @@ import Testimonial from '../Solutions Component/Testimonial';
 
 function SolutionPage() {
     
+
+    const HeroData={
+        color:'rgb(58, 242, 181)'
+    }
   return (
 
 
@@ -48,7 +52,7 @@ function SolutionPage() {
         <Services_provide/>
         <For_client/>
         <Experties/>
-        <Testimonial />
+        <Testimonial  data={HeroData}/>
         <BLogs/>
         <Appointment/>
         <Footer/>

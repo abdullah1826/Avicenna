@@ -17,13 +17,7 @@ const testimonials = [
         date: "04 August, 2023",
         rating: 5 // Add initial rating
     },
-    {
-        img: c2,
-        heading: "Xerninnea Austin",
-        para: "An exceptional experience from start to finish. Highly recommend their services.",
-        date: "04 August, 2023",
-        rating: 5 // Add initial rating
-    },
+ 
     {
         img: c1,
         heading: "Alexa",
@@ -43,7 +37,7 @@ function Testimonial({data}) {
         slidesToShow: 2,
         slidesToScroll: 1,
         arrows: false,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 2000,
         responsive: [
             {

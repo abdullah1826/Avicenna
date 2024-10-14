@@ -40,7 +40,7 @@ function About() {
 
 </div>
 
-<div className='License'>
+<div className='License' style={{paddingTop:"40px"}}>
     <h2 className='abouthead'  style={{color:'rgb(58, 242, 181)'}}> License</h2>
     <p  className='aboutp'>Lorem ipsum dolor sit amet consectetur. Mauris nam lectus lectus quam vitae quis pretium ut risus. Faucibus aliquet dolor vitae porttitor nibh. Luctus vulputate ornare lectus nulla scelerisque ligula congue velit tellus. </p>
     <ul style={{listStyleType:'circle',paddingLeft:'20px'}}>

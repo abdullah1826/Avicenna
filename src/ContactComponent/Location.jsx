@@ -7,7 +7,7 @@ import { MdCall } from "react-icons/md";
 
 function Location() {
   return (
-    <div className='ServicesContainer' style={{width:'90%',margin:'0px auto',paddingTop:"100px",paddingBottom:"100px"}}>
+    <div className='ServicesContainer'>
       <h3 className='heading' style={{color:'rgb(58, 242, 181)',fontSize:"35px",fontWeight:"700"}}>
         Get In <span style={{color:"white"}}>Touch</span>
       </h3>
