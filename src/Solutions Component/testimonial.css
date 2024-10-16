@@ -28,7 +28,13 @@ margin-left: 8px;
 margin-bottom: 40px !important;
 
   }
+  @media (max-width: 768px) {
+.ServicesContainer{
+   margin: 0px auto !important;
+}
 
+
+  }
 
   @media (max-width: 480px) {
 

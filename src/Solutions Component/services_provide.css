@@ -122,12 +122,18 @@ circle{
         color: aliceblue;
         background-color: rgb(29, 32, 41);
         border-radius: 25px;
+    
+      }
+    
+      .s-p{
+padding-top: 45px !important;
       }
       .section-data{
-        padding: 0px ;
-
+        padding-top: 50px !important;
       }
-   
+    .container{
+      max-width: none;
+    }
 }
 
 @media (max-width: 480px) {

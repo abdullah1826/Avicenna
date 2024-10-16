@@ -70,7 +70,7 @@ function Services_provide() {
 
     return (
         <div className='ServicesContainer'> 
-            <div>
+            <div className=' s-p'>
                 <h2 className='heading'>
                     Services <span className='my-span'>We Provide</span>
                 </h2>

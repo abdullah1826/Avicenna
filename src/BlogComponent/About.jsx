@@ -7,7 +7,7 @@ function About() {
     const location = useLocation(); // Access location
     const { imgSrc } = location.state || {};
   return (
-    <div className='ServicesContainer' style={{width:"90%"}}>
+    <div className='ServicesContainer'  style={{width:"90%"}}>
 
 <div className='About'>
     <h2  className='abouthead' style={{color:'rgb(58, 242, 181)'}}> About</h2>
