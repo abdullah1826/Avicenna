@@ -27,7 +27,7 @@ function Tech_we_use( {data}) {
       para: "For the past decade we have been creating high performance, feature-packed mobile applications for iOS & Android. As an expert in mobile application development services", 
       border: data== "app"? "rgb(93, 127, 61)":"rgb(59, 65, 128)",
       bg: data=="app"? "linear-gradient(90.28deg, rgba(147, 199, 86, 0.25) 0%, rgba(135, 186, 82, 0.25) 100%)" :" linear-gradient(90.28deg, rgba(119, 123, 179, 0.25) 0%, rgba(110, 116, 199, 0.25) 100%)",
-      move:'/androidservices'
+      move: data=="app"?"/androidservices":""
     },
     { 
       imageUrl:  data=="app"? car3 :react, 
