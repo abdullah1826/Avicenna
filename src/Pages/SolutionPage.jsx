@@ -18,10 +18,10 @@ function SolutionPage() {
     
 
     const HeroData={
-        color:'rgb(58, 242, 181)'
+        color:'rgb(58, 242, 181)',
+        appointment_heading:'Development'
     }
   return (
-
 
   
 
@@ -54,7 +54,7 @@ function SolutionPage() {
         <Experties/>
         <Testimonial  data={HeroData}/>
         <BLogs/>
-        <Appointment/>
+        <Appointment data={HeroData}/>
         <Footer/>
        
 

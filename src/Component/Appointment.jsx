@@ -1,7 +1,7 @@
 import React from 'react';
 import './appointment.css';
 
-function Appointment() {
+function Appointment({data}) {
   return (
     <div className='b-g' style={{ marginTop: "70px", border: '2px solid grey' }}>
       <div className="appointment-container">
@@ -9,7 +9,7 @@ function Appointment() {
           <div className="appointment-header">
             <h1 className="appointment-title">
               Schedule an appointment with our <br  classname="hide-on-mobile"/>
-              <span className="highlighted-text"> Mobile App Development</span> Expert
+              <span className="highlighted-text"> {data.appointment_heading}</span> Expert
             </h1>
           </div>
 

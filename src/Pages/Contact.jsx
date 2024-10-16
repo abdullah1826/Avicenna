@@ -16,7 +16,8 @@ const HeroData = {
     width: "70%",
         title: '<h2 style="color: rgb(58, 242, 181); font-size: 55px; font-weight: 700; width: 80%;">  Get In Touch  <span style="color:white;">With Us </span> </h2>',
         description: '<p style="color: white; font-size: 24px; font-weight: 100;">Avicenna Enterprises Solutions is Your <span style="color: rgb(58, 242, 181);">one-step solution  <br classname="hide-on-mobile" /></span> for all your development needs</p>',
-        imageUrl: bg9
+        imageUrl: bg9,
+        appointment_heading:'Development'
     }
   
    
@@ -33,7 +34,7 @@ function Contact() {
 <Doneprojects/>
 <Location/>
 <Message/>
-<Appointment/>
+<Appointment data={HeroData}/>
 <Footer/>
 
 

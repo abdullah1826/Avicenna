@@ -15,7 +15,8 @@ const HeroData = {
     width: "60%",
         title: '<h2 style="color: white; font-size: 55px; font-weight: 900; width: 80%;">  Be The Part Of   <span style="color: rgb(58, 242, 181);"> Our Brillient Team </span> </h2>',
         description: '<p style="color: white; font-size: 24px; font-weight: 100;">Avicenna Enterprises Solutions is Your <span style="color: rgb(58, 242, 181);">one-step solution</span> for all your development needs</p>',
-        imageUrl: bg6
+        imageUrl: bg6,
+        appointment_heading:'Development'
     }
   
    
@@ -33,7 +34,7 @@ function Career() {
 <Develop chng={"career"}/>
 
 <Jobapply/>
-<Appointment/>
+<Appointment data={HeroData}/>
 <Footer/>
 
 
