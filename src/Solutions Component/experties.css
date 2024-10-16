@@ -235,6 +235,9 @@ p{
     .for-flex{
         margin-top: 120px !important;
     }
+    .ExpertiesContainer p{
+        width: 100% !important;
+    }
     }
 
 
