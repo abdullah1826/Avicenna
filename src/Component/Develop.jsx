@@ -2,20 +2,20 @@ import React from 'react'
 import "./develop.css"
 function Develop({data ,dev ,chng}) {
   return (
-    <div className='marg' style={{paddingTop:'40px'}}>
+    <div className='marg' style={{paddingTop:'20px'}}>
         <section  style={{width:"90%",margin:'0px auto',}}>
 
 <div className='best-in-app'>
 <h2 style={{ color: 'white', fontSize: "50px", paddingTop: "55px", fontWeight: 700 }}>
 {chng=="career" ? "Discover":" We Develop Great"}  
   <span style={{ color: dev === "android" ? 'rgb(146, 199, 85)' :'rgb(58, 242, 181)'  }}>
-  {chng === "career" ? "Your Potential " : (data === "app" ? "Mobile Apps" : "Websites")}
+  {chng === "career" ? " Your Potential " : (data === "app" ? " Mobile Apps" : " Websites")}
 
   </span> 
   <br /> 
   {chng=="career" ?" With Us":"For Great"} 
   <span style={{ color:  dev === "android" ? 'rgb(146, 199, 85)' :'rgb(58, 242, 181)'}}>
-    {chng=="career"?" ":"Brands"}
+    {chng=="career"?" ":" Brands"}
   </span> 
 </h2>
 
