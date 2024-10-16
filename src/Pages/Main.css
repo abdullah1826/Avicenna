@@ -171,6 +171,7 @@ nav{
   @media (max-width: 480px) {
   .Heros{
     height: auto !important;
+    min-height: max-content !important;
   }
 
     .Hero{

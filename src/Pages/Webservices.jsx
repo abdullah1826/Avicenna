@@ -15,7 +15,7 @@ import bg2 from "../image/bg2.png"
 import Hero from '../Component/Hero';
 const HeroData = {
     width: "70%",
-        title: '<h2 style="color: white; font-size: 55px; font-weight: 900; width: 80%;">Best-in Class  <span style="color: rgb(58, 242, 181);">Web development </span> Services</h2>',
+        title: '<h2 style="color: white; font-size: 55px; font-weight: 900;">Best-in Class  <span style="color: rgb(58, 242, 181);">Web development </span> Services</h2>',
         description: '<p style="color: white; font-size: 24px; font-weight: 100;">Avicenna Enterprises Solutions is Your <span style="color: rgb(58, 242, 181);">one-step solution for <br /></span> all your development needs</p>',
         imageUrl: bg2,
         appointment_heading:'Web Development'

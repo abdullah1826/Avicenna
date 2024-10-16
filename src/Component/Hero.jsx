@@ -16,7 +16,8 @@ export default function Hero({ data, dataa, newdata, page ,iosd}) {
             className='Heros'
             style={{
                 width: '100%',
-                height:"100vh",
+                height:"max-content",
+                minHeight:"100vh",
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',
                 zIndex: 10,
