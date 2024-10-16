@@ -9,7 +9,7 @@ function Appointment({data}) {
           <div className="appointment-header">
             <h1 className="appointment-title">
               Schedule an appointment with our <br  classname="hide-on-mobile"/>
-              <span className="highlighted-text"> {data.appointment_heading}</span> Expert
+              <span className="highlighted-text"> {data?.appointment_heading}</span> Expert
             </h1>
           </div>
 

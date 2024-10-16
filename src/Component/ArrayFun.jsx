@@ -87,8 +87,8 @@ function ArrayFun() {
 
                 loading='lazy'
                 style={imgStyle}
-                src={item.imageUrl}
-                alt={item.head}
+                src={item?.imageUrl}
+                alt={item?.head}
                 
               />
             </div>

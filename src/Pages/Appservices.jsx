@@ -65,7 +65,7 @@ function Mainpage() {
 <ChooseUs page="app"/>
 <Tech_we_use data={"app"}/>
 <BLogs/>
-<Appointment data={HeroData}/>
+<Appointment data = {HeroData}/>
 <Footer/>
 
 
