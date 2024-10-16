@@ -26,7 +26,7 @@ function SolutionPage() {
   
 
 
- <div id='solutions' className='Containerr'style={{height:'100%',background:" #090e17" }}>
+ <div  className='Containerr'style={{height:'100%',background:" #090e17" }}>
 <div className='Hero' >
 <div className='header-wrap' style={{ width: '90%', margin: '0px auto', paddingTop: "50px" }}>
             <header className='header'>

@@ -2,7 +2,7 @@ import React from 'react'
 import "./develop.css"
 function Develop({data ,dev ,chng}) {
   return (
-    <div className='marg' style={{paddingTop:'18px'}}>
+    <div className='marg' style={{paddingTop:'20px'}}>
         <section  style={{width:"90%",margin:'0px auto',}}>
 
 <div className='best-in-app'>

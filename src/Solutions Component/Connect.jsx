@@ -5,7 +5,7 @@ function Connect() {
 
   const navigate=useNavigate();
   return (
-    <section style={{margin:'0px auto',width:'90%',marginTop:"130px",height:'100%'}}>
+    <section style={{margin:'0px auto',width:'90%',marginTop:"160px",height:'100%'}}>
         <div className='best-in-app'>
 <h2 style={{color:'rgb(58, 242, 181)',fontSize:"75px",fontWeight:"900",textAlign:"center"}} >Connect, Talk, Code </h2>
 
