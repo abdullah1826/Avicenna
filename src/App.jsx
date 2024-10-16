@@ -27,8 +27,9 @@ function AnimatedRoutes() {
       >
         <Routes location={location}>
           {/* Add a redirect for the root path */}
-          <Route path="/" element={<Navigate to="/solutions" />} /> {/* Redirect to Solutions */}
+          
           <Route path="/services" element={<Appservices />} />
+          <Route path="/" element={<SolutionPage />} />
           <Route path="/solutions" element={<SolutionPage />} />
           <Route path="/webservices" element={<Webservices />} />
           <Route path="/industryservices" element={<Industryservices />} />

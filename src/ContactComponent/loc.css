@@ -59,7 +59,7 @@ width: 100% !important;
 
     .icon-data{
         display: flex !important;
-        align-items: center !important;
+        align-items: flex-start !important;
     }
     .icon-data h5{
         font-size: 17px !important; 

@@ -11,16 +11,15 @@ import MenuSharpIcon from '@mui/icons-material/MenuSharp';
 import logo1 from "../image/logo1.png"; // Import your logo
 import './nav.css';
 
-function Nav({navbar}) {
+function Nav({ navbar }) {
   const [open, setOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 480);
   const [isFixed, setIsFixed] = useState(false);
   const navHeight = 100;
 
-  const location = useLocation(); // Get the current location
+  const location = useLocation();
   const navigate = useNavigate();
 
- 
   const handleScroll = () => {
     if (window.scrollY > 180) {
       setIsFixed(true);
@@ -42,40 +41,33 @@ function Nav({navbar}) {
 
   const handleNavigation = (path) => {
     navigate(`/${path}`);
-    setOpen(false); // Close the drawer after navigation
-  
-    // Custom smooth scroll function
+    setOpen(false);
+
     const scrollToTop = () => {
-      const targetScrollY = 0; // Target scroll position
-      const currentScrollY = window.scrollY; // Current scroll position
-      const distance = currentScrollY - targetScrollY; // Distance to scroll
-      const duration = 500; // Duration of the scroll (in ms)
-      const startTime = performance.now(); // Get the current time
-  
+      const targetScrollY = 0;
+      const currentScrollY = window.scrollY;
+      const distance = currentScrollY - targetScrollY;
+      const duration = 500;
+      const startTime = performance.now();
+
       const scrollStep = (timestamp) => {
-        const elapsed = timestamp - startTime; // Calculate how much time has passed
-        const progress = Math.min(elapsed / duration, 1); // Calculate progress (0 to 1)
-  
-        // Easing function (easeOutCubic)
-        const easeOutCubic = (t) => {
-          return 1 - Math.pow(1 - t, 3);
-        };
-  
-        const scrollY = currentScrollY - distance * easeOutCubic(progress); // Calculate the new scroll position
-        window.scrollTo(0, scrollY); // Scroll to the new position
-  
+        const elapsed = timestamp - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
+        const scrollY = currentScrollY - distance * easeOutCubic(progress);
+        window.scrollTo(0, scrollY);
+
         if (progress < 1) {
-          requestAnimationFrame(scrollStep); // Continue the animation if not finished
+          requestAnimationFrame(scrollStep);
         }
       };
-  
-      requestAnimationFrame(scrollStep); // Start the scrolling animation
+
+      requestAnimationFrame(scrollStep);
     };
-  
-    scrollToTop(); // Call the scroll function
+
+    scrollToTop();
   };
-  
-  
+
   const DrawerList = (
     <Box
       sx={{
@@ -94,47 +86,46 @@ function Nav({navbar}) {
     >
       <Box sx={{ padding: '16px', display: 'flex', justifyContent: 'center' }}>
         <img src={logo1} alt="Logo" style={{ width: '100%', maxWidth: '150px', height: 'auto' }} />
-        </Box>
-<List>
-  {['Solutions', 'Services', 'Portfolio', 'Blogs', 'Careers', 'Contact Us'].map((text) => {
-    const isServices = text === 'Services';
-    const isAndroidServicesPage = location.pathname === '/androidservices' && navbar === 'android';
-    const isActive = location.pathname.includes(text.toLowerCase().replace(' ', ''));
+      </Box>
+      <List>
+        {['Solutions', 'Services', 'Portfolio', 'Blogs', 'Careers', 'Contact Us'].map((text) => {
+          const isServices = text === 'Services';
+          const isAndroidServicesPage = location.pathname === '/androidservices' && navbar === 'android';
+          const isActive =
+            (text === 'Solutions' && (location.pathname === '/' || location.pathname === '/solutions')) ||
+            location.pathname.includes(text.toLowerCase().replace(' ', ''));
 
-    return (
-      <ListItem className='list-i' key={text} disablePadding>
-        <ListItemButton
-          onClick={() => handleNavigation(text.toLowerCase().replace(' ', ''))}
-          className={isAndroidServicesPage ? 'hvr2' : 'hvr'}
-          sx={{
-            color: isServices && isAndroidServicesPage ? 'rgb(91, 126, 29)' :
-                   isActive ? 'rgb(58, 242, 181)' : 'white',
-            padding: '5px 10px',
-          }}
-        >
-          <span
-            className={`dot ${
-              isServices && isAndroidServicesPage ? 'active2' :
-              isActive ? 'active' : ''
-            }`}
-          />
-          <ListItemText sx={{ fontSize: '1rem' }} primary={text} />
-        </ListItemButton>
-      </ListItem>
-    );
-  })}
-</List>
-<Divider />
-<Box sx={{ padding: '16px', display: 'flex', justifyContent: 'center' }}>
-  <button style={{fontSize:"12px",marginLeft:'0px'}} className={location.pathname === "/androidservices" ? "main-btn2 hvr2 active2" : "main-btn hvr active"}>
-    Start Your Project
-  </button>
-</Box>
-
+          return (
+            <ListItem className="list-i" key={text} disablePadding>
+              <ListItemButton
+                onClick={() => handleNavigation(text.toLowerCase().replace(' ', ''))}
+                className={isAndroidServicesPage ? 'hvr2' : 'hvr'}
+                sx={{
+                  color: isServices && isAndroidServicesPage ? 'rgb(91, 126, 29)' :
+                    isActive ? 'rgb(58, 242, 181)' : 'white',
+                  padding: '5px 10px',
+                }}
+              >
+                <span
+                  className={`dot ${
+                    isServices && isAndroidServicesPage ? 'active2' :
+                    isActive ? 'active' : ''
+                  }`}
+                />
+                <ListItemText sx={{ fontSize: '1rem' }} primary={text} />
+              </ListItemButton>
+            </ListItem>
+          );
+        })}
+      </List>
+      <Divider />
+      <Box sx={{ padding: '16px', display: 'flex', justifyContent: 'center' }}>
+        <button style={{ fontSize: "12px", marginLeft: '0px' }} className={location.pathname === "/androidservices" ? "main-btn2 hvr2 active2" : "main-btn hvr active"}>
+          Start Your Project
+        </button>
+      </Box>
     </Box>
   );
-  
-  
 
   useEffect(() => {
     const handleResize = () => {
@@ -149,8 +140,8 @@ function Nav({navbar}) {
     <div>
       {isMobile && (
         <MenuSharpIcon
-          style={{ fontSize: '60px', paddingTop: '30px', position: 'relative', right: '0px' }}
-          className='drawer-toggle'
+          style={{ fontSize: '60px', paddingTop: '24px', position: 'relative', right: '0px' }}
+          className="drawer-toggle"
           onClick={toggleDrawer(true)}
         />
       )}
@@ -187,44 +178,42 @@ function Nav({navbar}) {
                 alignItems: 'center',
               }}
             >
-    
-    
-    <ul
-  style={{
-    display: 'flex',
-    justifyContent: 'center',
-    listStyle: 'none',
-    padding: '0',
-    margin: '0',
-  }}
->
-  {['Solutions', 'Services', 'Portfolio', 'Blogs', 'Careers', 'Contact Us'].map((text) => {
-    const isServices = text === 'Services';
-    const isAndroidServicesPage = location.pathname === '/androidservices' && navbar === 'android';
-    const isActive = location.pathname.includes(text.toLowerCase().replace(' ', ''));
+              <ul
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  listStyle: 'none',
+                  padding: '0',
+                  margin: '0',
+                }}
+              >
+                {['Solutions', 'Services', 'Portfolio', 'Blogs', 'Careers', 'Contact Us'].map((text) => {
+                  const isServices = text === 'Services';
+                  const isAndroidServicesPage = location.pathname === '/androidservices' && navbar === 'android';
+                  const isActive =
+                    (text === 'Solutions' && (location.pathname === '/' || location.pathname === '/solutions')) ||
+                    location.pathname.includes(text.toLowerCase().replace(' ', ''));
 
-    return (
-      <li
-        key={text}
-        className={`
-          ${isAndroidServicesPage ? 'hvr2' : 'hvr'}
-          ${isServices && isAndroidServicesPage ? 'active2' : ''}
-          ${isActive && !isAndroidServicesPage ? 'active' : ''}
-        `}
-        onClick={() => handleNavigation(text.toLowerCase().replace(' ', ''))}
-      >
-        <span
-          className={`dot ${
-            isServices && isAndroidServicesPage ? 'active2' : isActive ? 'active' : ''
-          }`}
-        />
-        {text}
-      </li>
-    );
-  })}
-</ul>
-
-
+                  return (
+                    <li
+                      key={text}
+                      className={`
+                        ${isAndroidServicesPage ? 'hvr2' : 'hvr'}
+                        ${isServices && isAndroidServicesPage ? 'active2' : ''}
+                        ${isActive && !isAndroidServicesPage ? 'active' : ''}
+                      `}
+                      onClick={() => handleNavigation(text.toLowerCase().replace(' ', ''))}
+                    >
+                      <span
+                        className={`dot ${
+                          isServices && isAndroidServicesPage ? 'active2' : isActive ? 'active' : ''
+                        }`}
+                      />
+                      {text}
+                    </li>
+                  );
+                })}
+              </ul>
             </div>
           </nav>
         </div>
