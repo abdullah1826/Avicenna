@@ -30,7 +30,8 @@ function Industryservices() {
     const HeroData = {
         title: `<h2 style="color: white; font-size: 55px; font-weight: 900; width: 80%;">Boost your Business with Innovative <span style="color: rgb(58, 242, 181);"> ${head} </span> Solutions</h2>`,
         description: '<p style="color: white; font-size: 24px; font-weight: 100;">Avicenna Enterprises Solutions is Your <span style="color: rgb(58, 242, 181);">one-step solution for <br classname="hide-on-mobile" /></span> all your development needs</p>',
-        imageUrl: bgImage
+        imageUrl: bgImage,
+        color:"rgb(58, 242, 181)"
     }
    
     return (
@@ -61,7 +62,7 @@ function Industryservices() {
 
 
 
-<Testimonial/>
+<Testimonial data={HeroData}/>
 <Appointment/>
 <Footer/>
 

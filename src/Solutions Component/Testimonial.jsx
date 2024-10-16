@@ -37,7 +37,7 @@ function Testimonial({data}) {
         slidesToShow: 2,
         slidesToScroll: 1,
         arrows: false,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 2000,
         responsive: [
             {
@@ -93,7 +93,7 @@ function Testimonial({data}) {
                             <div className='inside-content' style={insideContentStyle}>
                                 <img src={testimonial.img} alt="Client" style={{ borderRadius: '50%', width: '100px', height: '100px', marginBottom: '15px' }} />
                                 <h2 style={{ marginBottom: '10px',color:"white" }}>{testimonial.heading}</h2>
-                                <p style={{ marginBottom: '20px',color:'whitesmoke',fontWeight:100 }}>
+                                <p className='ppp' style={{ marginBottom: '20px',color:'whitesmoke',fontWeight:100 }}>
                                     {testimonial.para}
                                 </p>
                                 <div className="stardata" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
