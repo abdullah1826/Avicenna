@@ -1,170 +1,66 @@
-import React from 'react'
+import React from 'react';
 import { useLocation } from 'react-router-dom'; // Import useLocation
-import "../BlogComponent/about.css"
+import "../BlogComponent/about.css";
+import { format } from 'date-fns'; // Fixed typo from "formet" to "format"
+
 function About() {
-
-
     const location = useLocation(); // Access location
-    const { imgSrc } = location.state || {};
-  return (
-    <div className='ServicesContainer'  style={{width:"90%"}}>
+    const { image, description, writer, created_at ,title} = location.state || {};
 
-<div className='About'>
-    <h2  className='abouthead' style={{color:'rgb(58, 242, 181)'}}> About</h2>
-    <p className='aboutp'>We are a passionate, fun-loving, growing team. We are looking for passionate programmers</p>
+    return (
+        <div className='ServicesContainer' style={{ width: "90%",margin:'0px auto' }}>
+            <div className='About'>
+              
 
-    <p  style={{width:"95%"}}  className='aboutp' >Lorem ipsum dolor sit amet consectetur. Diam mauris tortor lobortis nunc aliquam amet. Viverra magna aliquet volutpat quam nec mi purus quam. Quam urna pharetra interdum sed augue bibendum cras at vestibulum. Ac ut urna penatibus sed. Vestibulum a ut cum tortor morbi egestas luctus. Eget molestie amet pellentesque urna euismod ipsum. Ultrices tristique sit tincidunt libero augue. Nulla aliquet consequat lobortis commodo vulputate non integer. Quam neque enim pulvinar sed fermentum. In odio aliquet vulputate dignissim tempor eu. Porttitor diam quam euismod vivamus mus. Accumsan adipiscing ultrices eget egestas eu. Nisl cursus et lobortis nullam velit blandit sit magna nibh. Eu ornare egestas lacus in ultrices tempus egestas ut purus. Lacinia scelerisque arcu nisl tellus. At eu massa nulla lobortis. Risus faucibus aliquam elit eu mus. Praesent at cursus a integer turpis sit. Tellus sapien sapien lectus vel.</p>
-</div>
+                <div className='imge' >
+                    <img
+                        style={{
+                            width: "100%",
+                            borderRadius: '40px',
+                            maxHeight: "500px",
+                            objectFit: "cover"
+                        }}
+                        loading='lazy'
+                        src={image}
+                        alt="" 
+                    />
+                </div>
+                <div className='writer' style={{
+                    width: '45%',
+    height: '200px',
+    backgroundColor: 'rgba( 245, 245, 245,0.1)', // Grey with 50% transparency
+    backdropFilter: 'blur(15px)', // Adjust the blur intensity as needed
+    display: 'flex',
+    borderRadius:'10px',
+    WebkitBackdropFilter:'15px',
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: 'column',
+    position:"relative",
+    top:"-60px",
+  left:'28%'
+    
+        }}>
+        <h5>{title}</h5>
+                    <h2 style={{ color: 'rgb(58, 237, 178)', fontWeight: 700 }}>Writer</h2>
+                    <h5>{writer}</h5>
+                    <h6 style={{ color: "rgb(58, 237, 178)" }}>Created Date</h6>
+                    <p style={{ color: 'white' }}>
+                        {format(new Date(created_at), 'MMMM dd, yyyy')}
+                    </p>
+                </div>
+            </div>
 
-<div className='Cookies' style={{paddingTop:"30px"}}>
-    <h2 className='abouthead'  style={{color:'rgb(58, 242, 181)',}}> Cookies</h2>
-    <p  className='aboutp'>Lorem ipsum dolor sit amet consectetur. Mauris nam lectus lectus quam vitae quis pretium ut risus. Faucibus aliquet dolor vitae porttitor nibh. Luctus vulputate ornare lectus nulla scelerisque ligula congue velit tellus. </p>
-
-    <p style={{width:"95%"}}  className='aboutp'>Lorem ipsum dolor sit amet consectetur. Diam mauris tortor lobortis nunc aliquam amet. Viverra magna aliquet volutpat quam nec mi purus quam. Quam urna pharetra interdum sed augue bibendum cras at vestibulum. Ac ut urna penatibus sed. Vestibulum a ut cum tortor morbi egestas luctus. Eget molestie amet pellentesque urna euismod ipsum. Ultrices tristique sit tincidunt libero augue. Nulla aliquet consequat lobortis commodo vulputate non integer. Quam neque enim pulvinar sed fermentum. In odio aliquet vulputate dignissim tempor eu. Porttitor diam quam euismod vivamus mus. Accumsan adipiscing ultrices eget egestas eu. Nisl cursus et lobortis nullam velit blandit sit magna nibh. Eu ornare egestas lacus in ultrices tempus egestas ut purus. Lacinia scelerisque arcu nisl tellus. At eu massa nulla lobortis. Risus faucibus aliquam elit eu mus. Praesent at cursus a integer turpis sit. Tellus sapien sapien lectus vel.</p>
-
-    <div className='imge' style={{ paddingTop: "40px" }}>
-    <img 
-        style={{
-            width: "100%",
-            borderRadius: '40px',
-            maxHeight: "500px",
-            objectFit: "cover"
-        }} 
-        loading='lazy'
-        src={imgSrc} 
-        alt="" 
-    />
-</div>
-
-
-
-</div>
-
-<div className='License' style={{paddingTop:"40px"}}>
-    <h2 className='abouthead'  style={{color:'rgb(58, 242, 181)'}}> License</h2>
-    <p  className='aboutp'>Lorem ipsum dolor sit amet consectetur. Mauris nam lectus lectus quam vitae quis pretium ut risus. Faucibus aliquet dolor vitae porttitor nibh. Luctus vulputate ornare lectus nulla scelerisque ligula congue velit tellus. </p>
-    <ul style={{listStyleType:'circle',paddingLeft:'20px'}}>
-    <li  className='aboutp'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, tenetur.</li>
-    <li  className='aboutp'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, tenetur.</li>
-    <li  className='aboutp'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, tenetur.</li>
-    <li  className='aboutp'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, tenetur.</li>
-    <li  className='aboutp'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, tenetur.</li>
-    <li  className='aboutp'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, tenetur.</li>
-</ul>
-
-    <p style={{width:"95%",paddingTop:"20px"}}  className='aboutp'>Lorem ipsum dolor sit amet consectetur. Diam mauris tortor lobortis nunc aliquam amet. Viverra magna aliquet volutpat quam nec mi purus quam. Quam urna pharetra interdum sed augue bibendum cras at vestibulum. Ac ut urna penatibus sed. Vestibulum a ut cum tortor morbi egestas luctus. Eget molestie amet pellentesque urna euismod ipsum. Ultrices tristique sit tincidunt libero augue. Nulla aliquet consequat lobortis commodo vulputate non integer. Quam neque enim pulvinar sed fermentum. In odio aliquet vulputate dignissim tempor eu. Porttitor diam quam euismod vivamus mus. Accumsan adipiscing ultrices eget egestas eu. Nisl cursus et lobortis nullam velit blandit sit magna nibh. Eu ornare egestas lacus in ultrices tempus egestas ut purus. Lacinia scelerisque arcu nisl tellus. At eu massa nulla lobortis. Risus faucibus aliquam elit eu mus. Praesent at cursus a integer turpis sit. Tellus sapien sapien lectus vel.</p>
-    <ul style={{listStyleType:'circle',paddingLeft:'20px'}}>
-    <li  className='aboutp'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, tenetur.</li>
-    <li  className='aboutp'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, tenetur.</li>
-    <li  className='aboutp'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, tenetur.</li>
-    <li  className='aboutp'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, tenetur.</li>
-    <li  className='aboutp'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, tenetur.</li>
-    <li  className='aboutp'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, tenetur.</li>
-</ul>
-<p  className='aboutp' style={{paddingTop:"20px"}}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio perspiciatis quas quaerat ipsa reprehenderit in vel reiciendis incidunt similique animi accusamus dolore molestias aspernatur, dolores neque ducimus. Doloribus blanditiis veritatis accusamus. Animi saepe vel doloremque, quas molestias illum cupiditate perspiciatis ipsam, facilis ipsum exercitationem dolore blanditiis impedit ducimus nemo autem.</p>
- 
-<div className='imge' style={{ paddingTop: "40px" }}>
-    <img 
-        style={{
-            width: "100%",
-            borderRadius: '40px',
-            maxHeight: "500px",
-            objectFit: "cover"
-        }} 
-        loading='lazy'
-        src={imgSrc} 
-        alt="" 
-    />
-</div>
- </div>
-
-
- <div style={{paddingTop:"40px"}} className='HyperLink'>
-    <h2 className='abouthead'   style={{color:'rgb(58, 242, 181)',}}> HyperLink to Our Content</h2>
-    <p  className='aboutp'>Lorem ipsum dolor sit amet consectetur. Mauris nam lectus lectus quam vitae quis pretium ut risus. Faucibus aliquet dolor vitae porttitor nibh. Luctus vulputate ornare lectus nulla scelerisque ligula congue velit tellus. </p>
-    <ul style={{listStyleType:'circle',paddingLeft:'20px'}}>
-    <li  className='aboutp'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, tenetur.</li>
-    <li  className='aboutp'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, tenetur.</li>
-    <li  className='aboutp'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, tenetur.</li>
-    <li  className='aboutp'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, tenetur.</li>
-    <li  className='aboutp'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, tenetur.</li>
-    <li  className='aboutp'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, tenetur.</li>
-</ul>
-
-    <p style={{width:"95%",paddingTop:"20px"}}  className='aboutp'>Lorem ipsum dolor sit amet consectetur. Diam mauris tortor lobortis nunc aliquam amet. Viverra magna aliquet volutpat quam nec mi purus quam. Quam urna pharetra interdum sed augue bibendum cras at vestibulum. Ac ut urna penatibus sed. Vestibulum a ut cum tortor morbi egestas luctus. Eget molestie amet pellentesque urna euismod ipsum. Ultrices tristique sit tincidunt libero augue. Nulla aliquet consequat lobortis commodo vulputate non integer. Quam neque enim pulvinar sed fermentum. In odio aliquet vulputate dignissim tempor eu. Porttitor diam quam euismod vivamus mus. Accumsan adipiscing ultrices eget egestas eu. Nisl cursus et lobortis nullam velit blandit sit magna nibh. Eu ornare egestas lacus in ultrices tempus egestas ut purus. Lacinia scelerisque arcu nisl tellus. At eu massa nulla lobortis. Risus faucibus aliquam elit eu mus. Praesent at cursus a integer turpis sit. Tellus sapien sapien lectus vel.</p>
-   
- </div>
-
-
- <div className='Iframe'>
-    <h2 className='abouthead'   style={{color:'rgb(58, 242, 181)'}}> IFrames</h2>
-    <p  className='aboutp'>Lorem ipsum dolor sit amet Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat eligendi quis accusamus necessitatibus incidunt ex modi minima porro veritatis magni! A, blanditiis consequatur? Voluptate perferendis quae pariatur illum, nihil enim! consectetur. Mauris nam lectus lectus quam vitae quis pretium ut risus. Faucibus aliquet dolor vitae porttitor nibh. Luctus vulputate ornare lectus nulla scelerisque ligula congue velit tellus. </p>
-  
- </div>
-
- <div className='ContentLability' style={{width:"100%"}}>
-    <h2 className='abouthead'   style={{color:'rgb(58, 242, 181)'}}> Content Lability</h2>
-    <p  className='aboutp'>Lorem ipsum dolor sit amet Lorem ipsum Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque, tempore! dolor sit, amet consectetur adipisicing elit. Repellat eligendi quis accusamus necessitatibus incidunt ex modi minima porro veritatis magni! A, blanditiis consequatur? Voluptate perferendis quae pariatur illum, nihil enim! consectetur. Mauris nam lectus lectus quam vitae quis pretium ut risus. Faucibus aliquet dolor vitae porttitor nibh. Luctus vulputate ornare lectus nulla scelerisque ligula congue velit tellus. </p>
-  <div style={{display:'flex' ,justifyContent:'space-between',alignItems:'center',paddingTop:"40px"}}>
-    <img loading='lazy' style={{width:'48%'}} src={imgSrc} alt="" />
-    <img loading='lazy' style={{width:'48%'}} src={imgSrc} alt="" />
-  </div>
- </div>
-
-
- <div style={{paddingTop:"40px"}} className='YourPrivacy'>
-    <h2 className='abouthead'  style={{color:'rgb(58, 242, 181)'}}> Your Privacy</h2>
-    <p  className='aboutp'>Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi voluptatibus exercitationem nihil ipsa pariatur dolor deleniti provident aut voluptatum sint! Mauris nam lectus lectus quam vitae quis pretium ut risus. Faucibus aliquet dolor vitae porttitor nibh. Luctus vulputate ornare lectus nulla scelerisque ligula congue velit tellus. </p>
-    <ul style={{listStyleType:'circle',paddingLeft:'20px'}}>
-    <li  className='aboutp'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, tenetur.</li>
-    <li  className='aboutp'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, tenetur.</li>
-    <li  className='aboutp'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, tenetur.</li>
-    <li  className='aboutp'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, tenetur.</li>
-    <li  className='aboutp'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, tenetur.</li>
-    <li  className='aboutp'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, tenetur.</li>
-    <li  className='aboutp'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, tenetur.</li>
-    <li  className='aboutp'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, tenetur.</li>
-    <li  className='aboutp'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, tenetur.</li>
-    <li  className='aboutp'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, tenetur.</li>
-</ul>
-
-   
- </div>
-
- <div style={{paddingTop:"40px"}} className='Reservation'>
-    <h2 className='abouthead'   style={{color:'rgb(58, 242, 181)'}}>Reservation of Rights</h2>
-    <p  className='aboutp'>Lorem ipsum dolor sit amet consectetur. Mauris nam lectus lectus quam vitae quis pretium ut risus. Faucibus aliquet dolor vitae porttitor nibh. Luctus vulputate ornare lectus nulla scelerisque ligula congue velit tellus. </p>
-    <ul style={{listStyleType:'circle',paddingLeft:'20px'}}>
-    <li  className='aboutp'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, tenetur.</li>
-    <li  className='aboutp'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, tenetur.</li>
-    <li  className='aboutp'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, tenetur.</li>
-    <li  className='aboutp'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, tenetur.</li>
-    <li  className='aboutp'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, tenetur.</li>
-    <li  className='aboutp'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, tenetur.</li>
-</ul>
-
-    <p style={{width:"95%",paddingTop:"20px"}}  className='aboutp'>Lorem ipsum dolor sit amet consectetur. Diam mauris tortor lobortis nunc aliquam amet. Viverra magna aliquet volutpat quam nec mi purus quam. Quam urna pharetra interdum sed augue bibendum cras at vestibulum. Ac ut urna penatibus sed. Vestibulum a ut cum tortor morbi egestas luctus. Eget molestie amet pellentesque urna euismod ipsum. Ultrices tristique sit tincidunt libero augue. Nulla aliquet consequat lobortis commodo vulputate non integer. Quam neque enim pulvinar sed fermentum. In odio aliquet vulputate dignissim tempor eu. Porttitor diam quam euismod vivamus mus. Accumsan adipiscing ultrices eget egestas eu. Nisl cursus et lobortis nullam velit blandit sit magna nibh. Eu ornare egestas lacus in ultrices tempus egestas ut purus. Lacinia scelerisque arcu nisl tellus. At eu massa nulla lobortis. Risus faucibus aliquam elit eu mus. Praesent at cursus a integer turpis sit. Tellus sapien sapien lectus vel.</p>
-   
- </div>
-
-
- <div style={{paddingTop:"40px"}} className='Disclaimer'>
-    <h2 className='abouthead'   style={{color:'rgb(58, 242, 181)'}}> HyperLink to Our Content</h2>
-    <p  className='aboutp'>Lorem ipsum dolor sit amet consectetur. Mauris nam lectus lectus quam vitae quis pretium ut risus. Faucibus aliquet dolor vitae porttitor nibh. Luctus vulputate ornare lectus nulla scelerisque ligula congue velit tellus. </p>
-    <ul style={{listStyleType:'circle',paddingLeft:'20px'}}>
-    <li  className='aboutp'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, tenetur.</li>
-    <li  className='aboutp'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, tenetur.</li>
-    <li  className='aboutp'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, tenetur.</li>
-    <li  className='aboutp'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, tenetur.</li>
-    <li  className='aboutp'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, tenetur.</li>
-    <li  className='aboutp'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, tenetur.</li>
-</ul>
-
-
- </div>
-
-    </div>
-  )
+            <div style={{ paddingTop: "40px" }} className='Disclaimer'>
+                <h2 className='abouthead' style={{ color: 'rgb(58, 242, 181)' }}>Description</h2>
+                <p
+                style={{fontWeight:400}}
+                    className='aboutp'
+                    dangerouslySetInnerHTML={{ __html: description }}
+                />
+            </div>
+        </div>
+    );
 }
 
-export default About
+export default About;

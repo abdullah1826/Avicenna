@@ -25,6 +25,12 @@
     .ServicesContainer{
         margin-top: 20px !important;
     }
+    .writer{
+        display: none !important;
+    }
+    .Disclaimer p{
+        width: 100% !important;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -37,6 +43,9 @@
     }
     .ServicesContainer{
         margin: 20px auto !important;
+    }
+    .writer{
+        display: none !important;
     }
   
 }

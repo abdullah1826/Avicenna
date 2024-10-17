@@ -3,9 +3,32 @@ import "../ContactComponent/loc.css"
 import { MdLocationOn } from "react-icons/md";
 import { IoMdMail } from "react-icons/io";
 import { MdCall } from "react-icons/md";
+import { useState, useEffect } from 'react';
+import {fetchData} from "../Services/ApiServices";
+
 
 
 function Location() {
+  const [locationdata, setLocationData] = useState({
+    Email: "",
+    phone: "",
+    Address:""
+  });
+  
+  const dataCallback = (data) => {
+    setLocationData(
+        {
+            Email:data?.email,
+            Address:data?.address,
+            phone: data?.phone,
+        }
+    );
+  }
+  useEffect(() => {
+    fetchData(dataCallback);
+  }, []);
+  
+
   return (
     <div className='ServicesContainer'>
       <h3 className='heading' style={{color:'rgb(58, 242, 181)',fontSize:"35px",fontWeight:"700"}}>
@@ -23,7 +46,7 @@ function Location() {
             </div>
             <div style={{width:"76%"}}>
               <h5 style={{fontWeight:900,fontSize:'25px',color:"white"}}>Location</h5>
-              <p style={{fontSize:"19px",fontWeight:100,width:'100%',color:"white"}}>79 P Block Rd, Block P Phase 2 Johar Town, Lahore</p>
+              <p style={{fontSize:"19px",fontWeight:100,width:'100%',color:"white"}}>{locationdata?.Address}</p>
             </div>
           </div>
 
@@ -33,7 +56,7 @@ function Location() {
             </div>
             <div className='for-h5'  style={{width:"50%"}}>
               <h5  style={{fontWeight:900,fontSize:'25px',color:"white"}}>Email us</h5>
-              <p style={{fontSize:"19px",fontWeight:100,width:'100%',color:"white"}}>info@avicennaenterprise.com</p>
+              <p style={{fontSize:"19px",fontWeight:100,width:'100%',color:"white"}}>{locationdata.Email}</p>
             </div>
           </div>
 
@@ -43,7 +66,7 @@ function Location() {
             </div>
             <div  style={{width:"61%"}}>
               <h5  style={{fontWeight:900,fontSize:'25px',color:"white"}}>Call us</h5>
-              <p className='thip' style={{fontSize:"19px",color:"white",fontWeight:100,width:'100%'}}>+92 320 000 1511</p>
+              <p className='thip' style={{fontSize:"19px",color:"white",fontWeight:100,width:'100%'}}>{locationdata.phone}</p>
             </div>
           </div>
         </div>

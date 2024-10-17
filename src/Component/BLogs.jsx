@@ -5,8 +5,22 @@ import blog2 from "../image/blog2.png";
 import blog3 from "../image/blog3.png";
 import { MdArrowOutward } from "react-icons/md";
 import "../Component/blog.css";
+import { FetchBlogs } from '../Services/ApiServices';
+import { format } from 'date-fns';
+
 
 function BLogs() {
+  const [blogData, setBlogData] = useState([]);
+
+  const dataCallback = (data) => {
+    // Assuming data is an array of blog posts
+    setBlogData(data); // Set the blog data directly to the state
+  };
+
+  useEffect(() => {
+    FetchBlogs(dataCallback);
+  }, []);
+
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const navigate = useNavigate(); // Initialize navigate function
 
@@ -18,8 +32,12 @@ function BLogs() {
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-   
   }, []);
+
+
+
+
+
 
 
   const scrollToTop = () => {
@@ -49,6 +67,10 @@ function BLogs() {
     requestAnimationFrame(scrollStep); // Start the scrolling animation
 };
 
+const formatDate = (dateString) => {
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  return new Date(dateString).toLocaleDateString(undefined, options);
+};
 
   // Calculate styles based on window width
   const containerStyle = {
@@ -68,6 +90,8 @@ function BLogs() {
     borderRadius: '34px',
     width: windowWidth > 768 ? '55%' : '100%', // Responsive width
     marginTop: '60px',
+  
+   maxHeight:'100%',
   };
 
   const cardStyle = {
@@ -77,6 +101,7 @@ function BLogs() {
     position: 'relative',
     borderRadius: '34px',
     height: "330px",
+    
     width: '100%', // Responsive width for smaller screens
     marginTop: '60px',
   };
@@ -107,14 +132,9 @@ function BLogs() {
     margin: '10px 0',
     color: 'white',
     fontWeight: 100,
+
   };
 
-  const blogPosts = [
-    { id: 1, imgSrc: blog1, title: "10 Best Ecommerce Hosting Services for 2024", date: "25 July 2024", move: "/readblogs" },
-    { id: 2, imgSrc: blog2, title: "The Future of Networking: NFC Digital Business Cards", date: "25 July 2024", move: "/readblogs" },
-    { id: 3, imgSrc: blog3, title: "The Future of Networking: NFC Digital Business Cards", date: "25 July 2024", move: "/readblogs" },
-
-  ];
 
   return (
     <div style={{ margin: '0 auto', width: "90%", marginTop: "70px" }}>
@@ -135,18 +155,28 @@ function BLogs() {
       </div>
 
       <section className='blog-sec' style={containerStyle}>
-        {blogPosts.map((item, index) => {
+        {blogData.map((item, index) => {
           if (index % 3 === 0) {
             // Left element takes full height
             return (
               <div key={item.id} style={{ ...cardStyle1, flex: '1 1 60%' }}>
-                <img loading='lazy' style={{ ...cardImageStyle, height: '450px' }} src={item.imgSrc} alt={`Blog ${item.id}`} />
+                <img loading='lazy' style={{ ...cardImageStyle, height: '450px' }} src={item?.image} alt={`Blog ${item.id}`} />
                 <div style={cardContentStyle}>
-                  <h2 style={cardTitleStyle}>{item.title}</h2>
-                  <p style={cardDescriptionStyle}>{item.date}</p>
+                  <h2 style={cardTitleStyle}>{item?.title}</h2>
+                  <p 
+  style={cardDescriptionStyle} 
+  dangerouslySetInnerHTML={{ 
+    __html: item?.description?.split(' ').slice(0, 70).join(' ') + (item?.description.split(' ').length > 30 ? '...' : '') 
+  }} 
+/>
+  <p style={{ color: 'white' }}>
+    {format(new Date(item.created_at), 'MMMM dd, yyyy')}
+  </p>
+
+
                   <div className='butn'>
                     <MdArrowOutward style={{ fontSize: '40px' }}
-                      onClick={() => { scrollToTop(); navigate(item.move, { state: item })} }// Navigate to the respective route with item as state
+                      onClick={() => { scrollToTop(); navigate("/readBlogs", { state: item })} }// Navigate to the respective route with item as state
                     />
                   </div>
                 </div>
@@ -157,27 +187,47 @@ function BLogs() {
             return (
               <div key={`wrapper-${item.id}`} style={{ display: 'flex', flexDirection: 'column', flex: '1 1 35%' }}>
                 <div style={{ ...cardStyle, height: '50%' }}>
-                  <img loading='lazy' style={{ ...cardImageStyle }} src={item.imgSrc} alt={`Blog ${item.id}`} />
+                  <img loading='lazy' style={{ ...cardImageStyle }} src={item.image} alt={`Blog ${item.id}`} />
                   <div style={cardContentStyle}>
                     <h2 style={{ ...cardTitleStyle, fontSize: "17px" }}>{item.title}</h2>
-                    <p style={cardDescriptionStyle}>{item.date}</p>
+
+                    <p
+  style={{...cardDescriptionStyle,fontWeight:100}}
+  dangerouslySetInnerHTML={{
+    __html: item?.description
+      ?.split(' ')
+      .slice(0, 20)
+      .join(' ') + (item?.description.split(' ').length > 20 ? '...' : '')
+  }}
+/>
+
                     <div className='butn1'>
                       <MdArrowOutward style={{ fontSize: '25px' }}
-                        onClick={()  =>  {scrollToTop(); navigate(item.move, { state: item })}} // Navigate to the respective route with item as state
+                        onClick={()  =>  {scrollToTop(); navigate("/readBlogs", { state: item })}} // Navigate to the respective route with item as state
                       />
                     </div>
                   </div>
                 </div>
 
-                {blogPosts[index + 1] && (
-                  <div key={blogPosts[index + 1].id} style={{ ...cardStyle, height: '50%' }}>
-                    <img loading='lazy' style={{ ...cardImageStyle, height: '180px' }} src={blogPosts[index + 1].imgSrc} alt={`Blog ${blogPosts[index + 1].id}`} />
+                { blogData[index + 1] && (
+                  <div key={blogData[index + 1].id} style={{ ...cardStyle, height: '50%' }}>
+                    <img loading='lazy' style={{ ...cardImageStyle, height: '180px' }} src={blogData[index + 1].image} alt={`Blog ${blogData[index + 1].id}`} />
                     <div style={cardContentStyle}>
-                      <h2 style={{ ...cardTitleStyle, fontSize: "17px" }}>{blogPosts[index + 1].title}</h2>
-                      <p style={cardDescriptionStyle}>{blogPosts[index + 1].date}</p>
+                      <h2 style={{ ...cardTitleStyle, fontSize: "17px" }}>{blogData[index + 1].title}</h2>
+                      <p
+  style={{...cardDescriptionStyle,fontWeight:100}}
+  dangerouslySetInnerHTML={{
+    __html: blogData[index + 1]?.description
+      ?.split(' ')
+      .slice(0, 20)
+      .join(' ') + (blogData[index + 1]?.description.split(' ').length > 20 ? '...' : '')
+  }}
+/>
+
+
                       <div className='butn1'>
                         <MdArrowOutward style={{ fontSize: '25px' }}
-                          onClick={() => { scrollToTop(); navigate(blogPosts[index + 1].move, { state: blogPosts[index + 1] })}} // Navigate to the respective route with the next blog item as state
+                          onClick={() => { scrollToTop(); navigate("/readBlogs", { state: blogData[index + 1] })}} // Navigate to the respective route with the next blog item as state
                         />
                       </div>
                     </div>

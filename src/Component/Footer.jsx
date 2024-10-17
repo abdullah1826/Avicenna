@@ -1,11 +1,45 @@
-import React from 'react';
+import React,{useEffect,useState} from 'react';
 import "./footer.css";
-import logo1 from '../image/logo1.png';
+
 import lg1 from '../image/lg1.svg';
 import lg2 from '../image/lg2.svg';
 import lg3 from '../image/lg3.svg';
 import lg4 from '../image/lg4.svg';
+import {fetchData} from "../Services/ApiServices";
 function Footer() {
+
+    const [socialIcons, setSocialIcons] = useState({
+        image:"",
+        fb: "",
+        insta: "",
+        linkedin:"",
+      
+      });
+      
+      const dataCallback = (data) => {
+        setSocialIcons(
+            {
+                image:data?.image,
+                fb:data?.fb,
+                insta:data?.insta,
+                linkedin: data?.linkedin,
+            
+            }
+        );
+      }
+      useEffect(() => {
+        fetchData(dataCallback);
+      }, []);
+      const handleRedirect = (url) => {
+        if (url) {
+            window.open(url, '_blank');
+        } else {
+            console.log("URL not provided");
+        }
+    };
+    
+
+
     const footerarr = [
         {
             title: 'Company',
@@ -51,19 +85,23 @@ function Footer() {
             <div className='main-div'>
                 
                 <div>
-                    <img className='main-img' src={logo1} alt="logo" />
+                    <img className='main-img' src={socialIcons?.image} alt="logo" />
                     <p style={{width:'55%',paddingTop:'30px',fontSize:'14px',color:'rgb(255, 255, 255)',fontWeight:100}}>Our main focus includes planning, analysis, design, development & implementation, testing, and <br /> maintenance.</p>
                 </div>
                 <div className='flo-icn'>
-                    <h1 style={{fontSize:'24px',textAlign:'center'}}>Follow Us On:</h1>
-                    <div style={{display:'flex',justifyContent:'center',gap:'10px'}}>
-                    <img loading='lazy'   className='icon-img' style={{width:'45px',cursor:'pointer'}} src={lg1} alt="lg" />
-                    <img loading='lazy'   className='icon-img' style={{width:'45px',cursor:'pointer'}} src={lg2} alt="lg" />
-                    <img loading='lazy'  className='icon-img' style={{width:'45px',cursor:'pointer'}} src={lg3} alt="lg" />
-                    <img loading='lazy'  className='icon-img' style={{width:'45px',cursor:'pointer'}} src={lg4} alt="lg" />
+    <h1 style={{fontSize: '24px', textAlign: 'center'}}>Follow Us On:</h1>
+    <div style={{display: 'flex', justifyContent: 'center', gap: '10px'}}>
+        <img loading='lazy' className='icon-img' style={{width: '45px', cursor: 'pointer'}} src={lg1} alt="lg"
+             onClick={() => handleRedirect(socialIcons?.fb)} />
+        <img loading='lazy' className='icon-img' style={{width: '45px', cursor: 'pointer'}} src={lg2} alt="lg"
+             onClick={() => handleRedirect(socialIcons?.insta)} />
+        <img loading='lazy' className='icon-img' style={{width: '45px', cursor: 'pointer'}} src={lg3} alt="lg"
+            />
+        <img loading='lazy' className='icon-img' style={{width: '45px', cursor: 'pointer'}} src={lg4} alt="lg"
+             onClick={() => handleRedirect(socialIcons?.linkedin)} />
+    </div>
+</div>
 
-                    </div>
-                </div>
             </div>
             <hr style={{ width: "100%", borderBottom: "1px solid white" ,marginTop:'50px'}} />
 
