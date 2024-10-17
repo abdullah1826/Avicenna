@@ -82,14 +82,15 @@
       display: flex;
     }
     .appointment-title {
-      font-size: 13px; /* Further adjust title font size for very small screens */
+      font-size: 13px;
+      width: 100% !important; /* Further adjust title font size for very small screens */
     }
     .start-button {
         background: black;
         color: white;
-      width: 90px;
-      height: 30px;
-      font-size:7px;
+      width: 100px;
+      height: 40px;
+      font-size:9px;
       border-radius: 10px;
       border: none;
 
