@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState,useEffect}from 'react';
 import "./services_provide.css";
 import suport from "../image/suport.png";
 import web from "../image/web.png";
@@ -7,8 +7,25 @@ import backend from "../image/backend.png";
 import mob from "../image/mob.png";
 import { LuMoveRight } from "react-icons/lu";
 import { useNavigate } from 'react-router-dom';
+import { FetchServices } from '../Services/ApiServices';
+
+
+
 
 function Services_provide() {
+
+
+    const [services, setServices] = useState([]);
+      
+      const dataCallback = (data) => {
+        setServices(
+            data
+        );
+      }
+      useEffect(() => {
+        FetchServices(dataCallback);
+      }, []);
+
     const navigate = useNavigate(); // useNavigate hook for navigation
 
     const scrollToTop = () => {
@@ -79,23 +96,48 @@ function Services_provide() {
                 </p>
             </div>
             <section className='container section-data' style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
-                {service.map((item, index) => (
-                    <div key={index} className='cards'>
-                        <div className='card-data'>
-                            <img loading='lazy' className='card-img' src={item.image} alt={item.heading} />
-                            <h2 className='card-head'>{item.heading}</h2>
-                            <p className='card-para'>{item.para}</p>
-                            <button 
-                                onClick={() => {
-                                    scrollToTop(); // Scroll to the top before navigating
-                                    navigate(item.move); // Navigate to the specified route
-                                }}
-                                className='card-button'>
-                                <LuMoveRight /> Read more
-                            </button>
-                        </div>
-                    </div>
-                ))}
+            {services?.map((item) => (
+    <div key={item?.id} className='cards'>
+        <div className='card-data'>
+            <img loading='lazy' className='card-img' src={"https://avicennaenterprise.com/mega_bot/assets/" + item?.image} alt={item.title} />
+            <h2 className='card-head'>{item?.title}</h2>
+            <p
+  className='card-para'
+  style={{
+    height: 170,
+    overflow: item?.description?.length > 0 ? 'hidden' : 'visible',
+    textOverflow: 'ellipsis', // This ensures ellipsis is shown when overflow is hidden
+    display: '-webkit-box',
+    WebkitBoxOrient: 'vertical',
+    WebkitLineClamp: item?.description?.length > 0 ? 5 : 'none', // Adjust the line clamp as needed
+  }}
+>
+  {item?.description}
+</p>
+            <button 
+                onClick={() => {
+         
+                    const titleLower = item.title.trim().toLowerCase(); // Convert title to lowercase and trim
+
+                    if (titleLower === "mobile application") {
+                        scrollToTop(); 
+                        navigate('/services');
+                    } else if (titleLower === "website development") {
+                        scrollToTop();
+                        navigate('/webservices');
+                    }else if(titleLower==="backend development")
+                    {
+                        scrollToTop();
+                        navigate('/webservices')
+                    }
+                }}
+                className='card-button'>
+                <LuMoveRight /> Read more
+            </button>
+        </div>
+    </div>
+))}
+
             </section>
         </div>
     );

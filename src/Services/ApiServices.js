@@ -17,4 +17,13 @@ export const FetchBlogs = async (callback) => {
     console.error(error.message);
   }
 };
+export const FetchServices = async (callback) => {
+  try {
+    const response = await axios.get(`${apiBaseUrl}website-services`);
+    console.log(response.data)
+    callback(response.data.services);
+  } catch (error) {
+    console.error(error.message);
+  }
+};
 

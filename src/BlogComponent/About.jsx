@@ -51,7 +51,7 @@ function About() {
                 </div>
             </div>
 
-            <div style={{ paddingTop: "40px" ,width:'76%',margin:'0px auto'}} className='Disclaimer'>
+            <div  style={{ paddingTop: "40px" ,width:'76%',margin:'0px auto'}} className='Disclaimer'>
                 <h2 className='abouthead' style={{ color: 'rgb(58, 242, 181)' }}>Description</h2>
                 <p
                 style={{fontWeight:400,width:'100%',color:'rgb(156, 157, 159)'}}
