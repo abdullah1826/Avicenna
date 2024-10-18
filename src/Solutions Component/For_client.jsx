@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './client.css';
 import same from '../image/same.png';
 import same2 from '../image/same2.png';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function For_client() {
   const client_card = [
@@ -32,8 +33,10 @@ function For_client() {
     },
   ];
 
-
-
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+  
   return (
     <div style={{ marginTop: '0px' }} className="ServicesContainer">
       <div>
@@ -46,20 +49,30 @@ function For_client() {
 
       <div className="card-container">
         {client_card.map((item, index) => (
-          <div key={index} className="my-card">
-          <div className='inner-data'>
-            <img loading='lazy' className='my-img' src={item.image} alt={item.heding} />
+          <div
+            key={index}
+            className="my-card"
+            data-aos={
+  index === 0 ? 'slide-up' :
+  index === 1 ? 'slide-up' :
+  index === 2 ?'slide-up' :
+  index === 3 ?'slide-up' :
+  ''
+}
 
-            <div style={{display:'flex',alignItems:'end',gap:'10px'}} className='headnimg'>
-            <img loading='lazy' style={{width:'10px'}} src={same2} alt="" />
-              <h2 className='my-head'>{item.heding}</h2>
+          >
+            <div className='inner-data'>
+              <img loading='lazy' className='my-img' src={item.image} alt={item.heding} />
+
+              <div style={{ display: 'flex', alignItems: 'end', gap: '10px' }} className='headnimg'>
+                <img loading='lazy' style={{ width: '10px' }} src={same2} alt="" />
+                <h2 className='my-head'>{item.heding}</h2>
+              </div>
+
+              <p className='my-para'>{item.para}</p>
+              <button className='my-card-button'>{item.btn}</button>
             </div>
-
-            <p className='my-para'>{item.para}</p>
-            <button className='my-card-button'>{item.btn}</button>
           </div>
-          </div>
-            
         ))}
       </div>
     </div>

@@ -1,7 +1,8 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import img1 from "../image/img1.png";
 import "./jobapply.css";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 function Jobapply() {
   // Array of job data
   const jobData = [
@@ -37,10 +38,15 @@ function Jobapply() {
     // Add more job listings as needed
   ];
 
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, [])
+  
+
   return (
     <div className='ServicesContainer' style={{ marginTop: '10px' }}>
       {jobData.map((job, index) => (
-        <div style={{marginTop:"30px"}} className='main_data' key={index}>
+        <div data-aos='fade-up' style={{marginTop:"30px"}} className='main_data' key={index}>
           <div className='image1'>
             <img src={job.image} alt={job.title} />
           </div>

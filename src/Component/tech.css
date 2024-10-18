@@ -18,8 +18,12 @@
     text-align: center;
     overflow: hidden;
     margin-bottom: 10px; /* Adjust this to reduce gap at the bottom */
+    transition: transform 0.8s;
   }
   
+  .card:hover{
+    transform: scale(1.1);
+  }
   .card img {
     width: 100px;
     height: 100px;

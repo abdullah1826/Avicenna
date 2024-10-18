@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import car from '../image/car.png';
 import carry from '../image/carry.png';
@@ -31,7 +31,8 @@ const cardStyle = {
   position: 'relative',
   overflow: 'hidden',
   textAlign: 'left',
-  width:'-webkit-fill-available'
+  width:'-webkit-fill-available',
+ 
 };
 
 const imgStyle = {
@@ -64,7 +65,12 @@ const arr = [
   { imageUrl: mdcn, head: 'Medicine & Pharma',move:'/industryservices' },
 ];
 
+
+
 function ArrayFun() {
+
+ 
+
   const navigate = useNavigate(); // Define navigate function
   // navigate("/industryservices", { state: {sd:123} });
 
@@ -72,7 +78,7 @@ function ArrayFun() {
     <div id='services'>
       <div className='gridst' style={gridStyle}>
         {arr.map((item, index) => (
-          <div className='crdstyle' key={index} style={cardStyle}>
+          <div  className='crdstyle' key={index} style={cardStyle}>
             <h3 style={headingStyle}>{item.head}</h3>
             <div>
               <img

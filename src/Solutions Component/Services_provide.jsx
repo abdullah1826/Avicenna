@@ -1,17 +1,10 @@
 import React,{useState,useEffect}from 'react';
 import "./services_provide.css";
-import suport from "../image/suport.png";
-import web from "../image/web.png";
-import user from "../image/user.png";
-import backend from "../image/backend.png";
-import mob from "../image/mob.png";
 import { LuMoveRight } from "react-icons/lu";
 import { useNavigate } from 'react-router-dom';
 import { FetchServices } from '../Services/ApiServices';
-
-
-
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 function Services_provide() {
 
 
@@ -24,6 +17,7 @@ function Services_provide() {
       }
       useEffect(() => {
         FetchServices(dataCallback);
+        AOS.init({ duration: 1000 });
       }, []);
 
     const navigate = useNavigate(); // useNavigate hook for navigation
@@ -55,38 +49,10 @@ function Services_provide() {
         requestAnimationFrame(scrollStep); // Start the scrolling animation
     };
 
-    const service = [
-        {
-            image: mob,
-            heading: 'Mobile Application',
-            para: "We develop native mobile applications for iOS. That’ll be faster, more reliable...",
-            move: '/services'
-        },
-        {
-            image: web,
-            heading: 'Website Development',
-            para: "We will develop a roadmap of how we’ll develop the website from scratch by...",
-            move: '/webservices'
-        },
-        {
-            image: backend,
-            heading: 'Backend Development',
-            para: "We offer complete backend development in which we handle schema..."
-        },
-        {
-            image: user,
-            heading: 'User Experience',
-            para: "We don’t forget that our customers are not just technical; they can be laymen and we..."
-        },
-        {
-            image: suport,
-            heading: 'Support',
-            para: "Our support team is available 24/7 for our clients."
-        }
-    ];
+ 
 
     return (
-        <div className='ServicesContainer'> 
+        <div  className='ServicesContainer'> 
             <div className=' s-p'>
                 <h2 className='heading'>
                     Services <span className='my-span'>We Provide</span>
@@ -95,7 +61,7 @@ function Services_provide() {
                     For the past decade, we have been creating high-performance, feature-packed <br className='br' /> mobile applications for iOS & Android.
                 </p>
             </div>
-            <section className='container section-data' style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+            <section data-aos='fade-up'  className='container section-data' style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
             {services?.map((item) => (
     <div key={item?.id} className='cards'>
         <div className='card-data'>

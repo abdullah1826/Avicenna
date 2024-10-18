@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
-import blog1 from "../image/blog1.png";
-import blog2 from "../image/blog2.png";
-import blog3 from "../image/blog3.png";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { MdArrowOutward } from "react-icons/md";
 import "../Component/blog.css";
 import { FetchBlogs } from '../Services/ApiServices';
@@ -19,6 +18,7 @@ function BLogs() {
 
   useEffect(() => {
     FetchBlogs(dataCallback);
+    AOS.init({ duration: 2000 });
   }, []);
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -153,92 +153,99 @@ const formatDate = (dateString) => {
           Discover the most recent blogs about Avicenna Enterprise Solution here.
         </p>
       </div>
-
       <section className='blog-sec' style={containerStyle}>
-        {blogData.map((item, index) => {
-          if (index % 3 === 0) {
-            // Left element takes full height
-            return (
-              <div key={item.id} style={{ ...cardStyle1, flex: '1 1 60%' }}>
-                <img loading='lazy' style={{ ...cardImageStyle, height: '450px' }} src={item?.image} alt={`Blog ${item.id}`} />
-                <div style={cardContentStyle}>
-                  <h2 style={cardTitleStyle}>{item?.title}</h2>
-                  <p 
-  style={cardDescriptionStyle} 
-  dangerouslySetInnerHTML={{ 
-    __html: item?.description?.split(' ').slice(0, 70).join(' ') + (item?.description.split(' ').length > 30 ? '...' : '') 
-  }} 
-/>
-  <p style={{ color: 'white' }}>
-    {format(new Date(item.created_at), 'MMMM dd, yyyy')}
-  </p>
+  {blogData.map((item, index) => {
+    let aosAnimation = '';
+    if (index % 3 === 0) {
+      aosAnimation = index === 0 ? 'zoom-in' : 'slide-up'; // Customize as needed
+    }
 
+    if (index % 3 === 0) {
+      return (
+        <div key={item.id} style={{ ...cardStyle1, flex: '1 1 60%' }} data-aos={aosAnimation}>
+          <img loading='lazy' style={{ ...cardImageStyle, height: '450px' }} src={item?.image} alt={`Blog ${item.id}`} />
+          <div style={cardContentStyle}>
+            <h2 style={cardTitleStyle}>{item?.title}</h2>
+            <p 
+              style={cardDescriptionStyle} 
+              dangerouslySetInnerHTML={{ 
+                __html: item?.description?.split(' ').slice(0, 70).join(' ') + (item?.description.split(' ').length > 30 ? '...' : '') 
+              }} 
+            />
+            <p style={{ color: 'white' }}>
+              {format(new Date(item.created_at), 'MMMM dd, yyyy')}
+            </p>
 
-                  <div className='butn'>
-                    <MdArrowOutward style={{ fontSize: '40px' }}
-                      onClick={() => { scrollToTop(); navigate("/readBlogs", { state: item })} }// Navigate to the respective route with item as state
-                    />
-                  </div>
+            <div className='butn'>
+              <MdArrowOutward style={{ fontSize: '40px' }}
+                onClick={() => { scrollToTop(); navigate("/readBlogs", { state: item }) }} // Navigate to the respective route with item as state
+              />
+            </div>
+          </div>
+        </div>
+      );
+    } else if (index % 3 === 1) {
+      // Start the wrapper for the right-side elements
+      return (
+        <div key={`wrapper-${item.id}`} style={{ display: 'flex', flexDirection: 'column', flex: '1 1 35%' }}>
+          <div style={{ ...cardStyle, height: '50%' }} data-aos='fade-up'> {/* Adjust animation if needed */}
+            <img loading='lazy' style={{ ...cardImageStyle }} src={item.image} alt={`Blog ${item.id}`} />
+            <div style={cardContentStyle}>
+              <h2 style={{ ...cardTitleStyle, fontSize: "17px" }}>{item.title}</h2>
+              <p
+                style={{ ...cardDescriptionStyle, fontWeight: 100 }}
+                dangerouslySetInnerHTML={{
+                  __html: item?.description
+                    ?.split(' ')
+                    .slice(0, 20)
+                    .join(' ') + (item?.description.split(' ').length > 20 ? '...' : '')
+                }}
+              />
+              <p style={{ color: 'white' }}>
+                {format(new Date(item.created_at), 'MMMM dd, yyyy')}
+              </p>
+
+              <div className='butn1'>
+                <MdArrowOutward style={{ fontSize: '25px' }}
+                  onClick={() => { scrollToTop(); navigate("/readBlogs", { state: item }) }} // Navigate to the respective route with item as state
+                />
+              </div>
+            </div>
+          </div>
+
+          {blogData[index + 1] && (
+            <div key={blogData[index + 1].id} style={{ ...cardStyle, height: '50%' }} data-aos='fade-up'> {/* Adjust animation if needed */}
+              <img loading='lazy' style={{ ...cardImageStyle, height: '180px' }} src={blogData[index + 1].image} alt={`Blog ${blogData[index + 1].id}`} />
+              <div style={cardContentStyle}>
+                <h2 style={{ ...cardTitleStyle, fontSize: "17px" }}>{blogData[index + 1].title}</h2>
+                <p
+                  style={{ ...cardDescriptionStyle, fontWeight: 100 }}
+                  dangerouslySetInnerHTML={{
+                    __html: blogData[index + 1]?.description
+                      ?.split(' ')
+                      .slice(0, 20)
+                      .join(' ') + (blogData[index + 1]?.description.split(' ').length > 20 ? '...' : '')
+                  }}
+                />
+                <p style={{ color: 'white' }}>
+                  {format(new Date(item.created_at), 'MMMM dd, yyyy')}
+                </p>
+
+                <div className='butn1'>
+                  <MdArrowOutward style={{ fontSize: '25px' }}
+                    onClick={() => { scrollToTop(); navigate("/readBlogs", { state: blogData[index + 1] }) }} // Navigate to the respective route with the next blog item as state
+                  />
                 </div>
               </div>
-            );
-          } else if (index % 3 === 1) {
-            // Start the wrapper for the right-side elements
-            return (
-              <div key={`wrapper-${item.id}`} style={{ display: 'flex', flexDirection: 'column', flex: '1 1 35%' }}>
-                <div style={{ ...cardStyle, height: '50%' }}>
-                  <img loading='lazy' style={{ ...cardImageStyle }} src={item.image} alt={`Blog ${item.id}`} />
-                  <div style={cardContentStyle}>
-                    <h2 style={{ ...cardTitleStyle, fontSize: "17px" }}>{item.title}</h2>
+            </div>
+          )}
+        </div>
+      );
+    }
+    return null; // In case it doesn't match any condition
+  })}
+</section>
 
-                    <p
-  style={{...cardDescriptionStyle,fontWeight:100}}
-  dangerouslySetInnerHTML={{
-    __html: item?.description
-      ?.split(' ')
-      .slice(0, 20)
-      .join(' ') + (item?.description.split(' ').length > 20 ? '...' : '')
-  }}
-/>
-
-                    <div className='butn1'>
-                      <MdArrowOutward style={{ fontSize: '25px' }}
-                        onClick={()  =>  {scrollToTop(); navigate("/readBlogs", { state: item })}} // Navigate to the respective route with item as state
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                { blogData[index + 1] && (
-                  <div key={blogData[index + 1].id} style={{ ...cardStyle, height: '50%' }}>
-                    <img loading='lazy' style={{ ...cardImageStyle, height: '180px' }} src={blogData[index + 1].image} alt={`Blog ${blogData[index + 1].id}`} />
-                    <div style={cardContentStyle}>
-                      <h2 style={{ ...cardTitleStyle, fontSize: "17px" }}>{blogData[index + 1].title}</h2>
-                      <p
-  style={{...cardDescriptionStyle,fontWeight:100}}
-  dangerouslySetInnerHTML={{
-    __html: blogData[index + 1]?.description
-      ?.split(' ')
-      .slice(0, 20)
-      .join(' ') + (blogData[index + 1]?.description.split(' ').length > 20 ? '...' : '')
-  }}
-/>
-
-
-                      <div className='butn1'>
-                        <MdArrowOutward style={{ fontSize: '25px' }}
-                          onClick={() => { scrollToTop(); navigate("/readBlogs", { state: blogData[index + 1] })}} // Navigate to the respective route with the next blog item as state
-                        />
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </div>
-            );
-          }
-          return null;
-        })}
-      </section>
     </div>
   );
 }
