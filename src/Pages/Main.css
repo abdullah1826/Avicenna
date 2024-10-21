@@ -127,7 +127,7 @@ button {
     height: 150px !important;
   }
 
-  .my-img {
+  .my-imgs {
     width: 100px !important;
   }
   .next {
@@ -149,7 +149,7 @@ button {
 @media (max-width: 480px) {
   .Heros {
     height: auto !important;
-    min-height: max-content !;
+    min-height: 0 !important;
   }
 
   .Hero {
@@ -197,7 +197,7 @@ button {
   .prev {
     font-size: 20px !important;
   }
-  .my-img {
+  .my-imgs {
     width: 25% !important;
   }
   .header-wrap {

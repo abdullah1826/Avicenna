@@ -1,77 +1,143 @@
-import React,{useEffect} from 'react';
+import React, { useEffect, useState } from "react";
 import img1 from "../image/img1.png";
 import "./jobapply.css";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { FetchCareer } from "../Services/ApiServices";
+import { IoMdClose } from "react-icons/io";
+import {
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogActions,
+  Button,
+} from "@mui/material";
+
 function Jobapply() {
-  // Array of job data
-  const jobData = [
- 
-    {
-      title: "Frontend Developer",
-      buttons: ["3+ Experience", "React Expert", "Responsive Design"],
-      description:
-        "Our frontend development services focus on delivering seamless and engaging user experiences across various devices and platforms.",
-      image: img1,
-    },
-    {
-      title: "Backend Developer",
-      buttons: ["4+ Experience", "Node.js Expert", "API Integration"],
-      description:
-        "We offer robust backend development services to ensure smooth integration and secure data management for your applications.",
-      image: img1,
-    },
-    {
-      title: "Backend Developer",
-      buttons: ["4+ Experience", "Node.js Expert", "API Integration"],
-      description:
-        "We offer robust backend development services to ensure smooth integration and secure data management for your applications.",
-      image: img1,
-    },
-    {
-      title: "Frontend Developer",
-      buttons: ["3+ Experience", "React Expert", "Responsive Design"],
-      description:
-        "Our frontend development services focus on delivering seamless and engaging user experiences across various devices and platforms.",
-      image: img1,
-    },
-    // Add more job listings as needed
-  ];
+  const [career, setCareer] = useState([]);
+  const [openDialog, setOpenDialog] = useState(false);
+  const [selectedJob, setSelectedJob] = useState(null);
+
+  const dataCallback = (data) => {
+    setCareer(data);
+  };
 
   useEffect(() => {
-    AOS.init({ duration: 2000 });
-  }, [])
-  
+    FetchCareer(dataCallback);
+    AOS.init({ duration: 1000 });
+  }, []);
+
+  const handleDialogOpen = (job) => {
+    setSelectedJob(job);
+    setOpenDialog(true);
+  };
+
+  const handleDialogClose = () => {
+    setOpenDialog(false);
+    setSelectedJob(null);
+  };
 
   return (
-    <div className='ServicesContainer' style={{ marginTop: '10px' }}>
-      {jobData.map((job, index) => (
-        <div data-aos='fade-up' style={{marginTop:"30px"}} className='main_data' key={index}>
-          <div className='image1'>
-            <img src={job.image} alt={job.title} />
-          </div>
-          <div className='inner1'>
-            <div className='data1'>
-              <h3>{job.title}</h3>
-              <div className='three-btn'>
-                {job.buttons.map((btn, btnIndex) => (
-                  <button key={btnIndex}>{btn}</button>
-                ))}
-              </div>
-              <p>{job.description}</p>
+    <div className="ServicesContainer" style={{ marginTop: "10px" }}>
+      {career.map((job) => {
+        const words = job.description.split(" ");
+        const shouldTruncate = words.length > 40;
+        const displayedDescription = words.slice(0, 30).join(" ");
+
+        return (
+          <div
+            data-aos="fade-up"
+            style={{ marginTop: "30px" }}
+            className="main_data"
+            key={job.id}
+          >
+            <div className="image1" style={{ width: "20%" }}>
+              <img src={img1} alt={job.title} />
             </div>
-            <button
-              style={{
-                height: '55px',
-                fontSize: '13px',
-              }}
-              className='talk-btn new-btn'
-            >
-              Apply now
-            </button>
+            <div className="inner1">
+              <div className="data1" style={{ width: "70%" }}>
+                <h3>{job.title}</h3>
+                <div className="three-btn">
+                  {/* {job.buttons.map((btn, btnIndex) => (
+                    <button key={btnIndex}>{btn}</button>
+                  ))} */}
+                </div>
+                <p
+                  dangerouslySetInnerHTML={{ __html: displayedDescription }}
+                ></p>
+                {shouldTruncate && (
+                  <span
+                    onClick={() => handleDialogOpen(job)}
+                    style={{ color: "rgb(58, 237, 178)", cursor: "pointer" }}
+                  >
+                    ... Show More
+                  </span>
+                )}
+              </div>
+              <button
+                style={{
+                  width: "150px",
+                  height: "55px",
+                  fontSize: "13px",
+                }}
+                className="talk-btn new-btn"
+              >
+                Apply now
+              </button>
+            </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
+
+      {/* Dialog to show full job description */}
+      <Dialog open={openDialog} onClose={handleDialogClose}>
+        {selectedJob && (
+          <>
+            <DialogContent style={{ backgroundColor: "rgb(42, 46, 52)" }}>
+              <DialogActions>
+                <IoMdClose
+                  onClick={handleDialogClose} // Add the onClick event handler here
+                  style={{
+                    fontSize: "30px",
+                    cursor: "pointer",
+                    color: "rgb(58, 237, 178)",
+                    position: "relative",
+                    top: "-19px",
+                    right: "-19px",
+                  }}
+                />
+              </DialogActions>
+
+              <img
+                style={{
+                  borderRadius: "55px", // Remove any border radius
+                  width: "100%", // Make the image responsive
+                  height: "300px", // Set the desired height
+                }}
+                src={img1}
+                alt="qskjd"
+              />
+              <h3 style={{ color: "rgb(58, 237, 178)", paddingTop: "30px" }}>
+                {selectedJob.title}
+              </h3>
+              <p
+                style={{ color: "white", marginTop: "40px" }}
+                dangerouslySetInnerHTML={{ __html: selectedJob.description }}
+              ></p>
+              <button
+                style={{
+                  width: "100%",
+                  height: "55px",
+                  fontSize: "23px",
+                }}
+                className="talk-btn new-btn"
+              >
+                Apply now
+              </button>
+            </DialogContent>
+          </>
+        )}
+      </Dialog>
     </div>
   );
 }

@@ -1,128 +1,114 @@
-.my-card{
-    
-        background-color:transparent;
-        padding: 20px;
-        border-radius: 40px;
-        width: 48%;
-        box-shadow: inset 0px 0px 30px rgba(255, 255, 255, 0.3);
-       
-
+.my-card {
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 40px;
+  width: 48%;
+  box-shadow: inset 0px 0px 30px rgba(255, 255, 255, 0.3);
 }
-.my-card:hover{
-    box-shadow: inset 0px 0px 40px rgba(255, 255, 255, 0.6);
-    transition:box-shadow  0.3s ease, color 0.3s ease, border 0.3s ease; 
-
+.my-card:hover {
+  box-shadow: inset 0px 0px 40px rgba(255, 255, 255, 0.6);
+  transition: box-shadow 0.3s ease, color 0.3s ease, border 0.3s ease;
 }
 
-.card-container
-{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin-top: 80px;
-   
+.card-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 80px;
 }
-.my-img{
-    width: 70px;
+.my-img {
+  width: 70px;
+  transition: transform 0.6s ease-in-out;
 }
-.inner-data{
-    width: 85%;
-    margin: 20px auto;
-}
-.headnimg{
-   padding-top: 30px;
 
-  
+.my-img:hover {
+  transform: rotate(360deg);
 }
-.my-para{
-    width: 70%;
-    padding-top: 20px;
-    font-weight: 100;
+
+.inner-data {
+  width: 85%;
+  margin: 20px auto;
 }
-.my-head{
-    font-size: 24px;
+.headnimg {
+  padding-top: 30px;
+}
+.my-para {
+  width: 70%;
+  padding-top: 20px;
+  font-weight: 100;
+}
+.my-head {
+  font-size: 24px;
 }
 .my-card-button {
-   
-    margin-top: 20px;
-    width: auto;
-    min-height: 50px;
-    color: #3AF2B5 ;
-    background-color: transparent;
-    border-radius: 12px;
-    border: none;
-    border: 1px solid #3AF2B5;
-    font-size: 15px;
-    
-    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease; /* Apply transition */
-  }
-  
-  .my-card-button:hover {
-    background-color:#3AF2B5 ;
-    color: black;
-    
-  }
+  margin-top: 20px;
+  width: auto;
+  min-height: 50px;
+  color: #3af2b5;
+  background-color: transparent;
+  border-radius: 12px;
+  border: none;
+  border: 1px solid #3af2b5;
+  font-size: 15px;
 
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease; /* Apply transition */
+}
+
+.my-card-button:hover {
+  background-color: #3af2b5;
+  color: black;
+}
 
 @media (max-width: 768px) {
-    .my-card{
-    
-        background-color:transparent;
-        padding: 20px;
-        border-radius: 30px;
-        width: 45% !important;
-        box-shadow: inset 0px 0px 30px rgba(255, 255, 255, 0.3);
+  .my-card {
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 30px;
+    width: 45% !important;
+    box-shadow: inset 0px 0px 30px rgba(255, 255, 255, 0.3);
+  }
 
-}
-
-.my-img{
+  .my-img {
     width: 50px !important;
-}
+  }
 
-.my-para{
+  .my-para {
     width: 100% !important;
+  }
+  .ServicesContainer {
+    margin: 0px auto !important;
+  }
 }
-.ServicesContainer{
-margin: 0px auto !important;
-}
-}
-
 
 @media (max-width: 480px) {
-    .my-card{
-    
-        background-color:transparent;
-        padding: 20px;
-        border-radius: 30px;
-        width: 100% !important;
-        box-shadow: inset 0px 0px 30px rgba(255, 255, 255, 0.3);
+  .my-card {
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 30px;
+    width: 100% !important;
+    box-shadow: inset 0px 0px 30px rgba(255, 255, 255, 0.3);
+  }
 
-}
-
-.my-img{
+  .my-img {
     width: 50px !important;
-}
+  }
 
-.my-head{
+  .my-head {
     font-size: 16px;
     font-weight: 800;
     position: relative;
     bottom: 4px;
-}
-.my-para{
+  }
+  .my-para {
     width: 90% !important;
-}
+  }
 
-.my-card-button {
+  .my-card-button {
     margin-bottom: 0px;
-}
-.headnimg{
+  }
+  .headnimg {
     padding-top: 30px;
     align-items: end !important;
-   
- 
-   
- }
- 
+  }
 }
