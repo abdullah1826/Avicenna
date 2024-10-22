@@ -97,9 +97,21 @@ button {
   width: 240px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
+  .Hero {
+    height: max-content !important;
+    min-height: max-content !important;
+  }
   .Heros {
-    height: auto !important;
+    height: max-content !important;
+    min-height: max-content !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .Hero {
+    height: max-content !important;
+    min-height: max-content !important;
   }
   .header h3 {
     display: none;

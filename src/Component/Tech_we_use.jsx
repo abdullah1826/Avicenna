@@ -20,10 +20,10 @@ function Tech_we_use({ data, now }) {
         data == "app"
           ? "linear-gradient(90.28deg, rgba(75, 131, 220, 0.25) 0%, rgba(221, 237, 255, 0.25) 100%)"
           : "linear-gradient(90.28deg, rgba(38, 77, 228, 0.25) 0%, rgba(41, 101, 241, 0.25) 100%)",
-      move: data == "app" ? "/ios" : "",
+      move: data == "app" ? "/services/ios" : "/services/css",
     },
     {
-      imageUrl: data == "app" ? card2 : php,
+      imageUrl: data == "app" ? card4 : php,
       heading: data == "app" ? "Android Applications" : "PHP",
       para: "For the past decade we have been creating high performance, feature-packed mobile applications for iOS & Android. As an expert in mobile application development services",
       border: data == "app" ? "rgb(93, 127, 61)" : "rgb(59, 65, 128)",
@@ -31,7 +31,7 @@ function Tech_we_use({ data, now }) {
         data == "app"
           ? "linear-gradient(90.28deg, rgba(147, 199, 86, 0.25) 0%, rgba(135, 186, 82, 0.25) 100%)"
           : " linear-gradient(90.28deg, rgba(119, 123, 179, 0.25) 0%, rgba(110, 116, 199, 0.25) 100%)",
-      move: data == "app" ? "/androidservices" : "",
+      move: data == "app" ? "/services/androidservices" : "/services/php",
     },
     {
       imageUrl: data == "app" ? car3 : react,
@@ -39,10 +39,10 @@ function Tech_we_use({ data, now }) {
       para: "For the past decade we have been creating high performance, feature-packed mobile applications for iOS & Android. As an expert in mobile application development services",
       border: "rgb(24, 79, 134)",
       bg: "linear-gradient(90.28deg, rgba(115, 211, 237, 0.25) 0%, rgba(35, 126, 207, 0.25) 100%)",
-      move: data == "app" ? "/flutter" : "",
+      move: data == "app" ? "/services/flutter" : "/services/react",
     },
     {
-      imageUrl: data == "app" ? card4 : node,
+      imageUrl: data == "app" ? card2 : node,
       heading: data == "app" ? "Native Applications" : "Node JS",
       para: "For the past decade we have been creating high performance, feature-packed mobile applications for iOS & Android. As an expert in mobile application development services",
       border: data == "app" ? "rgb(75, 136, 156)" : "rgb(91, 126, 29)",
@@ -50,7 +50,7 @@ function Tech_we_use({ data, now }) {
         data == "app"
           ? "linear-gradient(90.28deg, rgba(142, 219, 237, 0.25) 0%, rgba(0, 216, 255, 0.25) 100%)"
           : " linear-gradient(90.28deg, rgba(139, 197, 0, 0.25) 0%, rgba(135, 186, 82, 0.25) 100%)",
-      move: data == "app" ? "/native" : "",
+      move: data == "app" ? "/services/native" : "/services/node",
     },
   ];
 
@@ -58,7 +58,7 @@ function Tech_we_use({ data, now }) {
   return (
     <div
       className="tech-main"
-      style={{ paddingTop: "40px", width: "90%", margin: "0px auto" }}
+      style={{ paddingTop: "110px", width: "90%", margin: "0px auto" }}
     >
       <div>
         <h2

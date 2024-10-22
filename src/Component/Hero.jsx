@@ -85,7 +85,7 @@ export default function Hero({ data, dataa, newdata, page }) {
         </header>
       </div>
 
-      <Nav navbar={"android"} />
+      <Nav data={data} navbar={"android"} />
       <>
         <Talktous
           data={data}

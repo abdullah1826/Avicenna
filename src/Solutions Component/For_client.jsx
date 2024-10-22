@@ -17,7 +17,7 @@ function For_client() {
   }, []);
 
   return (
-    <div style={{ marginTop: "0px" }} className="ServicesContainer">
+    <div style={{ marginTop: "90px" }} className="ServicesContainer">
       <div>
         <h2 className="heading">For Our Clients!</h2>
         <p style={{ width: "90%" }} className="paragraph">

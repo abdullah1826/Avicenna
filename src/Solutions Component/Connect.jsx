@@ -1,11 +1,12 @@
 import React from "react";
 import "../Component/talk.css";
+import "../Solutions Component/connect.css";
 import { useNavigate } from "react-router-dom";
 function Connect() {
   const navigate = useNavigate();
   return (
     <section
-      data-aos="slide-down"
+      data-aos="slide-right"
       style={{
         margin: "0px auto",
         width: "90%",
@@ -13,7 +14,7 @@ function Connect() {
         height: "100%",
       }}
     >
-      <div className="best-in-app">
+      <div className="best-in-app" style={{ padding: "0px" }}>
         <h2
           style={{
             color: "rgb(58, 242, 181)",
@@ -47,6 +48,7 @@ function Connect() {
             justifyContent: "center",
             alignItems: "center",
             margin: "30px auto",
+            fontWeight: 400,
           }}
           onClick={() => {
             navigate("/contactus");

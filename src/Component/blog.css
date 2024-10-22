@@ -90,9 +90,18 @@
   .blog-sec {
     margin: 0px !important;
   }
+  .main-para-main {
+    display: none;
+  }
 }
 
+.blog-pic {
+  height: 450px;
+}
 @media (max-width: 480px) {
+  .blog-pic {
+    height: 200px;
+  }
   .blog-sec {
     padding-top: 0px !important;
   }
@@ -100,6 +109,12 @@
     width: 100% !important;
   }
   .blo-p p {
+    width: 100% !important;
+  }
+  .main-blog-main {
+    margin: 60px auto !important;
+  }
+  .main-para-main {
     width: 100% !important;
   }
 }

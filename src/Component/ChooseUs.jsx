@@ -19,7 +19,7 @@ function ChooseUs({ page }) {
   ];
 
   return (
-    <div style={{ display: "flex", width: "100%" }}>
+    <div style={{ display: "flex", width: "100%", paddingTop: "40px" }}>
       <div
         className="main"
         style={{

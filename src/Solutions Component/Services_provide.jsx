@@ -46,8 +46,16 @@ function Services_provide() {
   };
 
   return (
-    <div className="ServicesContainer">
-      <div className=" s-p">
+    <div
+      className="main-of-service"
+      style={{
+        width: "90%",
+        color: "white",
+
+        margin: "100px auto 0px ",
+      }}
+    >
+      <div className=" s-p" style={{ width: "90%", margin: "0px auto" }}>
         <h2 className="heading">
           Services <span className="my-span">We Provide</span>
         </h2>

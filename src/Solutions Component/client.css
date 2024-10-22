@@ -60,12 +60,26 @@
   color: black;
 }
 
+@media (max-width: 830px) {
+  .my-card {
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 30px;
+    width: 47% !important;
+    box-shadow: inset 0px 0px 30px rgba(255, 255, 255, 0.3);
+  }
+  .card-container {
+    display: flex;
+    justify-content: start;
+  }
+}
+
 @media (max-width: 768px) {
   .my-card {
     background-color: transparent;
     padding: 20px;
     border-radius: 30px;
-    width: 45% !important;
+    width: 90% !important;
     box-shadow: inset 0px 0px 30px rgba(255, 255, 255, 0.3);
   }
 

@@ -1,84 +1,83 @@
-.ServicesContainer{
-    color: white;
-    width: 90%;
-    margin: 150px auto;
+.ServicesContainer {
+  color: white;
+  width: 90%;
+  margin: 150px auto;
 }
-.heading{
-    font-size: 55px;
-    font-weight: 900;
-    color: #3AF2B5;
+.heading {
+  font-size: 55px;
+  font-weight: 900;
+  color: #3af2b5;
 }
-.my-span{
-    color: white;
+.my-span {
+  color: white;
 }
-.paragraph{
-    font-size: 20px;
-    font-weight: 100;
+.paragraph {
+  font-size: 20px;
+  font-weight: 100;
 }
 
-circle{
-    width: 200px;
-    height: 200px;
-    border-radius: 100%;
-    background-color: rgb(25, 81, 69,0.6);
-    position: absolute;
-    top: -10px;
+circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background-color: rgb(25, 81, 69, 0.6);
+  position: absolute;
+  top: -10px;
 }
 
 .section-data {
-    padding-top:100px;
-    display: flex;
-   flex-wrap: wrap;
-    width: 100%;
-  
-  }
-  
-  .cards {
-    width: 31%;
+  padding-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
 
-    margin: 40px 1%; /* Add margin between cards */
-    border: 1px solid rgb(76, 78, 84);
-    color: aliceblue;
-    background-color: rgb(29, 32, 41);
-    border-radius: 25px;
-  }
-  .card-data{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: relative;
-    padding-top: 50px;
-  }
-  
-  .card-img {
-    width: 100px;
-    position: absolute;
-    top: -60px;
-    filter: drop-shadow(0px 19px 10px rgb(58, 242, 181,0.5) ); /* Blue drop shadow */
-  }
-  
-  .card-head{
-    text-align: center;
-    font-size: 24px;
-    padding-top: 50px;
-    font-weight: 900;
-  }
-  .card-para{
-    text-align: center;
-    min-height: 100px;
-    width: 70%;
-    color: #3AF2B5;
-    padding-top: 50px;
- 
+.cards {
+  width: 31%;
 
-  }
+  margin: 40px 1%; /* Add margin between cards */
+  border: 1px solid rgb(76, 78, 84);
+  color: aliceblue;
+  background-color: rgb(29, 32, 41);
+  border-radius: 25px;
+}
+.card-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  padding-top: 50px;
+}
+
+.card-img {
+  width: 100px;
+  position: absolute;
+  top: -60px;
+  filter: drop-shadow(
+    0px 19px 10px rgb(58, 242, 181, 0.5)
+  ); /* Blue drop shadow */
+}
+
+.card-head {
+  text-align: center;
+  font-size: 24px;
+  padding-top: 50px;
+  font-weight: 900;
+}
+.card-para {
+  text-align: center;
+  min-height: 100px;
+  width: 70%;
+  color: #3af2b5;
+  padding-top: 50px;
+}
 .card-button {
   margin-bottom: 40px;
   width: 160px;
   height: 50px;
   color: black;
-  background-color: #3AF2B5;
+  background-color: #3af2b5;
   border-radius: 12px;
   border: none;
   transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease; /* Apply transition */
@@ -86,88 +85,86 @@ circle{
 
 .card-button:hover {
   background-color: transparent;
-  color: #3AF2B5;
-  border: 1px solid #3AF2B5;
+  color: #3af2b5;
+  border: 1px solid #3af2b5;
 }
 
+@media (max-width: 850px) {
+  .cards {
+    width: 48%;
+  }
+}
 
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
+  .heading {
+    font-size: 30px;
+  }
+  .paragraph {
+    font-size: 15px;
+  }
+  .card-para {
+    text-align: center;
+    min-height: 100px;
+    width: 95%;
+    color: #3af2b5;
+    padding-top: 10px;
+    font-size: 14px;
+  }
+  .card-head {
+    text-align: center;
+    font-size: 18px;
+    padding-top: 50px;
+    font-weight: 900;
+  }
+  .cards {
+    width: 45%;
+    margin: 40px 1%; /* Add margin between cards */
+    border: 1px solid rgb(76, 78, 84);
+    color: aliceblue;
+    background-color: rgb(29, 32, 41);
+    border-radius: 25px;
+  }
 
-    .heading{
-        font-size: 30px;
-    }
-    .paragraph{
-        font-size: 15px;
-    }
-    .card-para{
-        text-align: center;
-        min-height: 100px;
-        width: 95%;
-        color: #3AF2B5;
-        padding-top: 10px;
-        font-size: 14px;
-     
-    
-      }
-      .card-head{
-        text-align: center;
-        font-size: 18px;
-        padding-top: 50px;
-        font-weight: 900;
-      }
-      .cards {
-        width: 45%;
-        margin: 40px 1%; /* Add margin between cards */
-        border: 1px solid rgb(76, 78, 84);
-        color: aliceblue;
-        background-color: rgb(29, 32, 41);
-        border-radius: 25px;
-    
-      }
-    
-      .s-p{
-padding-top: 45px !important;
-      }
-      .section-data{
-        padding-top: 50px !important;
-      }
-    .container{
-      max-width: none;
-    }
+  .s-p {
+    padding-top: 45px !important;
+  }
+  .section-data {
+    padding-top: 50px !important;
+  }
+  .container {
+    max-width: none;
+  }
 }
 
 @media (max-width: 480px) {
+  .main-of-service {
+    margin: 0 !important;
+  }
+  .ServicesContainer {
+    color: white;
+    width: 90%;
+    margin: 60px auto;
+  }
+  .heading {
+    font-size: 20px;
+  }
+  .paragraph {
+    font-size: 15px;
+  }
+  .cards {
+    width: 100%;
+    margin-left: 10px;
 
-    .ServicesContainer{
-        color: white;
-        width: 90%;
-        margin: 60px auto;
-    }
-    .heading{
-        font-size: 20px;
-    }
-    .paragraph{
-        font-size: 15px;
-    }
-    .cards {
-        width: 90%;
-    
-        margin: 40px 1%; /* Add margin between cards */
-        border: 1px solid rgb(76, 78, 84);
-        color: aliceblue;
-        background-color: rgb(29, 32, 41);
-        border-radius: 25px;
-      }
-      .container{
-        justify-content: start !important;
-        gap: 25px;
-      
-    
-      }
-      .section-data{
-        padding: 0px ;
-
-      }
-
+    border: 1px solid rgb(76, 78, 84);
+    color: aliceblue;
+    background-color: rgb(29, 32, 41);
+    border-radius: 25px;
+  }
+  .container {
+    justify-content: start !important;
+    gap: 25px;
+  }
+  .section-data {
+    padding: 0px;
+  }
 }
-  

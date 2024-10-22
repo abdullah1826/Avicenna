@@ -20,7 +20,11 @@ function Develop({ data, dev, chng }) {
                   dev === "android" ? `${data?.color}` : "rgb(58, 242, 181)",
               }}
             >
-              {chng === "career" ? " Your Potential " : data?.text}
+              {chng === "career"
+                ? " Your Potential "
+                : chng === "services"
+                ? data?.text
+                : "Apps"}
             </span>
             <br />
             {chng == "career" ? " With Us" : "For Great"}
@@ -38,7 +42,7 @@ function Develop({ data, dev, chng }) {
             style={{
               color: "white",
               fontSize: "20px",
-              width: "74%",
+              width: "100%",
               wordSpacing: "1px",
               letterSpacing: "0",
               fontWeight: 100,

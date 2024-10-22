@@ -11,8 +11,9 @@ function Talktous({ data, newdata, page = null }) {
   // Determine colors based on hover state
   const buttonStyle = {
     border: `1px solid ${data?.color}`,
+    fontWeight: 400,
 
-    color: data?.color,
+    // color: data?.color,
     backgroundColor: isHovered ? "transparent" : data?.color,
     color: isHovered ? data?.color : "black",
     padding: "10px 20px", // Adjust padding as needed

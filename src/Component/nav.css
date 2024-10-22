@@ -1,4 +1,5 @@
-.hvr, .hvr2 {
+.hvr,
+.hvr2 {
   margin: 0 15px;
   cursor: pointer;
   font-size: 24px;
@@ -11,46 +12,43 @@
   color: white; /* Default color */
 }
 
-
 .dot {
   display: inline-block;
   position: relative;
-  top:-4px;
-    width: 8px; 
-  height: 8px; 
+  top: -4px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  background-color: transparent; 
-  margin-right: 8px; 
-  vertical-align: middle; 
-  transition: background-color 1s ease; 
+  background-color: transparent;
+  margin-right: 8px;
+  vertical-align: middle;
+  transition: background-color 1s ease;
   visibility: hidden;
 }
 
 .hvr:hover .dot {
   visibility: visible;
-  background-color: rgb(58, 242, 181); 
+  background-color: rgb(58, 242, 181);
 }
 .hvr2:hover .dot {
   visibility: visible;
-  background-color:rgb(146, 199, 85); 
+  background-color: rgb(146, 199, 85);
 }
 
-
-
-.list-i:hover{
-  color: rgb(58, 242, 181); 
+.list-i:hover {
+  color: rgb(58, 242, 181);
 }
 
 .hvr:hover {
-  color: rgb(58, 242, 181); 
+  color: rgb(58, 242, 181);
 }
 .hvr2:hover {
-  color:rgb(146, 199, 85) ; 
+  color: rgb(146, 199, 85);
 }
 
 .dot.active {
-  background-color: rgb(58, 242, 181); 
-  transition: background-color 1s ease; 
+  background-color: rgb(58, 242, 181);
+  transition: background-color 1s ease;
 }
 
 .active {
@@ -59,47 +57,43 @@
   color: aliceblue;
 }
 
-.dot.active2{
-  background-color:rgb(146, 199, 85); 
-  transition: background-color 1s ease; 
+.dot.active2 {
+  background-color: rgb(146, 199, 85);
+  transition: background-color 1s ease;
 }
 .active2 {
-  color:rgb(146, 199, 85);
+  color: rgb(146, 199, 85);
   text-decoration: none;
 }
 
-
 .active .dot {
-  display: inline-block; 
+  display: inline-block;
 }
 .active2 .dot {
-  display: inline-block; 
+  display: inline-block;
 }
 
-  
-
-
-  
-
-
-  
-  ul li {
-    position: relative; /* For positioning the dot */
-  }
-  
+ul li {
+  position: relative;
+}
 
 nav {
-    margin-top: 70px;
-    border-top: 1px solid transparent;
-    border-bottom: 1px solid transparent;
-    border-image-source: linear-gradient(90deg, rgba(100, 101, 103, 0.1) 0%, rgba(100, 101, 103, 1) 50%, rgba(100, 101, 103, 0.1) 100%);
-    
-    color: white;
-    background: #0E1016;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  margin-top: 70px;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-image-source: linear-gradient(
+    90deg,
+    rgba(100, 101, 103, 0.1) 0%,
+    rgba(100, 101, 103, 1) 50%,
+    rgba(100, 101, 103, 0.1) 100%
+  );
+
+  color: white;
+  background: #0e1016;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .fixed-nav {
@@ -107,7 +101,6 @@ nav {
   top: -300px; /* Keep it at the top */
   width: 100%;
   z-index: 1000;
- 
 }
 
 nav ul li.active {
@@ -118,56 +111,52 @@ nav ul li .dot.active {
   background-color: rgba(58, 242, 181, 1);
 }
 
-
-
 @media (max-width: 768px) {
-    nav {
-        width: 100%;
-    }
+  nav {
+    width: 100%;
+  }
 
-    .hvr {
-        font-size: 16px;
-    }
+  .hvr {
+    font-size: 16px;
+  }
 
-    nav ul {
-        width: 100%;
-    }
+  nav ul {
+    width: 100%;
+  }
 }
 
 @media (max-width: 480px) {
-    nav {
-        display: none; /* Hide nav when screen is less than or equal to 480px */
-    }
+  .header {
+    z-index: 1;
+  }
+  nav {
+    display: none; /* Hide nav when screen is less than or equal to 480px */
+  }
 
-    .drawer-toggle {
-      
-      
-       color: aliceblue;
-       margin-left: 15px;
-    
-      top:-7px !important;
-      font-size: 70px !important;
-      
-      position: fixed !important;
-      right: 0px;
-      padding-top: 23px;
-   
-    }
-  
+  .drawer-toggle {
+    color: aliceblue;
+    margin-left: 15px;
 
+    top: -7px !important;
+    font-size: 70px !important;
 
-
+    position: fixed !important;
+    right: 0px;
+    padding-top: 23px;
+  }
 }
 
 .css-1edfpdg-MuiTypography-root {
-  margin: 0  !important;
-  font-family:  "Helvetica" !important;
+  margin: 0 !important;
+  font-family: "Helvetica" !important;
   font-weight: 500 !important;
   font-size: 19px !important;
   line-height: 0.8 !important;
   letter-spacing: 0 !important;
-
 }
 
-
-
+.main-btn:hover {
+  background-color: var(--hoverColor); /* Background changes to data?.color */
+  border-color: var(--hoverColor);
+  color: black; /* Text color becomes black on hover */
+}

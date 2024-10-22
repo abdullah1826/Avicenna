@@ -10,7 +10,7 @@ import Footer from "../Component/Footer.jsx";
 import Innovative from "../Component/Innovative";
 import { useLocation } from "react-router-dom";
 
-function Native() {
+function ServiceDetail() {
   console.log("Ios component is rendering"); // Check if this logs
   const location = useLocation();
   const currentURL = location.pathname;
@@ -21,25 +21,52 @@ function Native() {
   console.log("Ios page Called:"); // "ios"
   let changeableColor =
     routeName === "ios"
-      ? "#293E60"
+      ? "#0B8EE6"
       : routeName === "androidservices"
-      ? "rgb(146, 199, 85)"
+      ? "#80B548"
       : routeName === "flutter"
-      ? "rgb(88, 192, 241)"
+      ? "#72D4ED"
       : routeName === "native"
-      ? "#4B889C"
+      ? "#76CEE4"
+      : routeName === "css"
+      ? "rgb(38, 77, 228)"
+      : routeName === "php"
+      ? "#7377AF"
+      : routeName === "react"
+      ? "rgb(1, 216, 255)"
+      : routeName === "node"
+      ? "#8BC500"
       : "";
-  let text = routeName === "native" ? " Native Application" : "";
+
+  let text =
+    routeName === "flutter"
+      ? " Flutter App"
+      : routeName === "ios"
+      ? " IOS App"
+      : routeName === "native"
+      ? " Native App"
+      : routeName === "androidservices"
+      ? " Android App"
+      : routeName === "css"
+      ? " Websites"
+      : routeName === "php"
+      ? " Websites"
+      : routeName === "react"
+      ? " Websites"
+      : routeName === "node"
+      ? " Websites"
+      : "";
+
   const HeroData = {
     width: "75%",
     title: `<h2 style="color: white; font-size: 55px; font-weight: 900; width: 80%;">
-    Expert <span style="color:${changeableColor};"> Android App Development</span> Services
+    Expert <span style="color:${changeableColor};"> ${text}  Development</span> Services
   </h2>`,
     description: `<p style="color: white; font-size: 24px; font-weight: 100;">Avicenna Enterprises Solutions is Your <span style="color:${changeableColor};">one-step solution for <br classname="hide-on-mobile" /></span> all your development needs</p>`,
     color: changeableColor,
     imageUrl: bg4,
-    text: text,
     appointment_heading: "App Development",
+    text: text,
   };
 
   return (
@@ -48,9 +75,10 @@ function Native() {
       style={{ height: "100%", background: " #090e17", position: "sticky" }}
     >
       <Hero data={HeroData} newdata={"android"} />
-      <Develop dev={"android"} data={HeroData} />
-      <Innovative data={HeroData} />
+      <Develop data={HeroData} dev={"android"} />
       <Doneprojects />
+      <Innovative data={HeroData} />
+
       <br />
       <br />
       <br />
@@ -63,4 +91,4 @@ function Native() {
   );
 }
 
-export default Native;
+export default ServiceDetail;
