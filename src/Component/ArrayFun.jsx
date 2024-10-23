@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 import car from "../image/car.png";
 import carry from "../image/carry.png";
@@ -48,7 +48,6 @@ const imgStyle = {
 
 const headingStyle = {
   color: "white",
-
   textAlign: "center",
   paddingTop: "20px",
   fontSize: "28px",
@@ -66,8 +65,7 @@ const arr = [
 ];
 
 function ArrayFun() {
-  const navigate = useNavigate(); // Define navigate function
-  // navigate("/industryservices", { state: {sd:123} });
+  const navigate = useNavigate();
 
   return (
     <div id="services">
@@ -94,6 +92,7 @@ function ArrayFun() {
         ))}
       </div>
 
+      {/* NFC section */}
       <div
         style={{
           width: "90%",
@@ -106,8 +105,15 @@ function ArrayFun() {
           background:
             "linear-gradient(90.28deg, rgba(98, 98, 98, 0.25) 0%, rgba(168, 168, 168, 0.25) 100%)",
           border: "2px solid rgb(100, 101, 105)",
+          cursor: "pointer", // Add cursor pointer for click indication
         }}
         className="nfc"
+        onClick={() => {
+          window.scrollTo(0, 0); // Scroll to top when clicked
+          navigate("/industryservices", {
+            state: { imageUrl: nfc, head: "NFC" },
+          });
+        }}
       >
         <div className="nfc-l" style={{ marginLeft: 50, marginTop: "40px" }}>
           <h1 style={{ color: "white", fontWeight: 800 }}>NFC</h1>

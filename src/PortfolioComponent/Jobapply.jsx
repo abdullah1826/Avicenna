@@ -90,10 +90,20 @@ function Jobapply() {
       })}
 
       {/* Dialog to show full job description */}
-      <Dialog open={openDialog} onClose={handleDialogClose}>
+      <Dialog
+        style={{ backgroundColor: "rgb(42, 46, 52)" }}
+        open={openDialog}
+        onClose={handleDialogClose}
+      >
         {selectedJob && (
           <>
-            <DialogContent style={{ backgroundColor: "rgb(42, 46, 52)" }}>
+            <DialogContent
+              className="main-cl"
+              style={{
+                backgroundColor: "rgb(42, 46, 52)",
+                borderRadius: "20px",
+              }}
+            >
               <DialogActions>
                 <IoMdClose
                   onClick={handleDialogClose} // Add the onClick event handler here
@@ -121,7 +131,7 @@ function Jobapply() {
                 {selectedJob.title}
               </h3>
               <p
-                style={{ color: "white", marginTop: "40px" }}
+                style={{ color: "white", marginTop: "40px", width: "100%" }}
                 dangerouslySetInnerHTML={{ __html: selectedJob.description }}
               ></p>
               <button

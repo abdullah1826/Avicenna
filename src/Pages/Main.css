@@ -156,6 +156,9 @@ button {
   .Hero {
     min-height: 61vh !important;
   }
+  .main-btn {
+    font-size: 12px !important;
+  }
 }
 
 @media (max-width: 480px) {

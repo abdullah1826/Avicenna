@@ -214,6 +214,7 @@ function BLogs() {
                   {" "}
                   {/* Adjust animation if needed */}
                   <img
+                    className="my-bp"
                     loading="lazy"
                     style={{ ...cardImageStyle }}
                     src={item.image}
@@ -259,6 +260,7 @@ function BLogs() {
                     {" "}
                     {/* Adjust animation if needed */}
                     <img
+                      className="my-bp"
                       loading="lazy"
                       style={{ ...cardImageStyle, height: "180px" }}
                       src={blogData[index + 1].image}

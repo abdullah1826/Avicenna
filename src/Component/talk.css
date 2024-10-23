@@ -12,6 +12,20 @@
   color: black;
   font-weight: 550; /* Smooth transition */
 }
+.talk-btnn {
+  background-color: rgb(58, 237, 178);
+  width: 180px;
+  height: 60px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: 900;
+  transition: background-color 0.4s, color 0.4s;
+  color: black;
+  font-weight: 550; /* Smooth transition */
+}
 
 .talk-btn2 {
   background-color: rgb(146, 199, 85);
@@ -33,6 +47,11 @@
   border: 1px solid rgb(58, 237, 178);
   color: rgb(58, 237, 178);
 }
+.talk-btnn:hover {
+  background-color: transparent;
+  border: 1px solid rgb(58, 237, 178);
+  color: rgb(58, 237, 178);
+}
 .talk-btn2:hover {
   background-color: transparent;
   border: 1px solid rgb(146, 199, 85);
@@ -47,10 +66,15 @@
   }
 
   .best-in-app p {
-    font-size: 20px !important ; /* Adjust paragraph size for tablets */
+    font-size: 30px !important ; /* Adjust paragraph size for tablets */
   }
 
   .talk-btn {
+    width: 130px !important; /* Adjust button width for tablets */
+    height: 50px !important; /* Adjust button height for tablets */
+    font-size: 15px !important; /* Adjust button font size for tablets */
+  }
+  .talk-btnn {
     width: 130px !important; /* Adjust button width for tablets */
     height: 50px !important; /* Adjust button height for tablets */
     font-size: 15px !important; /* Adjust button font size for tablets */
@@ -63,6 +87,9 @@
   .hidden-br {
     display: none !important;
   }
+  .best-in-app {
+    padding-top: 0px !important;
+  }
 }
 
 @media (max-width: 480px) {
@@ -71,7 +98,6 @@
   }
   .best-in-app h2 {
     font-size: 20px !important;
-
     margin-top: 10px !important;
   }
 
@@ -85,9 +111,9 @@
     width: 120px !important; /* Adjust button width for mobile */
     height: 40px !important; /* Adjust button height for mobile */
     font-size: 16px;
-    margin-top: 30px; /* Adjust button font size for mobile */
+    margin-top: 0px; /* Adjust button font size for mobile */
   }
-  .talk-btn {
+  .talk-btnn {
     width: 120px !important; /* Adjust button width for mobile */
     height: 40px !important; /* Adjust button height for mobile */
     font-size: 16px;

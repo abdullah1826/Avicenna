@@ -1,72 +1,87 @@
 /* Global styles */
 .information {
-    border: 2px solid rgb(101, 102, 104);
-    height: 240px;
-    border-radius: 27px;
-   background-color: rgb(43, 45, 51,0.4);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-  }
-
-  .information h1{
-    font-size: 75px !important;
-    font-weight: 900;
-    height: 100px !important;
-  }
-  .information p{
-    font-size: 15px;
-  }
-  
-  @media (max-width: 768px) {
-    
-.for-h{
-  height: 60px !important;
-}
-.information{
-  height: 200px !important;
-}
-.information h1{
-  font-size: 50px !important;
-}
-
-.information p{
-  font-size: 12px;
-}
-}
-  @media (max-width: 480px) {
-    
-.myclasss{
-  margin: 3px;
-}
-.information{
-  height: 150px !important;
-  padding-top: 0px !important;
-
-}
-.information h1{
-  font-size: 20px !important;
-}
-
-.information p{
-  font-size: 8px;
-  height: 34px;
+  border: 2px solid rgb(101, 102, 104);
+  height: 240px;
+  border-radius: 27px;
+  background-color: rgb(43, 45, 51, 0.4);
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: stretch;
-  margin-top: 10px;
-}
-section{
-  padding-top: 40px !important;
-}
-.my-section{
-  padding-top: 0px !important;
 }
 
-.marg{
-  padding-top: 100px !important;
+.information h1 {
+  font-size: 75px !important;
+  font-weight: 900;
+  height: 100px !important;
 }
+.information p {
+  font-size: 15px;
 }
 
+@media (max-width: 840px) {
+  .my-section {
+    padding-top: 100px !important;
+  }
+  .for-h {
+    height: 70px !important;
+  }
+  .information {
+    height: 200px !important;
+    padding-top: 0px !important;
+  }
+  .information h1 {
+    font-size: 50px !important;
+  }
 
+  .information p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .for-h {
+    height: 60px !important;
+  }
+  .information {
+    height: 200px !important;
+  }
+  .information h1 {
+    font-size: 50px !important;
+  }
+
+  .information p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .myclasss {
+    margin: 3px;
+  }
+  .information {
+    height: 150px !important;
+    padding-top: 0px !important;
+  }
+  .information h1 {
+    font-size: 20px !important;
+  }
+
+  .information p {
+    font-size: 8px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 10px;
+  }
+  section {
+    padding-top: 40px !important;
+  }
+  .my-section {
+    padding-top: 0px !important;
+  }
+
+  .marg {
+    padding-top: 100px !important;
+  }
+}

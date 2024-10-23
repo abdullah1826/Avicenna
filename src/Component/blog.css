@@ -93,6 +93,10 @@
   .main-para-main {
     display: none;
   }
+
+  .my-bp {
+    height: 200px !important;
+  }
 }
 
 .blog-pic {

@@ -103,15 +103,19 @@ function Nav({ navbar, data }) {
           const isServices = text === "Services";
           const isAndroidServicesPage =
             location.pathname === "/androidservices" && navbar === "android";
+
           const isActive =
             (text === "Solutions" &&
               (location.pathname === "/" ||
                 location.pathname === "/solutions")) ||
+            (text === "Blogs" && location.pathname === "/readBlogs") || // New condition for Blogs
             location.pathname.includes(text.toLowerCase().replace(" ", ""));
 
-          // Set initial active color for "Services" to rgb(58, 237, 178) and update with data?.color if available
+          // Set the active color based on your requirements
           const activeColor =
-            isServices && !data?.color
+            text === "Blogs" && location.pathname === "/readBlogs" // Set specific color for Blogs
+              ? "rgb(58, 237, 178)" // Use blue for Blogs active state
+              : isServices && !data?.color
               ? "rgb(58, 237, 178)"
               : data?.color || "rgb(58, 237, 178)";
 
@@ -252,20 +256,22 @@ function Nav({ navbar, data }) {
                   "Contact Us",
                 ].map((text, index) => {
                   const isServices = text === "Services";
-                  const isAndroidServicesPage =
-                    location.pathname === "/androidservices" &&
-                    navbar === "android";
+
+                  // Update the isActive condition to include the "Blogs" item
                   const isActive =
                     (text === "Solutions" &&
                       (location.pathname === "/" ||
                         location.pathname === "/solutions")) ||
+                    (text === "Blogs" && location.pathname === "/readBlogs") || // New condition for Blogs
                     location.pathname.includes(
                       text.toLowerCase().replace(" ", "")
                     );
 
                   // Set the active color based on your requirements
                   const activeColor =
-                    isServices && !data?.color
+                    text === "Blogs" && location.pathname === "/readBlogs" // Set specific color for Blogs
+                      ? "rgb(58, 237, 178)" // Use blue for Blogs active state
+                      : isServices && !data?.color
                       ? "rgb(58, 237, 178)"
                       : data?.color || "rgb(58, 237, 178)";
 
@@ -276,11 +282,7 @@ function Nav({ navbar, data }) {
                   return (
                     <li
                       key={text}
-                      className={`
-                    ${isAndroidServicesPage ? "hvr2" : "hvr"}
-                    ${isServices && isAndroidServicesPage ? "active2" : ""}
-                    ${isActive && !isAndroidServicesPage ? "active" : ""}
-                  `}
+                      className="hvr"
                       onClick={() =>
                         handleNavigation(text.toLowerCase().replace(" ", ""))
                       }

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import "../Pages/Main.css";
 import kmeti from "../image/kmeti.png";
 import first from "../image/first.png";
@@ -14,6 +14,7 @@ function Doneprojects() {
   const scrollRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(1);
 
+  // Scroll left function
   const scrollLeft = () => {
     if (currentIndex === 1) {
       setCurrentIndex(testimonials.length);
@@ -27,6 +28,7 @@ function Doneprojects() {
     }
   };
 
+  // Scroll right function
   const scrollRight = () => {
     if (currentIndex === testimonials.length) {
       setCurrentIndex(1);
@@ -36,6 +38,16 @@ function Doneprojects() {
       scrollRef.current.scrollBy({ left: 150, behavior: "smooth" });
     }
   };
+
+  // Auto scroll functionality
+  useEffect(() => {
+    const interval = setInterval(() => {
+      scrollRight();
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [currentIndex]);
+
   return (
     <div>
       <div

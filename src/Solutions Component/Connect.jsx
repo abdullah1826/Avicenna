@@ -29,10 +29,10 @@ function Connect() {
         <p
           style={{
             color: "white",
-            fontSize: "18px",
+            fontSize: "22px",
             fontWeight: 100,
-            width: "80%",
-            textAlign: "center",
+            width: "90%",
+            textAlign: "webkit-center",
             margin: "0px auto",
           }}
         >
@@ -54,7 +54,7 @@ function Connect() {
             navigate("/contactus");
             window.scrollTo(0, 0);
           }}
-          className="talk-btn"
+          className="talk-btnn"
         >
           Talk to us
         </button>

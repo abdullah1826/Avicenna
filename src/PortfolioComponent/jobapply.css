@@ -79,8 +79,12 @@
   .data1 p {
     font-size: 14px;
     line-height: 16px;
+    width: 100% !important;
   }
 
+  p {
+    width: 100% !important;
+  }
   .three-btn button {
     width: auto;
     font-size: 10px;
@@ -136,4 +140,9 @@
     font-size: 7px;
     height: 32px;
   }
+}
+
+.css-rsks93-MuiPaper-root-MuiDialog-paper {
+  background-color: rgb(42, 46, 52) !important;
+  border-radius: 20px !important;
 }

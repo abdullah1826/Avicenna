@@ -1,78 +1,70 @@
+@media (max-width: 830px) {
+  .gridst {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
 @media (max-width: 768px) {
- 
-.gridst{
-display: grid !important;
-    grid-template-columns:repeat(2, 1fr) !important;
-}
-.gridst h3{
+  .gridst {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .gridst h3 {
     font-size: 25px !important;
-}
-
-.nfc p {
-font-size: 14px !important;
-width: 90% !important;
-padding-bottom: 20px;
-}
-.nfc img {
-    width: 200px;
-
-}
-
   }
 
+  .nfc p {
+    font-size: 14px !important;
+    width: 90% !important;
+    padding-bottom: 20px;
+  }
+  .nfc img {
+    width: 200px;
+  }
+}
 
+@media (max-width: 480px) {
+  .gridst {
+    display: grid !important;
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .crdstyle {
+    width: 100%;
+    margin: 0px auto !important;
+  }
+  .gridst h3 {
+    font-size: 20px !important;
+  }
+  .gridst img {
+    left: -14px !important;
+  }
 
-
-
-
-
-  
-  @media (max-width: 480px) {
-    .gridst{
-        display: grid !important;
-        grid-template-columns:repeat(1, 1fr) !important;
-        
-    }
-    .crdstyle{
-        width: 100%;
-        margin: 0px auto !important;
-    }
-    .gridst h3{
-        font-size: 20px !important;
-    }
-    .gridst img{
-        left: -14px !important;
-    }
-
-.nfc{
-    display:flex !important;
+  .nfc {
+    display: flex !important;
     flex-direction: column !important;
     width: 90% !important;
-   
-}
-    .nfc p {
-        font-size: 14px !important;
-        width: 90% !important;
-        padding-bottom: 20px;
-        }
-        .nfc img {
-            width: 200px;
-        }
+  }
+  .nfc p {
+    font-size: 14px !important;
+    width: 90% !important;
+    padding-bottom: 20px;
+  }
+  .nfc img {
+    width: 200px;
+  }
 
- .nfc .nfc-l{
+  .nfc .nfc-l {
     margin-left: 20px !important;
-}
-.indust p{
+  }
+  .indust p {
     width: 100% !important;
+  }
 }
-    }
 
+.crdstyle {
+  transition: transform 0.8s; /* Increased transition duration to 6 seconds */
+}
 
-    .crdstyle {
-        transition: transform 0.8s; /* Increased transition duration to 6 seconds */
-    }
-    
-    .crdstyle:hover {
-        transform: scale(1.1); /* Increase the scale for the zoom effect */
-    }
-    
+.crdstyle:hover {
+  transform: scale(1.1); /* Increase the scale for the zoom effect */
+}

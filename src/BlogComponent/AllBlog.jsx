@@ -196,6 +196,7 @@ function AllBlog() {
               >
                 <div style={{ ...cardStyle, height: "50%" }}>
                   <img
+                    className="my-bp"
                     loading="lazy"
                     style={{ ...cardImageStyle }}
                     src={item.image}
@@ -238,6 +239,7 @@ function AllBlog() {
                     style={{ ...cardStyle, height: "50%" }}
                   >
                     <img
+                      className="my-bp"
                       loading="lazy"
                       style={{ ...cardImageStyle, height: "180px" }}
                       src={blogData[index + 1].image}

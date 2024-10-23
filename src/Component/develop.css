@@ -6,6 +6,9 @@
   .best-in-app p {
     font-size: 15px !important;
   }
+  .marg .best-in-app {
+    padding-top: 100px !important;
+  }
 }
 @media (max-width: 480px) {
   .best-in-app h2 {
@@ -25,6 +28,9 @@
     padding-top: 0px !important;
   }
   .best-in-app {
+    padding-top: 30px !important;
+  }
+  .marg .best-in-app {
     padding-top: 30px !important;
   }
 }
