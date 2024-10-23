@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./develop.css";
+import "./talk.css";
+import AOS from "aos";
 function Develop({ data, dev, chng }) {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
+
   return (
-    <div data-aos="zoom-out" className="marg" style={{ paddingTop: "0px" }}>
+    <div className="marg" style={{ paddingTop: "0px" }}>
       <section style={{ width: "90%", margin: "0px auto" }}>
-        <div className="best-in-app">
+        <div data-aos="zoom-out" className="best-in-app">
           <h2
             style={{
               color: "white",

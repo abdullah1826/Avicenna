@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./talk.css";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 function Talktous({ data, page = null }) {
   const navigate = useNavigate();
   const [localData, setLocalData] = useState(data);
@@ -14,6 +15,7 @@ function Talktous({ data, page = null }) {
     if (storedData) {
       setLocalData(JSON.parse(storedData));
     }
+    AOS.init({ duration: 2000 });
   }, []);
 
   // Update localStorage when data prop changes
@@ -54,13 +56,14 @@ function Talktous({ data, page = null }) {
 
   return (
     <section
+      data-aos="slide-right"
       style={{
         margin: "0 auto",
         width: "90%",
         marginTop: "140px",
       }}
     >
-      <div className="best-in-app">
+      <div style={{ paddingTop: "0px" }} className="best-in-app">
         {page === "blogRead" ? (
           <div
             className="heading"
