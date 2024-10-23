@@ -81,7 +81,7 @@ function Testimonial({ data }) {
       className="ServicesContainer"
       style={{ margin: "20px auto", width: "100%" }}
     >
-      <div style={{ width: "90%", margin: "0px auto" }}>
+      <div data-aos="zoom-in" style={{ width: "90%", margin: "0px auto" }}>
         <h2 style={{ color: "white" }} className="heading">
           Client <span style={{ color: data?.color }}>Testimonials</span>
         </h2>

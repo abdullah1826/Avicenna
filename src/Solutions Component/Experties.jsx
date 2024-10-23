@@ -9,7 +9,7 @@ function Experties() {
       style={{ marginTop: -20, marginBottom: 0 }}
       className="ExpertiesContainer"
     >
-      <div>
+      <div data-aos="zoom-in">
         <h2 style={{ color: "white" }} className="heading">
           {" "}
           Our <span style={{ color: "rgb(58, 242, 181)" }}>

@@ -93,6 +93,7 @@ function Tech_we_use({ data, now }) {
       <div className="cards-container">
         {card.map((item, index) => (
           <div
+            data-aos="flip-left"
             key={index}
             className="card"
             style={{ background: item.bg, border: `2px solid ${item.border}` }}

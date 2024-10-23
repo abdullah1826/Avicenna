@@ -32,7 +32,7 @@ function Connect() {
             fontSize: "22px",
             fontWeight: 100,
             width: "90%",
-            textAlign: "webkit-center",
+            textAlign: "-webkit-center",
             margin: "0px auto",
           }}
         >

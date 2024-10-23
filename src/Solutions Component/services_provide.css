@@ -140,6 +140,10 @@ circle {
   .main-of-service {
     margin: 0 !important;
   }
+  .card-para {
+    width: 90% !important;
+    height: auto !important;
+  }
   .ServicesContainer {
     color: white;
     width: 90%;

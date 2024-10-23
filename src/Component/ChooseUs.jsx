@@ -73,6 +73,7 @@ function ChooseUs({ page }) {
           >
             {arr.map((item, index) => (
               <img
+                data-aos="flip-right"
                 className="tw-img"
                 key={index}
                 src={item.image}

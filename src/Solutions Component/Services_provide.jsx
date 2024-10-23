@@ -55,7 +55,11 @@ function Services_provide() {
         margin: "100px auto 0px ",
       }}
     >
-      <div className=" s-p" style={{ width: "90%", margin: "0px auto" }}>
+      <div
+        data-aos="zoom-in"
+        className=" s-p"
+        style={{ width: "90%", margin: "0px auto" }}
+      >
         <h2 className="heading">
           Services <span className="my-span">We Provide</span>
         </h2>

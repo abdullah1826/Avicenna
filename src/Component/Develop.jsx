@@ -2,7 +2,7 @@ import React from "react";
 import "./develop.css";
 function Develop({ data, dev, chng }) {
   return (
-    <div className="marg" style={{ paddingTop: "0px" }}>
+    <div data-aos="zoom-out" className="marg" style={{ paddingTop: "0px" }}>
       <section style={{ width: "90%", margin: "0px auto" }}>
         <div className="best-in-app">
           <h2

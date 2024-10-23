@@ -91,7 +91,7 @@ function Jobapply() {
 
       {/* Dialog to show full job description */}
       <Dialog
-        style={{ backgroundColor: "rgb(42, 46, 52)" }}
+        style={{ backgroundColor: "rgb(42, 46, 52,0.3)" }}
         open={openDialog}
         onClose={handleDialogClose}
       >
@@ -119,6 +119,7 @@ function Jobapply() {
               </DialogActions>
 
               <img
+                className="new-i"
                 style={{
                   borderRadius: "55px", // Remove any border radius
                   width: "100%", // Make the image responsive

@@ -280,7 +280,7 @@ p {
 @media (max-width: 480px) {
   .for-flex {
     flex-direction: column; /* Change to column direction */
-    margin-top: 20px; /* Adjust top margin */
+    margin-top: 60px !important; /* Adjust top margin */
   }
 
   .first,
@@ -334,7 +334,7 @@ p {
   }
   .for-ab2 {
     position: static !important;
-    margin-top: 24rem;
+    margin-top: 22rem;
   }
   .last {
     margin: 0px !important;
