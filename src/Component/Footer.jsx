@@ -6,7 +6,15 @@ import lg3 from "../image/lg3.svg";
 import lg4 from "../image/lg4.svg";
 import { fetchData } from "../Services/ApiServices";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
-
+import car from "../image/car.png";
+import carry from "../image/carry.png";
+import doc from "../image/doc.png";
+import trolly from "../image/trolly.png";
+import tract from "../image/tract.png";
+import hat from "../image/hat.png";
+import fact from "../image/fact.png";
+import mdcn from "../image/mdcn.png";
+import nfc from "../image/nfc.png";
 function Footer() {
   const navigate = useNavigate();
   const [socialIcons, setSocialIcons] = useState({
@@ -36,58 +44,58 @@ function Footer() {
       console.log("URL not provided");
     }
   };
+  const industryservices = [
+    { imageUrl: car, head: "Automotive", move: "/industryservices" },
+    { imageUrl: carry, head: "Retail", move: "/industryservices" },
+    { imageUrl: doc, head: "Healthcare", move: "/industryservices" },
+    { imageUrl: trolly, head: "Logistics", move: "/industryservices" },
+    { imageUrl: tract, head: "Agriculture", move: "/industryservices" },
+    { imageUrl: hat, head: "Education", move: "/industryservices" },
+    { imageUrl: fact, head: "Manufacturing", move: "/industryservices" },
+    { imageUrl: mdcn, head: "Medicine & Pharma", move: "/industryservices" },
+  ];
 
   const footerarr = [
     {
       title: "Company",
       heading: [
-        { name: "About Us", move: "/services" },
-        { name: "Portfolio", move: "/portfolio" },
-        { name: "Blog", move: "/blogs" },
-        { name: "Careers", action: null },
-        { name: "Contact Us", action: null },
+        { head: "About Us", move: "/services" },
+        { head: "Portfolio", move: "/portfolio" },
+        { head: "Blog", move: "/blogs" },
+        { head: "Careers", move: "/careers" },
+        { head: "Contact Us", move: "/contactus" },
       ],
     },
     {
       title: "Solutions",
       heading: [
-        { name: "App Discovery Services" },
-        { name: "Team Augmentation" },
-        { name: "Enterprise App Development" },
-        { name: "AR/VR Application Development" },
-        { name: "IoT Application Development" },
-        { name: "Wearables Apps Development" },
-        { name: "Field Sales" },
-        { name: "On-Demand Apps Development" },
+        { head: "App Discovery Services" },
+        { head: "Team Augmentation" },
+        { head: "Enterprise App Development" },
+        { head: "AR/VR Application Development" },
+        { head: "IoT Application Development" },
+        { head: "Wearables Apps Development" },
+        { head: "Field Sales" },
+        { head: "On-Demand Apps Development" },
       ],
     },
     {
       title: "Services",
       heading: [
-        { name: "iOS" },
-        { name: "Android" },
-        { name: "React Native" },
-        { name: "Flutter" },
-        { name: "Ionic" },
-        { name: "Xamarin" },
-        { name: "NativeScript" },
-        { name: "HTML 5" },
-        { name: "Sencha" },
+        { head: "iOS", move: "/services/ios" },
+        { head: "Android", move: "/services/androidservices" },
+        { head: "React Native", move: "/services/native" },
+        { head: "Flutter", move: "/services/flutter" },
+        { head: "CSS", move: "/services/css" },
+        { head: "PHP", move: "/services/php" },
+        { head: "Node", move: "/services/node" },
+        { head: "React", move: "/services/react" },
+        { head: "Sencha" },
       ],
     },
     {
       title: "Industries",
-      heading: [
-        { name: "Retail" },
-        { name: "Agriculture" },
-        { name: "Healthcare" },
-        { name: "Pharmaceutical" },
-        { name: "Manufacturing" },
-        { name: "Automotive" },
-        { name: "Logistics" },
-        { name: "Education" },
-        { name: "NFC" },
-      ],
+      heading: industryservices,
     },
   ];
 
@@ -124,7 +132,10 @@ function Footer() {
                   key={subIndex}
                   onClick={() => {
                     if (subItem.move) {
-                      navigate(subItem.move);
+                      window.scrollTo(1, 1);
+                      navigate(subItem.move, { state: subItem });
+
+                      console.log("now this is", subItem);
                     }
                   }}
                   style={{
@@ -134,7 +145,7 @@ function Footer() {
                     fontWeight: 300,
                   }}
                 >
-                  {subItem.name}
+                  {subItem.head}
                 </li>
               ))}
             </ul>
