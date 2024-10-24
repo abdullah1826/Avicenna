@@ -21,7 +21,7 @@ function ChooseUs({ page }) {
   return (
     <div style={{ display: "flex", width: "100%", paddingTop: "40px" }}>
       <div
-        className="main"
+        className="main look"
         style={{
           width: "90%",
           margin: "0px auto",
@@ -32,10 +32,11 @@ function ChooseUs({ page }) {
           alignItems: "flex-start",
         }}
       >
-        <h2 style={{ fontSize: "55px", fontWeight: 900 }}>
+        <h2 className="heading" style={{ fontSize: "55px", fontWeight: 900 }}>
           Why <span style={{ color: "rgb(58, 237, 178)" }}>Choose Us? </span>
         </h2>
         <p
+          className="paragraph"
           style={{
             color: "white",
             fontSize: "20px",

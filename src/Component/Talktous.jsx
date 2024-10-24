@@ -8,7 +8,7 @@ function Talktous({ data, page = null }) {
   const navigate = useNavigate();
   const [localData, setLocalData] = useState(data);
   const [isHovered, setIsHovered] = useState(false); // State to track hover
-
+  // console.log(data);
   // Retrieve data from localStorage on mount
   useEffect(() => {
     const storedData = localStorage.getItem("talkData");
@@ -22,6 +22,7 @@ function Talktous({ data, page = null }) {
   useEffect(() => {
     if (data) {
       localStorage.setItem("talkData", JSON.stringify(data));
+      setLocalData(data);
     }
   }, [data]);
 
@@ -36,7 +37,6 @@ function Talktous({ data, page = null }) {
     transition: "background-color 0.3s, color 0.3s", // Smooth transition
   };
 
-  // Modify the title by changing the color of specific words
   const modifyTitle = (title) => {
     if (!title) return ""; // Safeguard against undefined title
 
@@ -60,10 +60,10 @@ function Talktous({ data, page = null }) {
       style={{
         margin: "0 auto",
         width: "90%",
-        marginTop: "140px",
+        marginTop: "50px",
       }}
     >
-      <div style={{ paddingTop: "0px" }} className="best-in-app">
+      <div className="best-in-app look">
         {page === "blogRead" ? (
           <div
             className="heading"
@@ -78,12 +78,14 @@ function Talktous({ data, page = null }) {
           </div>
         ) : (
           <div
+            className="heading"
             style={{ width: localData?.width || "100%" }}
             dangerouslySetInnerHTML={{ __html: localData?.title || "" }}
           />
         )}
 
         <div
+          className="paragraph"
           dangerouslySetInnerHTML={{ __html: localData?.description || "" }}
         />
 

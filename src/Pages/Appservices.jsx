@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Main.css";
 import Info from "../Component/Info";
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import Doneprojects from "../Component/Doneprojects"; // Fixed path
 import ArrayFun from "../Component/ArrayFun"; // Fixed path
@@ -11,21 +10,44 @@ import BLogs from "../Component/BLogs"; // Fixed path
 import Appointment from "../Component/Appointment"; // Fixed path
 import Footer from "../Component/Footer"; // Fixed path
 import Develop from "../Component/Develop"; // Fixed path
-
 import bg from "../image/bg.png";
 import Hero from "../Component/Hero";
 
-const HeroData = {
-  width: "70%",
-  title:
-    '<h2 style="color: white; font-size: 55px; font-weight: 900;">Best-in Class  <span style="color: rgb(58, 242, 181);">App development </span> Services</h2>',
-  description:
-    '<p style="color: white; font-size: 24px; font-weight: 100;">Avicenna Enterprises Solutions is Your <span style="color: rgb(58, 242, 181);">one-step solution for <brclassname="hide-on-mobile" /></span> all your development needs</p>',
-  imageUrl: bg,
-  appointment_heading: " App Development",
-};
-
 function Mainpage() {
+  const [heroWidth, setHeroWidth] = useState("70%");
+
+  // Effect to handle window resizing
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 480) {
+        setHeroWidth("90%");
+      } else {
+        setHeroWidth("70%");
+      }
+    };
+
+    // Set initial width based on current window size
+    handleResize();
+
+    // Add event listener to window resize
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const HeroData = {
+    width: heroWidth,
+    title:
+      '<h2 style="color: white; font-size: 55px; font-weight: 900;">Best-in Class  <span style="color: rgb(58, 242, 181);">App development </span> Services</h2>',
+    description:
+      '<p style="color: white; font-size: 24px; font-weight: 300;">Avicenna Enterprises Solutions is Your <span style="color: rgb(58, 242, 181);">one-step solution for <brclassname="hide-on-mobile" /></span> all your development needs</p>',
+    imageUrl: bg,
+    appointment_heading: "App Development",
+  };
+
   return (
     <>
       <div
@@ -65,13 +87,13 @@ function Mainpage() {
                 style={{
                   color: "white",
                   fontSize: "20px",
-                  fontWeight: "100",
+                  fontWeight: "300",
                   width: "100%",
                 }}
               >
                 Our extensive experience in delivering mobile app development
-                services, has given us the opportunity br to work with brands on
-                key industry issues and build efficient industry through smart
+                services has given us the opportunity to work with brands on key
+                industry issues and build efficient industries through smart
                 apps.
               </p>
             </div>
@@ -83,8 +105,6 @@ function Mainpage() {
           <BLogs />
           <Appointment data={HeroData} />
           <Footer />
-
-          {/* last... */}
         </div>
       </div>
     </>

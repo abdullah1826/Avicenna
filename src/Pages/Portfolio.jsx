@@ -20,7 +20,7 @@ const HeroData = {
   title:
     '<h2 style="color: white; font-size: 55px; font-weight: 900;">   Home to Expert  <span style="color: rgb(58, 242, 181);">Software Engineers </span> </h2>',
   description:
-    '<p style="color: white; font-size: 24px; font-weight: 100;">Avicenna Enterprises Solutions is Your <span style="color: rgb(58, 242, 181);">one-step solution  <br classname="hide-on-mobile" /></span> for all your development needs</p>',
+    '<p style="color: white; font-size: 24px; font-weight:300;">Avicenna Enterprises Solutions is Your <span style="color: rgb(58, 242, 181);">one-step solution  <br classname="hide-on-mobile" /></span> for all your development needs</p>',
   imageUrl: bg5,
   color: "rgb(58, 242, 181)",
   appointment_heading: "Development",

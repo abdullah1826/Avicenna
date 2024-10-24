@@ -1,15 +1,22 @@
-import React from 'react';
-import './appointment.css';
+import React from "react";
+import "./appointment.css";
 
-function Appointment({data}) {
+function Appointment({ data }) {
   return (
-    <div className='b-g' style={{ marginTop: "70px", border: '2px solid grey' }}>
+    <div
+      className="b-g"
+      style={{ marginTop: "70px", border: "2px solid grey" }}
+    >
       <div className="appointment-container">
         <div className="appointment-content">
           <div className="appointment-header">
             <h1 className="appointment-title">
-              Schedule an appointment with our <br  classname="hide-on-mobile"/>
-              <span className="highlighted-text"> {data?.appointment_heading}</span> Expert
+              Schedule an appointment with our <br classname="hide-on-mobile" />
+              <span className="highlighted-text">
+                {" "}
+                {data?.appointment_heading}
+              </span>{" "}
+              Expert
             </h1>
           </div>
 

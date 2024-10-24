@@ -81,12 +81,16 @@ function Testimonial({ data }) {
       className="ServicesContainer"
       style={{ margin: "20px auto", width: "100%" }}
     >
-      <div data-aos="zoom-in" style={{ width: "90%", margin: "0px auto" }}>
+      <div
+        className="look"
+        data-aos="zoom-in"
+        style={{ width: "90%", margin: "0px auto" }}
+      >
         <h2 style={{ color: "white" }} className="heading">
           Client <span style={{ color: data?.color }}>Testimonials</span>
         </h2>
         <p
-          style={{ width: "50%", color: "white", fontWeight: 100 }}
+          style={{ width: "50%", color: "white", fontWeight: 300 }}
           className="paragraph"
         >
           For the past decade we have been creating high performance,
@@ -120,7 +124,7 @@ function Testimonial({ data }) {
                   style={{
                     marginBottom: "20px",
                     color: "whitesmoke",
-                    fontWeight: 100,
+                    fontWeight: 300,
                   }}
                 >
                   {testimonial.para}

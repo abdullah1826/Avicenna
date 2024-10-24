@@ -13,7 +13,7 @@ function Tech_we_use({ data, now }) {
   const card = [
     {
       imageUrl: data == "app" ? card1 : css,
-      heading: data == "app" ? "ios Application" : "CSS",
+      heading: data == "app" ? "IOS Application" : "CSS",
       para: "For the past decade we have been creating high performance, feature-packed mobile applications for iOS & Android. As an expert in mobile application development services",
       border: data == "app" ? "rgb(42, 82, 150,0.7)" : "rgb(29, 65, 159)",
       bg:
@@ -57,11 +57,12 @@ function Tech_we_use({ data, now }) {
   const navigate = useNavigate();
   return (
     <div
-      className="tech-main"
+      className="tech-main look"
       style={{ paddingTop: "110px", width: "90%", margin: "0px auto" }}
     >
       <div>
         <h2
+          className="heading"
           style={{
             fontSize: "55px",
             fontWeight: 900,
@@ -69,19 +70,17 @@ function Tech_we_use({ data, now }) {
           }}
         >
           Technologies{" "}
-          <span style={{ color: "white" }}>
-            We Used to Build <br />
-            Great
-          </span>{" "}
-          Mobile Applications
+          <span style={{ color: "white" }}>We Used to Build Great</span> Mobile
+          Applications
         </h2>
         <p
+          className="paragraph"
           style={{
             color: "white",
             fontSize: "20px",
             width: "70%",
             letterSpacing: "0",
-            fontWeight: 100,
+            fontWeight: 300,
           }}
         >
           For the past decade we have been creating high performance,
@@ -109,7 +108,7 @@ function Tech_we_use({ data, now }) {
               style={{
                 color: "white",
                 fontSize: "12px",
-                fontWeight: 100,
+                fontWeight: 500,
                 width: "90%",
               }}
             >
@@ -117,7 +116,7 @@ function Tech_we_use({ data, now }) {
             </p>
             <button
               onClick={() => {
-                window.scrollTo(0, 0);
+                window.scrollTo(1, 1);
                 navigate(item.move);
               }}
             >

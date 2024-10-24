@@ -100,7 +100,7 @@ circle {
     font-size: 30px;
   }
   .paragraph {
-    font-size: 15px;
+    font-size: 16px;
   }
   .card-para {
     text-align: center;
@@ -149,11 +149,13 @@ circle {
     width: 90%;
     margin: 60px auto;
   }
-  .heading {
-    font-size: 20px;
+  .s-p .heading {
+    font-size: 30px !important;
   }
-  .paragraph {
-    font-size: 15px;
+  .s-p .paragraph {
+    font-size: 16px !important;
+    font-weight: 300 !important;
+    width: 100% !important;
   }
   .cards {
     width: 100%;

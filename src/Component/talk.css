@@ -96,10 +96,11 @@
   .best-in-app {
     padding-top: 40px !important;
   }
-  .best-in-app h2 {
-    font-size: 20px !important;
+  /* .best-in-app h2 {
+    font-size: 4px !important;
     margin-top: 10px !important;
-  }
+    min-width: 100% !important;
+  } */
 
   .best-in-app p {
     font-size: 15px !important;
@@ -111,13 +112,16 @@
     width: 120px !important; /* Adjust button width for mobile */
     height: 40px !important; /* Adjust button height for mobile */
     font-size: 16px;
-    margin-top: 0px; /* Adjust button font size for mobile */
+    margin-top: 0px;
+    font-weight: 600 !important;
+    /* Adjust button font size for mobile */
   }
   .talk-btnn {
     width: 120px !important; /* Adjust button width for mobile */
     height: 40px !important; /* Adjust button height for mobile */
     font-size: 16px;
-    margin-top: 30px; /* Adjust button font size for mobile */
+    margin-top: 30px;
+    font-weight: 600 !important; /* Adjust button font size for mobile */
   }
   .talk-btn2 {
     width: 120px !important; /* Adjust button width for mobile */

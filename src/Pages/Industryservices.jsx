@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Main.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Doneprojects from "../Component/Doneprojects"; // Fixed path
@@ -25,11 +25,37 @@ function Industryservices() {
   };
 
   console.log(bgImage);
+
+  // State to manage width
+  const [heroWidth, setHeroWidth] = useState("70%");
+
+  // Effect to handle window resizing
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 480) {
+        setHeroWidth("90%");
+      } else {
+        setHeroWidth("70%");
+      }
+    };
+
+    // Set initial width based on current window size
+    handleResize();
+
+    // Add event listener to window resize
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const HeroData = {
-    width: "70%",
+    width: heroWidth,
     title: `<h2 style="color: white; font-size: 55px; font-weight: 900; width: 80%;">Boost your Business with  <span style="color: rgb(58, 242, 181);">Innovative ${head} </span> Solutions</h2>`,
     description:
-      '<p style="color: white; font-size: 24px; font-weight: 100;">Avicenna Enterprises Solutions is Your <span style="color: rgb(58, 242, 181);">one-step solution for <br classname="hide-on-mobile" /></span> all your development needs</p>',
+      '<p style="color: white; font-size: 24px; font-weight:300;">Avicenna Enterprises Solutions is Your <span style="color: rgb(58, 242, 181);">one-step solution for <br classname="hide-on-mobile" /></span> all your development needs</p>',
     imageUrl: bgImage,
     color: "rgb(58, 242, 181)",
     appointment_heading: "Development",

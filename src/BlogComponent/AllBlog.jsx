@@ -132,7 +132,7 @@ function AllBlog() {
             width: "80%",
             wordSpacing: "1px",
             letterSpacing: "0",
-            fontWeight: 100,
+            fontWeight: 300,
           }}
         >
           Discover the most recent blogs about Avicenna Enterprise Solution

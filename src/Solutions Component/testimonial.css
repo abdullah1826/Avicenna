@@ -1,60 +1,46 @@
-.main-testo{
+.main-testo {
+  width: 100%;
+  background-color: transparent;
+  box-shadow: inset 0px 0px 30px rgba(255, 255, 255, 0.3);
 
-    width: 100%;
-    background-color: transparent;
-    box-shadow: inset 0px 0px 30px rgba(255, 255, 255, 0.3);
-   
-    min-height: 450px;
-
+  min-height: 450px;
 }
-.testimonial{
-    width: 100%;
-    background:red;
-    margin-bottom: 100px;
-    
-    
+.testimonial {
+  width: 100%;
+  background: red;
+  margin-bottom: 100px;
 }
 
 .its {
-margin-top: 50px;
-border: 2px solid grey;
-background-color:rgb(31, 34, 42);
-border-radius: 35px;
-display: flex;
-gap: 30px !important;
-width: 96% !important;
-height: 380px;
-margin-left: 8px;
-margin-bottom: 40px !important;
-
+  margin-top: 50px;
+  border: 2px solid grey;
+  background-color: rgb(31, 34, 42);
+  border-radius: 35px;
+  display: flex;
+  gap: 30px !important;
+  width: 96% !important;
+  height: 380px;
+  margin-left: 8px;
+  margin-bottom: 40px !important;
+}
+@media (max-width: 768px) {
+  .ServicesContainer {
+    margin: 0px auto !important;
   }
-  @media (max-width: 768px) {
-.ServicesContainer{
-   margin: 0px auto !important;
 }
 
-
-  }
-
-  @media (max-width: 480px) {
-
- .paragraph {
+@media (max-width: 480px) {
+  .paragraph {
     width: 100% !important;
- }
- .my-date{
-    font-size: 10px !important;
- }
-
- .stardata{
-    display: block !important;
- }
-.ppp{
-   width: 100% !important;
-}
   }
- 
+  .my-date {
+    font-size: 10px !important;
+  }
 
-
-  
-  
-
+  .stardata {
+    display: block !important;
+  }
+  .ppp {
+    width: 100% !important;
+  }
+}

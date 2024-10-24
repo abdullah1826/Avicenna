@@ -1,6 +1,20 @@
 * {
   font-family: "Outfit", sans-serif;
 }
+p {
+  font-weight: 300 !important;
+}
+
+@media (max-width: 480px) {
+  p {
+    font-weight: 300 !important;
+  }
+}
+@media (max-width: 768px) {
+  p {
+    font-weight: 300 !important;
+  }
+}
 
 .fade-enter {
   opacity: 0;

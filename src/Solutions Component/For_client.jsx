@@ -18,7 +18,7 @@ function For_client() {
 
   return (
     <div style={{ marginTop: "90px" }} className="ServicesContainer">
-      <div data-aos="zoom-in">
+      <div className="look" data-aos="zoom-in">
         <h2 className="heading">For Our Clients!</h2>
         <p style={{ width: "90%" }} className="paragraph">
           For the past decade we have been creating high performance,

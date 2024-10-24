@@ -72,7 +72,7 @@ function Successstory({ data, minedata }) {
       <Slider {...carouselSettings}>
         {Folio.map((item, index) => (
           <div className="SuccessContent" key={index}>
-            <div className="successtext">
+            <div className="successtext ">
               <h2 className="heading" style={{ color: data?.color }}>
                 {item.heading(minedata)}
               </h2>
@@ -90,7 +90,7 @@ function Successstory({ data, minedata }) {
               </h4>
 
               <p
-                className="paragraph mypara"
+                className=" mypara"
                 style={{ width: "60%", paddingTop: "20px" }}
               >
                 {item.para}

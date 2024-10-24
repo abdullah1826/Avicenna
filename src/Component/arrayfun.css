@@ -26,17 +26,20 @@
 @media (max-width: 480px) {
   .gridst {
     display: grid !important;
-    grid-template-columns: repeat(1, 1fr) !important;
+    grid-template-columns: repeat(2, 1fr) !important;
   }
   .crdstyle {
     width: 100%;
     margin: 0px auto !important;
+    height: 200px !important;
   }
   .gridst h3 {
-    font-size: 20px !important;
+    font-size: 17px !important;
   }
   .gridst img {
-    left: -14px !important;
+    left: 20px !important;
+    width: 70% !important;
+    top: 30px !important;
   }
 
   .nfc {
@@ -66,5 +69,6 @@
 }
 
 .crdstyle:hover {
-  transform: scale(1.1); /* Increase the scale for the zoom effect */
+  border: 2px solid rgb(58, 237, 178) !important;
+  transform: scale(1.1);
 }

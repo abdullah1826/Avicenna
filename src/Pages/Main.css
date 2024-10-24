@@ -162,6 +162,12 @@ button {
 }
 
 @media (max-width: 480px) {
+  .best-in-app h2 {
+    font-size: 35px !important;
+    /* margin-top: 10px !important; */
+    min-width: 100% !important;
+  }
+
   .Heros {
     height: auto !important;
     min-height: 0 !important;
@@ -220,10 +226,10 @@ button {
   }
 
   .indust h2 {
-    font-size: 20px !important;
+    font-size: 30px !important;
   }
   .indust p {
-    font-size: 15px !important;
+    font-size: 17px !important;
   }
 
   .indust {

@@ -2,6 +2,7 @@ import React from "react";
 import "../Component/talk.css";
 import "../Solutions Component/connect.css";
 import { useNavigate } from "react-router-dom";
+import "../Pages/main.css";
 function Connect() {
   const navigate = useNavigate();
   return (
@@ -30,7 +31,7 @@ function Connect() {
           style={{
             color: "white",
             fontSize: "22px",
-            fontWeight: 100,
+            fontWeight: 300,
             width: "90%",
             textAlign: "-webkit-center",
             margin: "0px auto",

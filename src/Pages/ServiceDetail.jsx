@@ -62,7 +62,7 @@ function ServiceDetail() {
     title: `<h2 style="color: white; font-size: 55px; font-weight: 900; width: 80%;">
     Expert <span style="color:${changeableColor};"> ${text}  Development</span> Services
   </h2>`,
-    description: `<p style="color: white; font-size: 24px; font-weight: 100;">Avicenna Enterprises Solutions is Your <span style="color:${changeableColor};">one-step solution for <br classname="hide-on-mobile" /></span> all your development needs</p>`,
+    description: `<p style="color: white; font-size: 24px; font-weight:300;">Avicenna Enterprises Solutions is Your <span style="color:${changeableColor};">one-step solution for <br classname="hide-on-mobile" /></span> all your development needs</p>`,
     color: changeableColor,
     imageUrl: bg4,
     appointment_heading: "App Development",

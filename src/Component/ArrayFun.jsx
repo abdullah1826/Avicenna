@@ -124,7 +124,7 @@ function ArrayFun() {
               color: "white",
               lineHeight: 1.5,
               margin: "0px",
-              fontWeight: 100,
+              fontWeight: 300,
             }}
           >
             Our extensive experience in delivering mobile app development

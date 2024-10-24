@@ -125,4 +125,12 @@
     padding-top: 30px;
     align-items: end !important;
   }
+
+  .look .heading {
+    font-size: 30px !important;
+  }
+  .look .paragraph {
+    font-size: 16px !important;
+    font-weight: 300;
+  }
 }
