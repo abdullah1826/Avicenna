@@ -75,6 +75,7 @@
 
 ul li {
   position: relative;
+  font-weight: 300 !important;
 }
 
 nav {

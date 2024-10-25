@@ -17,13 +17,15 @@
   gap: 30px;
   margin-top: 80px;
 }
+
 .my-img {
   width: 70px;
-  transition: transform 0.6s ease-in-out;
+  transition: transform 0.9s linear; /* Smooth transition for rotation */
 }
-
-.my-img:hover {
-  transform: rotate(360deg);
+.my-card:hover .my-img {
+  transform: rotate(
+    360deg
+  ); /* Rotate images when hovering over the container */
 }
 
 .inner-data {

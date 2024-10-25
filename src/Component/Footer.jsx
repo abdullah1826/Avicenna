@@ -14,7 +14,7 @@ import tract from "../image/tract.png";
 import hat from "../image/hat.png";
 import fact from "../image/fact.png";
 import mdcn from "../image/mdcn.png";
-import nfc from "../image/nfc.png";
+
 function Footer() {
   const navigate = useNavigate();
   const [socialIcons, setSocialIcons] = useState({
@@ -90,7 +90,6 @@ function Footer() {
         { head: "PHP", move: "/services/php" },
         { head: "Node", move: "/services/node" },
         { head: "React", move: "/services/react" },
-        { head: "Sencha" },
       ],
     },
     {
