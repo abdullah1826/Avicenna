@@ -78,8 +78,10 @@ function ArrayFun() {
                 onClick={() => {
                   // Check if item.move is defined and navigate if it is
                   if (item.move) {
-                    window.scrollTo(0, 0);
                     navigate(item.move, { state: item });
+                    setTimeout(() => {
+                      window.scrollTo(0, 0);
+                    }, 0);
                   }
                 }}
                 loading="lazy"

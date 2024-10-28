@@ -5,7 +5,7 @@ import lg2 from "../image/lg2.svg";
 import lg3 from "../image/lg3.svg";
 import lg4 from "../image/lg4.svg";
 import { fetchData } from "../Services/ApiServices";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useNavigate } from "react-router-dom";
 import car from "../image/car.png";
 import carry from "../image/carry.png";
 import doc from "../image/doc.png";
@@ -15,7 +15,7 @@ import hat from "../image/hat.png";
 import fact from "../image/fact.png";
 import mdcn from "../image/mdcn.png";
 
-function Footer() {
+function Footer({ data }) {
   const navigate = useNavigate();
   const [socialIcons, setSocialIcons] = useState({
     image: "",
@@ -24,27 +24,31 @@ function Footer() {
     linkedin: "",
   });
 
-  const dataCallback = (data) => {
-    setSocialIcons({
-      image: data?.image,
-      fb: data?.fb,
-      insta: data?.insta,
-      linkedin: data?.linkedin,
-    });
-  };
-
   useEffect(() => {
+    const dataCallback = (data) => {
+      setSocialIcons({
+        image: data?.image,
+        fb: data?.fb,
+        insta: data?.insta,
+        linkedin: data?.linkedin,
+      });
+    };
     fetchData(dataCallback);
   }, []);
 
   const handleRedirect = (url) => {
     if (url) {
+      window.scroll(0, 0);
       window.open(url, "_blank");
     } else {
       console.log("URL not provided");
     }
   };
-  const industryservices = [
+
+  const [hoveredSection, setHoveredSection] = useState(null);
+  const [hoveredItem, setHoveredItem] = useState(null);
+
+  const industryServices = [
     { imageUrl: car, head: "Automotive", move: "/industryservices" },
     { imageUrl: carry, head: "Retail", move: "/industryservices" },
     { imageUrl: doc, head: "Healthcare", move: "/industryservices" },
@@ -55,46 +59,46 @@ function Footer() {
     { imageUrl: mdcn, head: "Medicine & Pharma", move: "/industryservices" },
   ];
 
-  const footerarr = [
+  const footerSections = [
     {
       title: "Company",
-      heading: [
-        { head: "About Us", move: "/services" },
-        { head: "Portfolio", move: "/portfolio" },
-        { head: "Blog", move: "/blogs" },
-        { head: "Careers", move: "/careers" },
-        { head: "Contact Us", move: "/contactus" },
+      links: [
+        { label: "About Us", move: "/services" },
+        { label: "Portfolio", move: "/portfolio" },
+        { label: "Blog", move: "/blogs" },
+        { label: "Careers", move: "/careers" },
+        { label: "Contact Us", move: "/contactus" },
       ],
     },
     {
       title: "Solutions",
-      heading: [
-        { head: "App Discovery Services" },
-        { head: "Team Augmentation" },
-        { head: "Enterprise App Development" },
-        { head: "AR/VR Application Development" },
-        { head: "IoT Application Development" },
-        { head: "Wearables Apps Development" },
-        { head: "Field Sales" },
-        { head: "On-Demand Apps Development" },
+      links: [
+        { label: "App Discovery Services" },
+        { label: "Team Augmentation" },
+        { label: "Enterprise App Development" },
+        { label: "AR/VR Application Development" },
+        { label: "IoT Application Development" },
+        { label: "Wearables Apps Development" },
+        { label: "Field Sales" },
+        { label: "On-Demand Apps Development" },
       ],
     },
     {
       title: "Services",
-      heading: [
-        { head: "iOS", move: "/services/ios" },
-        { head: "Android", move: "/services/androidservices" },
-        { head: "React Native", move: "/services/native" },
-        { head: "Flutter", move: "/services/flutter" },
-        { head: "CSS", move: "/services/css" },
-        { head: "PHP", move: "/services/php" },
-        { head: "Node", move: "/services/node" },
-        { head: "React", move: "/services/react" },
+      links: [
+        { label: "iOS", move: "/services/ios" },
+        { label: "Android", move: "/services/androidservices" },
+        { label: "React Native", move: "/services/native" },
+        { label: "Flutter", move: "/services/flutter" },
+        { label: "CSS", move: "/services/css" },
+        { label: "PHP", move: "/services/php" },
+        { label: "Node", move: "/services/node" },
+        { label: "React", move: "/services/react" },
       ],
     },
     {
       title: "Industries",
-      heading: industryservices,
+      links: industryServices,
     },
   ];
 
@@ -109,32 +113,43 @@ function Footer() {
       }}
     >
       <footer>
-        {footerarr.map((item, index) => (
+        {footerSections.map((section, sectionIndex) => (
           <div
-            key={index}
+            key={sectionIndex}
             className="footer-row"
             style={{ marginBottom: "20px" }}
           >
-            <h4
+            <h5
               style={{
                 fontSize: "25px",
                 fontWeight: 500,
                 marginTop: "20px",
                 cursor: "pointer",
+                color: data?.color,
               }}
+              onMouseEnter={() => setHoveredSection(sectionIndex)}
+              onMouseLeave={() => setHoveredSection(null)}
             >
-              {item.title}
-            </h4>
+              {section.title}
+            </h5>
             <ul style={{ marginTop: "30px" }}>
-              {item.heading.map((subItem, subIndex) => (
+              {section.links.map((link, itemIndex) => (
                 <li
-                  key={subIndex}
+                  key={itemIndex}
+                  onMouseEnter={() => {
+                    setHoveredSection(sectionIndex);
+                    setHoveredItem(itemIndex);
+                  }}
+                  onMouseLeave={() => {
+                    setHoveredSection(null);
+                    setHoveredItem(null);
+                  }}
                   onClick={() => {
-                    if (subItem.move) {
-                      window.scrollTo(1, 1);
-                      navigate(subItem.move, { state: subItem });
-
-                      console.log("now this is", subItem);
+                    if (link.move) {
+                      navigate(link.move, { state: link });
+                      setTimeout(() => {
+                        window.scrollTo(0, 0);
+                      }, 100);
                     }
                   }}
                   style={{
@@ -142,15 +157,20 @@ function Footer() {
                     lineHeight: "40px",
                     fontSize: "18px",
                     fontWeight: 300,
+                    color:
+                      hoveredSection === sectionIndex &&
+                      hoveredItem === itemIndex
+                        ? data?.color // Change color only for the hovered item
+                        : "white",
+                    transition: "color 0.3s ease-in",
                   }}
                 >
-                  {subItem.head}
+                  {link.label || link.head} {/* Show head if no label */}
                 </li>
               ))}
             </ul>
           </div>
         ))}
-        {/* Horizontal line */}
       </footer>
       <hr
         style={{
@@ -159,7 +179,6 @@ function Footer() {
           marginBottom: "50px",
         }}
       />
-
       <div className="main-div">
         <div>
           <img className="main-img" src={socialIcons?.image} alt="logo" />
@@ -173,8 +192,8 @@ function Footer() {
             }}
           >
             Our main focus includes planning, analysis, design, development &
-            implementation, testing, and <br className="hide-on-mobile" />{" "}
-            maintenance.
+            implementation, testing, and
+            <br className="hide-on-mobile" /> maintenance.
           </p>
         </div>
         <div className="flo-icn">
@@ -189,7 +208,7 @@ function Footer() {
               className="icon-img"
               style={{ width: "45px", cursor: "pointer" }}
               src={lg1}
-              alt="lg"
+              alt="Facebook"
               onClick={() => handleRedirect(socialIcons?.fb)}
             />
             <img
@@ -197,7 +216,7 @@ function Footer() {
               className="icon-img"
               style={{ width: "45px", cursor: "pointer" }}
               src={lg2}
-              alt="lg"
+              alt="Instagram"
               onClick={() => handleRedirect(socialIcons?.insta)}
             />
             <img
@@ -205,14 +224,14 @@ function Footer() {
               className="icon-img"
               style={{ width: "45px", cursor: "pointer" }}
               src={lg3}
-              alt="lg"
+              alt="Twitter"
             />
             <img
               loading="lazy"
               className="icon-img"
               style={{ width: "45px", cursor: "pointer" }}
               src={lg4}
-              alt="lg"
+              alt="LinkedIn"
               onClick={() => handleRedirect(socialIcons?.linkedin)}
             />
           </div>
@@ -225,7 +244,6 @@ function Footer() {
           marginTop: "50px",
         }}
       />
-
       <div
         className="copy"
         style={{
@@ -242,7 +260,7 @@ function Footer() {
           @2023 All the Copyright Reserved.
         </p>
         <p style={{ fontWeight: 300, fontSize: "20px" }}>
-          Privacy Policy | Terms of Services
+          Privacy Policy | Terms & Conditions
         </p>
       </div>
     </div>

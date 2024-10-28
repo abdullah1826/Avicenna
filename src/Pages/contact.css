@@ -1,0 +1,19 @@
+.my-best-class {
+  padding-top: 0px !important;
+  position: relative !important;
+  top: -100px;
+  z-index: 1;
+}
+
+@media (max-width: 840px) {
+  .my-best-class {
+    padding-top: 100px !important;
+  }
+}
+@media (max-width: 768px) {
+  .my-best-class {
+    padding-top: 10px !important;
+
+    top: 0px;
+  }
+}

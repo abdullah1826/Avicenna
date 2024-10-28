@@ -53,7 +53,9 @@ function BlogPage() {
       >
         <Hero data={HeroData} />
 
-        <Develop />
+        <div className="my-best-class">
+          <Develop />
+        </div>
         <Doneprojects />
         <AllBlog />
         <Appointment data={HeroData} />

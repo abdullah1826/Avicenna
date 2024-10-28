@@ -6,7 +6,18 @@ footer {
   justify-content: space-between;
   color: white;
   width: 80%;
-  margin: 0px auto;
+  margin: 0 auto;
+  flex-wrap: wrap; /* Allow items to wrap into rows */
+}
+
+@media (max-width: 480px) {
+  footer {
+    flex-direction: row;
+  }
+
+  footer > * {
+    flex: 1 1 45%; /* Set each item to take 45% width to create two columns */
+  }
 }
 
 .main-img {
@@ -18,21 +29,27 @@ footer {
   margin-bottom: 20px;
 }
 
-h4 {
+h5 {
   margin: 0;
-  font-size: 1.2em;
+  font-size: 1.8em !important;
+  color: aquamarine;
 }
 
 ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  cursor: pointer !important;
 }
 
 li {
   margin: 5px 0;
-  cursor: pointer !important;
+  cursor: pointer;
+  transition: 0.6s ease-in;
+  font-size: 20px !important;
+}
+
+li:hover {
+  color: aquamarine;
 }
 
 .main-div {
@@ -48,10 +65,26 @@ hr {
   opacity: 1;
 }
 
+@media (max-width: 840px) {
+  footer {
+    flex-direction: row;
+    justify-content: start;
+    padding-left: 50px !important;
+  }
+
+  footer > * {
+    flex: 1 1 50%;
+  }
+}
 /* Responsive styles for 768px screen */
 @media (max-width: 768px) {
   footer {
-    width: 100%;
+    flex-direction: row;
+    justify-content: start;
+  }
+
+  footer > * {
+    flex: 1 1 50%;
   }
 
   .footer-row {
@@ -92,7 +125,7 @@ hr {
     width: 100%;
   }
 
-  .footer-row h4 {
+  .footer-row h5 {
     font-size: 17px !important;
   }
   .footer-row li {
@@ -125,5 +158,30 @@ hr {
 
   .copy p {
     font-size: 13px !important;
+  }
+
+  footer {
+    flex-direction: row;
+    justify-content: start;
+  }
+
+  footer > * {
+    flex: 1 1 50%;
+  }
+  .footer-row h5 {
+    font-size: 23px !important;
+    color: rgb(58, 237, 178);
+    padding-left: 12px;
+  }
+  .footer-row ul {
+    margin-top: 6px !important;
+  }
+  .footer-row li {
+    font-size: 17px !important;
+    line-height: 26px !important;
+    padding-left: 12px;
+  }
+  .main-div p {
+    font-size: 14px !important;
   }
 }

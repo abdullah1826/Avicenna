@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./tech.css";
 import card1 from "../image/card1.png";
 import css from "../image/css.png";
@@ -8,53 +8,67 @@ import node from "../image/node.png";
 import card2 from "../image/card2.png";
 import car3 from "../image/car3.png";
 import card4 from "../image/card4.png";
-import { Navigate, useNavigate } from "react-router-dom";
-function Tech_we_use({ data, now }) {
+import { useNavigate } from "react-router-dom";
+
+function Tech_we_use({ data }) {
+  const navigate = useNavigate();
+
+  // Scroll to top when component mounts or data prop changes
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [data]);
+
   const card = [
     {
-      imageUrl: data == "app" ? card1 : css,
-      heading: data == "app" ? "IOS Application" : "CSS",
+      imageUrl: data === "app" ? card1 : css,
+      heading: data === "app" ? "IOS Application" : "CSS",
       para: "For the past decade we have been creating high performance, feature-packed mobile applications for iOS & Android. As an expert in mobile application development services",
-      border: data == "app" ? "rgb(42, 82, 150,0.7)" : "rgb(29, 65, 159)",
+      border: data === "app" ? "rgba(42, 82, 150, 0.7)" : "rgb(29, 65, 159)",
       bg:
-        data == "app"
+        data === "app"
           ? "linear-gradient(90.28deg, rgba(75, 131, 220, 0.25) 0%, rgba(221, 237, 255, 0.25) 100%)"
           : "linear-gradient(90.28deg, rgba(38, 77, 228, 0.25) 0%, rgba(41, 101, 241, 0.25) 100%)",
-      move: data == "app" ? "/services/ios" : "/services/css",
+      move: data === "app" ? "/services/ios" : "/services/css",
     },
     {
-      imageUrl: data == "app" ? card4 : php,
-      heading: data == "app" ? "Android Applications" : "PHP",
+      imageUrl: data === "app" ? card4 : php,
+      heading: data === "app" ? "Android Applications" : "PHP",
       para: "For the past decade we have been creating high performance, feature-packed mobile applications for iOS & Android. As an expert in mobile application development services",
-      border: data == "app" ? "rgb(93, 127, 61)" : "rgb(59, 65, 128)",
+      border: data === "app" ? "rgb(93, 127, 61)" : "rgb(59, 65, 128)",
       bg:
-        data == "app"
+        data === "app"
           ? "linear-gradient(90.28deg, rgba(147, 199, 86, 0.25) 0%, rgba(135, 186, 82, 0.25) 100%)"
-          : " linear-gradient(90.28deg, rgba(119, 123, 179, 0.25) 0%, rgba(110, 116, 199, 0.25) 100%)",
-      move: data == "app" ? "/services/androidservices" : "/services/php",
+          : "linear-gradient(90.28deg, rgba(119, 123, 179, 0.25) 0%, rgba(110, 116, 199, 0.25) 100%)",
+      move: data === "app" ? "/services/androidservices" : "/services/php",
     },
     {
-      imageUrl: data == "app" ? car3 : react,
-      heading: data == "app" ? "Flutter Applications" : "React JS",
+      imageUrl: data === "app" ? car3 : react,
+      heading: data === "app" ? "Flutter Applications" : "React JS",
       para: "For the past decade we have been creating high performance, feature-packed mobile applications for iOS & Android. As an expert in mobile application development services",
       border: "rgb(24, 79, 134)",
       bg: "linear-gradient(90.28deg, rgba(115, 211, 237, 0.25) 0%, rgba(35, 126, 207, 0.25) 100%)",
-      move: data == "app" ? "/services/flutter" : "/services/react",
+      move: data === "app" ? "/services/flutter" : "/services/react",
     },
     {
-      imageUrl: data == "app" ? card2 : node,
-      heading: data == "app" ? "Native Applications" : "Node JS",
+      imageUrl: data === "app" ? card2 : node,
+      heading: data === "app" ? "Native Applications" : "Node JS",
       para: "For the past decade we have been creating high performance, feature-packed mobile applications for iOS & Android. As an expert in mobile application development services",
-      border: data == "app" ? "rgb(75, 136, 156)" : "rgb(91, 126, 29)",
+      border: data === "app" ? "rgb(75, 136, 156)" : "rgb(91, 126, 29)",
       bg:
-        data == "app"
+        data === "app"
           ? "linear-gradient(90.28deg, rgba(142, 219, 237, 0.25) 0%, rgba(0, 216, 255, 0.25) 100%)"
-          : " linear-gradient(90.28deg, rgba(139, 197, 0, 0.25) 0%, rgba(135, 186, 82, 0.25) 100%)",
-      move: data == "app" ? "/services/native" : "/services/node",
+          : "linear-gradient(90.28deg, rgba(139, 197, 0, 0.25) 0%, rgba(135, 186, 82, 0.25) 100%)",
+      move: data === "app" ? "/services/native" : "/services/node",
     },
   ];
 
-  const navigate = useNavigate();
+  const handleNavigation = (path) => {
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 0); // Smooth scroll to top
+    navigate(path); // Navigate to the new page
+  };
+
   return (
     <div
       className="tech-main look"
@@ -67,6 +81,7 @@ function Tech_we_use({ data, now }) {
             fontSize: "55px",
             fontWeight: 900,
             color: "rgb(58, 237, 178)",
+            width: "70%",
           }}
         >
           Technologies{" "}
@@ -79,7 +94,6 @@ function Tech_we_use({ data, now }) {
             color: "white",
             fontSize: "20px",
             width: "70%",
-            letterSpacing: "0",
             fontWeight: 300,
           }}
         >
@@ -114,13 +128,8 @@ function Tech_we_use({ data, now }) {
             >
               {item.para}
             </p>
-            <button
-              onClick={() => {
-                window.scrollTo(1, 1);
-                navigate(item.move);
-              }}
-            >
-              See More{" "}
+            <button onClick={() => handleNavigation(item.move)}>
+              See More
             </button>
           </div>
         ))}

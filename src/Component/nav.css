@@ -9,7 +9,7 @@
   line-height: 1.5;
   text-decoration: none;
   transition: color 2s ease;
-  color: white; /* Default color */
+  color: white;
 }
 
 .dot {
@@ -76,6 +76,7 @@
 ul li {
   position: relative;
   font-weight: 300 !important;
+  font-size: 22px !important;
 }
 
 nav {
@@ -118,11 +119,22 @@ nav ul li .dot.active {
   }
 
   .hvr {
-    font-size: 16px;
+    font-size: 16px !important;
+    padding: 1px !important;
   }
 
   nav ul {
     width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    width: 100%;
+  }
+
+  .hvr {
+    font-size: 16px !important;
   }
 }
 
@@ -151,13 +163,48 @@ nav ul li .dot.active {
   margin: 0 !important;
   font-family: "Helvetica" !important;
   font-weight: 500 !important;
-  font-size: 19px !important;
+  font-size: 22px !important;
   line-height: 0.8 !important;
   letter-spacing: 0 !important;
+  padding: 4px !important;
 }
 
 .main-btn:hover {
   background-color: var(--hoverColor); /* Background changes to data?.color */
   border-color: var(--hoverColor);
   color: black; /* Text color becomes black on hover */
+}
+.css-1u169s7-MuiList-root {
+  list-style: none;
+  margin: 0;
+  padding: 12px !important;
+  position: relative;
+  padding-top: 38px !important;
+}
+
+.css-1eh66j0 {
+  width: 300px !important;
+  background: #111419;
+  height: 100%;
+  color: white;
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-image-source: linear-gradient(
+    90deg,
+    rgba(100, 101, 103, 0.1) 0%,
+    rgba(100, 101, 103, 1) 50%,
+    rgba(100, 101, 103, 0.1) 100%
+  );
+  border-image-slice: 1;
+}
+.css-1c3tbzi {
+  padding: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: flex-start !important;
 }

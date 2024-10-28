@@ -1,76 +1,71 @@
-
 .LocationMain {
-    width: 100%;
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Change direction to column for small screens */
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Change direction to column for small screens */
 }
 
-
-
 .leftdiv {
-    width: 100%; /* Default to full width */
+  width: 100%; /* Default to full width */
 }
 
 .rightdiv {
-    width: 100%; /* Default to full width */
+  width: 100%; /* Default to full width */
 }
 
 .icon-data {
-    display: flex;
-    gap: 20px; /* Reduced gap for better responsiveness */
+  display: flex;
+  gap: 20px; /* Reduced gap for better responsiveness */
 }
 
-@media (min-width: 768px) { /* Optional media query for larger screens */
-    .LocationMain {
-        flex-direction: row; /* Row layout for larger screens */
-    }
-  
-    .rightdiv iframe{
-        width: 90%;
-        margin-left:60px;
-    }
-/* 
+@media (min-width: 768px) {
+  /* Optional media query for larger screens */
+  .LocationMain {
+    flex-direction: row; /* Row layout for larger screens */
+  }
+
+  .rightdiv iframe {
+    width: 90%;
+    margin-left: 60px;
+  }
+  /* 
     .icon-data{
        
         width: max-content;
     } */
-    .leftdiv {
-        width: 40%; /* 40% for larger screens */
-    }
+  .leftdiv {
+    width: 40%; /* 40% for larger screens */
+  }
 
-    .rightdiv {
-        width: 55%; /* 55% for larger screens */
-    }
-    .icon-data h5{
-font-size: 20px;
-    }
+  .rightdiv {
+    width: 55%; /* 55% for larger screens */
+  }
+  .icon-data h5 {
+    font-size: 20px;
+  }
 
-    .thip p{
-width: 100% !important;
-    }
+  .thip p {
+    width: 100% !important;
+  }
 }
 
+@media screen and (max-width: 480px) {
+  .icon-data {
+    display: flex !important;
+    align-items: flex-start !important;
+  }
+  .icon-data h5 {
+    font-size: 17px !important;
+  }
+  .icon-data p {
+    font-size: 12px !important;
+  }
 
-
-
-@media screen and (max-width:480px){
-
-    .icon-data{
-        display: flex !important;
-        align-items: flex-start !important;
-    }
-    .icon-data h5{
-        font-size: 17px !important; 
-            }
-    .icon-data p{
-        font-size: 12px !important; 
-            }
-
-            .LocationMain{
-                gap:40px ;
-            }
-
-
+  .LocationMain {
+    gap: 40px;
+  }
+  .ServicesContainer {
+    margin: 45px auto !important;
+  }
 }

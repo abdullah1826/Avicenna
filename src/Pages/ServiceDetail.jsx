@@ -75,7 +75,10 @@ function ServiceDetail() {
       style={{ height: "100%", background: " #090e17", position: "sticky" }}
     >
       <Hero data={HeroData} newdata={"android"} />
-      <Develop data={HeroData} dev={"android"} />
+      <div className="my-best-class">
+        <Develop data={HeroData} dev={"android"} />
+      </div>
+
       <Doneprojects />
       <Innovative data={HeroData} />
 
@@ -86,7 +89,7 @@ function ServiceDetail() {
       <br />
       <Testimonial data={HeroData} />
       <Appointment data={HeroData} />
-      <Footer />
+      <Footer data={HeroData} />
     </div>
   );
 }

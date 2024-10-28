@@ -38,7 +38,7 @@ function Jobapply() {
   };
 
   return (
-    <div className="ServicesContainer" style={{ marginTop: "10px" }}>
+    <div className="ServicesContainer" style={{ marginTop: "0px" }}>
       {career.map((job) => {
         const words = job.description.split(" ");
         const shouldTruncate = words.length > 40;

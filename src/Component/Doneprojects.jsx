@@ -16,27 +16,23 @@ function Doneprojects() {
 
   // Scroll left function
   const scrollLeft = () => {
-    if (currentIndex === 1) {
-      setCurrentIndex(testimonials.length);
-      scrollRef.current.scrollTo({
-        left: testimonials.length * 150,
-        behavior: "smooth",
-      });
-    } else {
-      setCurrentIndex(currentIndex - 1);
-      scrollRef.current.scrollBy({ left: -150, behavior: "smooth" });
-    }
+    const newIndex =
+      currentIndex === 1 ? testimonials.length : currentIndex - 1;
+    setCurrentIndex(newIndex);
+    scrollRef.current.scrollTo({
+      left: (newIndex - 1) * 200, // Use the image width to calculate scroll position
+      behavior: "smooth",
+    });
   };
 
-  // Scroll right function
   const scrollRight = () => {
-    if (currentIndex === testimonials.length) {
-      setCurrentIndex(1);
-      scrollRef.current.scrollTo({ left: 0, behavior: "smooth" });
-    } else {
-      setCurrentIndex(currentIndex + 1);
-      scrollRef.current.scrollBy({ left: 150, behavior: "smooth" });
-    }
+    const newIndex =
+      currentIndex === testimonials.length ? 1 : currentIndex + 1;
+    setCurrentIndex(newIndex);
+    scrollRef.current.scrollTo({
+      left: (newIndex - 1) * 200, // Use the image width to calculate scroll position
+      behavior: "smooth",
+    });
   };
 
   // Auto scroll functionality

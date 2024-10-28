@@ -119,7 +119,7 @@ function AllBlog() {
   };
 
   return (
-    <div style={{ margin: "0 auto", width: "90%", marginTop: "70px" }}>
+    <div style={{ margin: "0 auto", width: "90%", marginTop: "120px" }}>
       <div className="blog-main">
         <h2 style={{ color: "white", fontSize: "55px", fontWeight: 900 }}>
           Latest From{" "}

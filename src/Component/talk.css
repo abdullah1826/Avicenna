@@ -58,6 +58,9 @@
   color: rgb(146, 199, 85);
 }
 
+.look {
+  padding-top: 110px !important;
+}
 /* Responsive styles */
 @media (max-width: 768px) {
   .best-in-app h2 {

@@ -55,7 +55,9 @@ function Career() {
       >
         <Hero data={HeroData} />
 
-        <Develop chng={"career"} />
+        <div className="my-best-class">
+          <Develop chng={"career"} />
+        </div>
 
         <Jobapply />
         <Appointment data={HeroData} />

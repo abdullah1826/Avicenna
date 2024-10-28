@@ -20,7 +20,7 @@
 
 .my-img {
   width: 70px;
-  transition: transform 0.9s linear; /* Smooth transition for rotation */
+  transition: transform 0.5s linear; /* Smooth transition for rotation */
 }
 .my-card:hover .my-img {
   transform: rotate(

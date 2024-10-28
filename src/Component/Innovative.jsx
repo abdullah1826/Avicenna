@@ -39,7 +39,10 @@ function Innovative({ data }) {
           Services
         </h2>
 
-        <p className="paragraph" style={{ width: "90%", textAlign: "center" }}>
+        <p
+          className="paragraph"
+          style={{ width: "88%", textAlign: "center", margin: "0px auto" }}
+        >
           As a leading android mobile application development company that
           provides futuristic android app development solutions to businesses
           around the world.

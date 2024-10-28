@@ -25,7 +25,7 @@ function Location() {
   }, []);
 
   return (
-    <div className="ServicesContainer">
+    <div className="ServicesContainer my-s">
       <h3
         data-aos="zoom-out"
         className="heading"

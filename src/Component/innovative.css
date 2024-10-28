@@ -82,6 +82,18 @@
   gap: 20px;
 }
 
+@media (max-width: 840px) {
+  .team {
+    display: none !important;
+  }
+  .main-ino {
+    width: 100% !important;
+  }
+  .inoo-data .paragraph {
+    width: 100% !important;
+  }
+}
+
 @media (max-width: 480px) {
   .team {
     display: none !important;

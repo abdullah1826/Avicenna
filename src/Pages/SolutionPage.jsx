@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Nav from "../Component/Nav"; // Fixed path
 import logo1 from "../image/logo1.png"; // This path seems correct
 import Connect from "../Solutions Component/Connect";
@@ -15,6 +15,10 @@ import Experties from "../Solutions Component/Experties";
 import Testimonial from "../Solutions Component/Testimonial";
 
 function SolutionPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const HeroData = {
     color: "rgb(58, 242, 181)",
     appointment_heading: "Development",
@@ -50,7 +54,10 @@ function SolutionPage() {
         <Connect />
       </div>
       <Info />
-      <Develop />
+      <div className="my-best-class">
+        <Develop />
+      </div>
+
       <Doneprojects />
       <Services_provide />
       <For_client />

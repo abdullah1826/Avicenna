@@ -45,44 +45,54 @@ const Folio = [
   },
 ];
 
-const carouselSettings = {
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  arrows: false,
-  autoplay: true,
-  autoplaySpeed: 4000,
-  dots: true,
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
-};
-
 function Successstory({ data, minedata }) {
-  // Destructure data here
+  const carouselSettings = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    dots: true,
+    customPaging: () => (
+      <div
+        style={{
+          width: "16px",
+          height: "16px",
+          backgroundColor: "#ddd", // Default color
+          borderRadius: "50%",
+          margin: "0 5px",
+        }}
+      />
+    ),
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <div className="SuccessContainer">
       <Slider {...carouselSettings}>
         {Folio.map((item, index) => (
           <div className="SuccessContent" key={index}>
-            <div className="successtext ">
+            <div className="successtext">
               <h2 className="heading" style={{ color: data?.color }}>
                 {item.heading(minedata)}
               </h2>
 
               <h4
                 style={{
-                  color: data ? data.color : "rgb(237, 198, 59)",
+                  color: data?.color || "rgb(237, 198, 59)",
                   fontSize: "35px",
                   fontWeight: "800",
-                  paddingTop: "50px",
+                  paddingTop: "20px",
                 }}
               >
                 {item.subheading}{" "}
@@ -90,8 +100,8 @@ function Successstory({ data, minedata }) {
               </h4>
 
               <p
-                className=" mypara"
-                style={{ width: "60%", paddingTop: "20px" }}
+                className="mypara"
+                style={{ width: "60%", paddingTop: "10px", fontSize: "18px" }}
               >
                 {item.para}
               </p>
@@ -107,6 +117,15 @@ function Successstory({ data, minedata }) {
           </div>
         ))}
       </Slider>
+
+      {/* Inline styling for the active dot */}
+      <style>
+        {`
+          .slick-dots li.slick-active div {
+            background-color: ${data?.color || "black"} !important;
+          }
+        `}
+      </style>
     </div>
   );
 }

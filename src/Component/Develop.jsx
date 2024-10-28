@@ -10,7 +10,7 @@ function Develop({ data, dev, chng }) {
   return (
     <div className="marg" style={{ paddingTop: "0px" }}>
       <section style={{ width: "90%", margin: "0px auto" }}>
-        <div data-aos="zoom-out" className="best-in-app">
+        <div data-aos="zoom-in" className="best-in-app">
           <h2
             style={{
               color: "white",

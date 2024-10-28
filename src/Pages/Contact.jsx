@@ -1,6 +1,7 @@
 import React from "react";
 
 import "./Main.css";
+import "./contact.css";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import Appointment from "../Component/Appointment"; // Fixed path
@@ -31,7 +32,10 @@ function Contact() {
       >
         <Hero data={HeroData} />
 
-        <Develop />
+        <div className="my-best-class">
+          <Develop />
+        </div>
+
         <Doneprojects />
         <Location />
         <Message />

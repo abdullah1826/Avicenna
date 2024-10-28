@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./contact.css";
 import "./Main.css";
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -35,7 +35,9 @@ function Portfolio() {
       >
         <Hero data={HeroData} />
 
-        <Develop />
+        <div className="my-best-class">
+          <Develop />
+        </div>
         <Doneprojects />
         <Tech_we_use data="app" />
 

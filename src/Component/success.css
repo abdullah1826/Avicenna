@@ -1,108 +1,97 @@
-
-.SuccessContainer{
-width: 100%;
-background-color: rgba(55, 55, 55, 1);
-margin-bottom: 100px;
-
-
+.SuccessContainer {
+  width: 100%;
+  background-color: rgba(55, 55, 55, 1);
+  margin-bottom: 100px;
 }
 
-.SuccessContent{
-
-    width: 90% !important;
-    display: flex !important;
-    justify-content: space-between !important;
-    margin: 0px auto !important;
-    color:white;
-    align-items: center !important;
-    margin-bottom: 40px !important;
- 
+.SuccessContent {
+  width: 90% !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  margin: 0px auto !important;
+  color: white;
+  align-items: center !important;
+  margin-bottom: 40px !important;
 }
 
 .slick-dots {
-    position: absolute; 
- bottom: 30px;
-    justify-content: flex-start;
-    display: flex !important;
-    padding-left: 70px;
+  position: absolute;
+  bottom: 90px;
+  justify-content: flex-start;
+  display: flex !important;
+  padding-left: 70px;
 
-    /* Align items to the start (left) */
-
+  /* Align items to the start (left) */
 }
 
-.slick-dots li {
-    margin: 0 1px; /* Space between individual dots */
-    font-size: 30px !important; /* This will not affect the dot size, use below for size */
-}
+/* .slick-dots li {
+  margin: 0 1px; /* Space between individual dots */
+/* font-size: 0px !important; This will not affect the dot size, use below for size */
+/* } */
 
-.slick-dots li button:before {
-    color: rgb(115, 137, 129); /* Default color for inactive dots */
-    font-size: 16px; /* Size of the dots */
-    opacity: 0.75; /* Adjust the opacity if needed */
+/* .slick-dots li button:before {
+  color: rgb(115, 137, 129);
+  font-size: 16px; 
+  opacity: 0.75; 
 }
 
 .slick-dots li.slick-active button:before {
-    opacity: 1; /* Fully visible for active dot */
-    color: rgb(58, 242, 181); /* Active dot color */
+  opacity: 1;
+  color: rgb(58, 242, 181); 
+} */
+
+@media (max-width: 830px) {
+  .slick-dots {
+    position: absolute;
+    bottom: 16px !important;
+    justify-content: flex-start;
+    display: flex !important;
+    padding-left: 40px;
+  }
 }
-
-
-
-
-
 @media (max-width: 768px) {
-   
-h4{
-    padding-top:0px!important;
+  h4 {
+    padding-top: 0px !important;
     font-size: 20px !important;
-
-    }
-    p{
-        width: 80% !important;
-    }
-
+  }
+  p {
+    width: 80% !important;
+  }
+  .slick-dots {
+    position: absolute;
+    bottom: 39px;
+    justify-content: flex-start;
+    display: flex !important;
+    padding-left: 40px;
+  }
 }
-@media (max-width:480px) {
-   
+@media (max-width: 480px) {
+  .SuccessContent {
+    padding-top: 30px;
+  }
 
-    .SuccessContent{
-        padding-top: 30px;
-
-    }
-
-h4{
-    padding-top:0px!important;
+  h4 {
+    padding-top: 0px !important;
     font-size: 20px !important;
+  }
+  .mypara {
+    width: 100% !important;
+    font-size: 13px !important;
+  }
 
-    }
-    .mypara{
-        width: 100% !important;
-    }
+  .myi {
+    width: 40% !important;
+  }
 
-
-    .myi{
-        width: 40% !important;
-    }
- 
-h4{
+  h4 {
     font-size: 15px !important;
-
-
-}
-.slick-dots {
- 
- bottom: 30px;
+  }
+  .slick-dots {
+    bottom: 30px;
     justify-content: flex-start;
     display: flex !important;
     padding-left: 20px !important;
 
     /* Align items to the start (left) */
-
-}
-
-
-
-
- 
-
+  }
 }
