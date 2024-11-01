@@ -122,7 +122,7 @@ function Successstory({ data, minedata }) {
       <style>
         {`
           .slick-dots li.slick-active div {
-            background-color: ${data?.color || "black"} !important;
+            background-color: ${data?.color || "rgb(58, 237, 178)"} !important;
           }
         `}
       </style>

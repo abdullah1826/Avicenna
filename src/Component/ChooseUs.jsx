@@ -19,14 +19,14 @@ function ChooseUs({ page }) {
   ];
 
   return (
-    <div style={{ display: "flex", width: "100%", paddingTop: "40px" }}>
+    <div style={{ display: "flex", width: "100%", paddingTop: "0px" }}>
       <div
         className="main look"
         style={{
           width: "90%",
           margin: "0px auto",
           color: "white",
-          marginTop: "90px",
+          marginTop: "10px",
           display: "flex",
           flexDirection: "column",
           alignItems: "flex-start",

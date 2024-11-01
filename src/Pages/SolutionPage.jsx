@@ -54,7 +54,7 @@ function SolutionPage() {
         <Connect />
       </div>
       <Info />
-      <div className="my-best-class">
+      <div className="my-best-class" style={{marginTop:"100px"}}>
         <Develop />
       </div>
 
