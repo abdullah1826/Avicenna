@@ -58,7 +58,10 @@ function BlogPage() {
         </div>
         <Doneprojects />
         <AllBlog />
+        <div style={{paddingTop:"50px"}}>
         <Appointment data={HeroData} />
+        </div>
+     
         <Footer />
       </div>
     </>

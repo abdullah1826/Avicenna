@@ -35,6 +35,9 @@
   .marg .best-in-app {
     padding-top: 30px !important;
   }
+  .my-best-class{
+    margin-top: 0px !important;
+  }
 }
 .best-in-app {
   padding-top: 80px;

@@ -94,4 +94,7 @@
 
     /* Align items to the start (left) */
   }
+  .SuccessContainer{
+    margin-bottom: 30px ;
+  }
 }

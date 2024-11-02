@@ -43,4 +43,7 @@
   .ppp {
     width: 100% !important;
   }
+  .ServicesContainer{
+    margin: 20px auto !important;
+  }
 }

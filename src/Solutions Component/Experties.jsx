@@ -6,10 +6,10 @@ import globe from "../image/globe.png";
 function Experties() {
   return (
     <div
-      style={{ marginTop: -20, marginBottom: 0 }}
+      style={{ marginTop:"0px", marginBottom: 0 }}
       className="ExpertiesContainer"
     >
-      <div className=" look" data-aos="zoom-in">
+      <div className="" data-aos="zoom-in"  style={{paddingTop:"0px"}}>
         <h2 style={{ color: "white" }} className="heading">
           {" "}
           Our <span style={{ color: "rgb(58, 242, 181)" }}>

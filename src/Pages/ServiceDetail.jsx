@@ -86,8 +86,11 @@ function ServiceDetail() {
       <br />
       <br />
       <Successstory data={HeroData} />
-      <br />
+ 
+      <div style={{paddingTop:"0px"}}>
       <Testimonial data={HeroData} />
+      </div>
+    
       <Appointment data={HeroData} />
       <Footer data={HeroData} />
     </div>

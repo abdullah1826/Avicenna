@@ -208,3 +208,14 @@ nav ul li .dot.active {
   -webkit-justify-content: center;
   justify-content: flex-start !important;
 }
+
+.css-1u169s7-MuiList-root {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 17px !important;
+  padding-top: 6px !important;
+}
